@@ -2,7 +2,7 @@ import { HeroContainer, HeroLeftContainer, Img, HeroRightContainer, HeroInnerCon
 import Typewriter from 'typewriter-effect';
 import { Bio } from '../../data/constants';
 import Image from 'next/image';
-import HeroImg from '../../../../public/images/HeroImg.png';
+import HeroImg from '../../../../public/images/ProfileImg.jpeg';
 
 const HeroSection = () => {
     return (
@@ -10,7 +10,7 @@ const HeroSection = () => {
             <HeroContainer>
                 <HeroInnerContainer >
                     <HeroLeftContainer id="Left">
-                        <Title>Hi, I am <br /> {Bio.name}</Title>
+                        <Title>Hi, I am {Bio.name}</Title>
                         <TextLoop>
                             I am a
                             <Span>
@@ -28,10 +28,9 @@ const HeroSection = () => {
                     </HeroLeftContainer>
 
                     <HeroRightContainer id="Right">
-                        <Image src={HeroImg} alt="hero-image" width={500} height={500} />
+                        <Image src={HeroImg} alt="hero-image" width={500} height={360} />
                     </HeroRightContainer>
                 </HeroInnerContainer>
-
             </HeroContainer>
         </div>
     )
