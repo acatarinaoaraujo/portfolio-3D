@@ -10,7 +10,6 @@ import project_8 from "../../../public/images/project-8.png";
 import covidProject from "../../../public/images/Final_Report.pdf";
 
 import resume from "../../../public/images/resume-example.pdf";
-import { name } from "file-loader";
 
 export const Bio = {
   name: "Ana Araújo",
@@ -347,24 +346,26 @@ export const education = [
 export const projects = [
   {
     id: 0,
-    title: "UNC CSXL Roster Management",
-    date: "Jan 2024 - May 2024",
+    title: "Receipt Tracker App",
+    date: "Oct 2023 - Dec 2023",
     description:
-      "Contributed to the development of the UNC CSXL web app, which attracts over 300 weekly visitors. Key achievements include creating a roster management system for student organizations, enabling features like members-only events and admin privileges. Enhanced the frontend using Angular and TypeScript, and integrated it with a Python backend powered by FastAPI and PostgreSQL. Utilized Python’s RESTful APIs for membership management and SQLAlchemy ORM for efficient data handling on CloudApps.",
+      "The Mejiro project was developed to address the common yet overlooked challenge of financial management within small organizations. Drawing inspiration from personal experiences of manual bookkeeping and informal price tracking, our team set out to create a solution that streamlines the process of managing receipts and financial records. Mejiro combines OCR technology for scanning receipts with GPT-4 AI for parsing data, offering a comprehensive, user-friendly application designed to make financial oversight more accessible and efficient.",
     image: project_1,
     tags: [
-      "Docker",
-      "CloudApps",
-      "TypeScript",
-      "Angular",
-      "Python",
-      "PostgreSQL",
-      "RESTful APIS",
-      "SQLAlchemy",
+      "Next.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "GPT-4",
+      "OCR",
+      "Tailwind CSS",
+      "Vercel",
+      "Jest",
+      "Chart.js",
     ],
     category: "web app",
-    github: "https://github.com/unc-csxl/csxl.unc.edu",
-    webapp: "https://csxl-team-a3-comp590-24s.apps.unc.edu",
+    github: "https://github.com/ics613/receipttracker",
+    webapp: "https://receipttracker-kappa.vercel.app/",
   },
   {
     id: 1,

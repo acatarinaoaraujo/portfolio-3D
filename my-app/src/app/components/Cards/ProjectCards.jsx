@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 import { ButtonContainer } from '../Navbar/NavbarStyledComponent';
+import Image from 'next/image';
 
 const Button = styled(Link)`
     display: block; /* Ensure the button is always visible */
@@ -27,14 +28,14 @@ const Button = styled(Link)`
 `;
 
 const Card = styled.div`
-    width: 330px;
+    width: 340px;
     height: 490px;
     background-color: #BCCCE7;
     cursor: pointer;
     border-radius: 10px;
     box-shadow: 0 0 12px 4px rgba(0,0,0,0.4);
     overflow: hidden;
-    padding: 26px 20px;
+    padding: 26px 18px;
     display: flex;
     flex-direction: column;
     gap: 14px;
@@ -48,12 +49,14 @@ const Card = styled.div`
     }
 `;
 
-const Image = styled.img`
+const CardImageWrapper = styled.div`
     width: 100%;
     height: 180px;
     background-color: ${({ theme }) => theme.white};
     border-radius: 10px;
     box-shadow: 0 0 16px 2px rgba(0,0,0,0.3);
+    overflow: hidden;
+    display: flex;
 `;
 
 const Tags = styled.div`
@@ -137,7 +140,14 @@ const Avatar = styled.img`
 const ProjectCards = ({ project, setOpenModal }) => {
     return (
         <Card onClick={() => setOpenModal({ state: true, project: project })}>
-            <Image src={project.image} alt={project.title} />
+            <CardImageWrapper>
+                <Image
+                    src={project.image}
+                    alt={project.title}
+                    width={306}
+                    height={180}
+                />
+            </CardImageWrapper>
             <Tags>
                 {project.tags?.map((tag, index) => (
                     <Tag key={index}>{tag}</Tag>
@@ -148,14 +158,11 @@ const ProjectCards = ({ project, setOpenModal }) => {
                 <Date>{project.date}</Date>
                 <Description>{project.description}</Description>
             </Details>
-            {/* <Button to={project?.github} target="_blank">View Code</Button>
-            <Button to={project?.webapp} target="_blank">View Live App</Button> */}
             <Members>
                 {project.member?.map((member, index) => (
                     <Avatar key={index} src={member.img} alt={`Member ${index}`} />
                 ))}
             </Members>
-
         </Card>
     );
 };
