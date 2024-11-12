@@ -6,9 +6,11 @@ import project_5 from "../../../public/images/project-5.png";
 import project_6 from "../../../public/images/project-6.png";
 import project_7 from "../../../public/images/project-7.png";
 import project_8 from "../../../public/images/project-8.png";
+import project_9 from "../../../public/images/project-9.png";
+import project_10 from "../../../public/images/project-10.png";
+import project_11 from "../../../public/images/project-11.png";
 
-import covidProject from "../../../public/images/Final_Report.pdf";
-
+import thesis from "../../../public/images/thesis.pdf";
 import resume from "../../../public/images/resume-example.pdf";
 
 export const Bio = {
@@ -345,6 +347,18 @@ export const education = [
 
 export const projects = [
   {
+    id: 10,
+    title: "An Exploratory Examination Of Software Vulnerability Classification Using Large Language Models",
+    date: "Oct 2023 - May 2024",
+    description:
+      "This study addresses the challenge of accurately classifying software vulnerabilities, critical weaknesses that can endanger system security. Leveraging the National Vulnerability Database (NVD) and the Vulnerability Description Ontology from NIST, we explore the integration of Large Language Models (LLMs), such as BERT and DistilBERT, to enhance classification across 27 vulnerability categories. Our analysis shows that LLMs outperform traditional models and entropy-based methods, particularly in understanding vulnerability descriptions within specified noun groups. Additionally, the research highlights that while expanding datasets can improve classification coverage, annotation quality remains a key factor. The findings underscore the potential of LLMs and well-curated data to improve automated vulnerability assessment, advancing cybersecurity practices and precision in vulnerability management.",
+    image: project_11,
+    tags: ["Python", "NIST", "Cybersecurity", "Pytorch", "Hugging Face", "Transformers", "Peft", "Llama 2", "XLNet", "BERT", "DeBERTa"],
+    category: "research",
+    webapp: thesis,
+  },
+  {
+
     id: 0,
     title: "Receipt Tracker App",
     date: "Oct 2023 - Dec 2023",
@@ -366,6 +380,28 @@ export const projects = [
     category: "web app",
     github: "https://github.com/ics613/receipttracker",
     webapp: "https://receipttracker-kappa.vercel.app/",
+  },
+  {
+    id: 8,
+    title: "A Developer-Centric Study Exploring Mobile Application Security Practices and Challenges",
+    date: "Jun 2023 - Aug 2024",
+    description:
+      "This study examines the security practices and challenges faced by mobile app developers. As mobile apps increasingly handle sensitive data for essential services like banking and healthcare, securing them is critical. Through a global survey of 137 experienced mobile developers, our research provides insights into the practices developers prioritize, such as authentication and secure storage, and the obstacles they encounter, including managing vulnerabilities, permissions, and privacy concerns. The findings highlight a gap in existing resources, with many developers expressing a need for improved training and practical guidance on secure development. Developers often rely on platforms like Stack Overflow for security-related information but report that current learning materials fall short in equipping them with comprehensive security skills. This research underscores the need for better-designed tools, resources, and training programs that integrate security from the earliest stages of development, contributing to a safer mobile app ecosystem.",
+    image: project_9,
+    tags: ["Python", "Data Analysis", "Stack Overflow", "Topic Modeling", "pyLDAvis", "NLTK", "Survey", "LinkedIn"],
+    category: "research",
+    webapp: "https://arxiv.org/pdf/2408.09032",
+  },
+  {
+    id: 9,
+    title: "A Developer-Centric Study Exploring Mobile Application Security Practices and Challenges",
+    date: "Jan 2023 - Aug 2024",
+    description:
+      "This study investigates the security challenges mobile app developers face by analyzing security-related questions on Stack Overflow. With society’s increasing reliance on mobile apps for accessing sensitive resources, app security is paramount. Our research focuses on the types of security issues developers encounter, especially on the Android platform, and identifies seven key categories: Secured Communications, Database Security, App Distribution, Encryption, Permissions, File-Specific Security, and General Security. Our findings underscore Stack Overflow's role as a primary resource for developers seeking security guidance. This study offers valuable insights that can inform the creation of more targeted tools, resources, and training by researchers and vendors to enhance mobile app security practices.",
+    image: project_10,
+    tags: ["Python", "Data Analysis", "Pandas", "NLTK", "Stack Overflow", "Topic Modeling", "pyLDAvis", "Matplotlib", "Gensim"],
+    category: "research",
+    webapp: "https://arxiv.org/pdf/2409.07926",
   },
   {
     id: 1,
@@ -437,15 +473,16 @@ export const projects = [
   },
   {
     id: 7,
-    title: "Covid Deaths with Pre-Existing Health Conditions",
-    date: "Jan - Feb 2022",
+    title: "UH Class Critics",
+    date: "Apr 2021 - May 2021",
     description:
-      "Analyzed COVID-19 fatalities in individuals with pre-existing conditions using R, applying data analytics and machine learning techniques..",
+      "Class Critics is a website that allows students from the University of Hawaii at Manoa to share their experiences taking different courses and professors. Students have access to a collection of professors and courses and can evaluate them based on a rating scale of 1-5. The project was conceived in response to the lack of information available to students when it comes to selecting courses and professors at the start of each semester.",
     image: project_8,
-    tags: ["R", "tidyverse", "ggplot", "corrplot"],
-    category: "artificial intelligence",
-    webapp: covidProject,
+    tags: ["React.js", "Node.js", "Meteor.js",  "MongoDB", "Semantic UI", "CSS", "HTML"],
+    category: "web app",
+    github: "https://github.com/Runtime-Terrorz",
   },
+
 ];
 
 export const TimeLineData = [
