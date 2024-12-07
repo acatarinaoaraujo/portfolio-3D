@@ -88,7 +88,7 @@ function Footer() {
   return (
     <FooterContainer>
       <FooterWrapper>
-        <Logo>Lalitha Vadrevu</Logo>
+        <Logo>Ana Oliveira Araújo</Logo>
         <Nav>
           <NavLink href="#about">About</NavLink>
           <NavLink href="#skills">Skills</NavLink>
@@ -101,7 +101,7 @@ function Footer() {
           <SocialMediaIcon href={Bio.linkedin} target="display"><LinkedInIcon /></SocialMediaIcon>
         </SocialMediaIcons>
         <Copyright>
-          &copy; 2024 Lalitha Vadrevu. All rights reserved.
+          &copy; 2024 Ana Araújo. All rights reserved.
         </Copyright>
 
       </FooterWrapper>

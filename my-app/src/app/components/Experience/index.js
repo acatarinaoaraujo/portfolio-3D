@@ -71,15 +71,13 @@ const TimelineSection = styled.div`
     gap: 12px;
 `;
 
-
-
 const index = () => {
     return (
         <Container id="experience">
             <Wrapper>
                 <Title>Experience</Title>
                 <Desc>
-                During my past internships, I gained a lot of valuable knowledge and hands-on experience. Here’s a glimpse of the projects I worked on and my experiences. Feel free to reach out if you’d like to chat more about it! 
+                Below is a summary of the work I&apos;ve done and the experiences I&apos;ve gained. Feel free to reach out if you&apos;d like to discuss further!
                 </Desc>
                 <TimelineSection>
                     <Timeline>
@@ -87,7 +85,7 @@ const index = () => {
                             <TimelineItem>
                                 <TimelineSeparator>
                                     <TimelineDot variant="outlined" color="secondary" />
-                                    {index !== experiences.length - 1 && <TimelineConnector style={{ background: '#854CE6' }} />}
+                                    {index !== experiences.length  && <TimelineConnector style={{ background: '#854CE6' }} />}
                                 </TimelineSeparator>
                                 <TimelineContent sx={{ py: '12px', px: 2 }}>
                                     <ExperienceCard experience={experience}/>
@@ -95,7 +93,6 @@ const index = () => {
                             </TimelineItem>
                         ))}
                     </Timeline>
-
                 </TimelineSection>
             </Wrapper>
         </Container>

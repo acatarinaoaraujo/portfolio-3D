@@ -14,7 +14,7 @@ const Button = styled(Link)`
     font-weight: 700;
     text-align: center;
     border: none;
-    border-radius: 10px;
+    border-radius: 4px;
     cursor: pointer;
     transition: all 0.8s ease-in-out;
     text-decoration: none;
@@ -28,11 +28,11 @@ const Button = styled(Link)`
 `;
 
 const Card = styled.div`
-    width: 340px;
-    height: 490px;
+    width: 342px;
+    height: 550px;
     background-color: #BCCCE7;
     cursor: pointer;
-    border-radius: 10px;
+    border-radius: 2px;
     box-shadow: 0 0 12px 4px rgba(0,0,0,0.4);
     overflow: hidden;
     padding: 26px 18px;
@@ -53,7 +53,7 @@ const CardImageWrapper = styled.div`
     width: 100%;
     height: 180px;
     background-color: ${({ theme }) => theme.white};
-    border-radius: 10px;
+    border-radius: 2px;
     box-shadow: 0 0 16px 2px rgba(0,0,0,0.3);
     overflow: hidden;
     display: flex;

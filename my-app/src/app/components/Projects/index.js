@@ -12,8 +12,7 @@ const Projects = ({openModal,setOpenModal}) => {
       <Wrapper>
         <Title>Projects</Title>
         <Desc>
-          Over the past few years, I have gotten the opportunity to work on a wide range of projects. Here are some of my projects.<br />
-          <b>Click on an Individual Project to 'View Code' or 'View App'</b>
+        Over the past few years, I’ve had the opportunity to work on a diverse range of projects, including application development, machine learning, and research. Here are some of the projects and research I’ve contributed to.
         </Desc>
         <ToggleButtonGroup >
           {toggle === 'all' ?
@@ -23,15 +22,15 @@ const Projects = ({openModal,setOpenModal}) => {
           }
           <Divider />
           {toggle === 'web app' ?
-            <ToggleButton active value="web app" onClick={() => setToggle('web app')}>WEB APP'S</ToggleButton>
+            <ToggleButton active value="web app" onClick={() => setToggle('web app')}>Applications</ToggleButton>
             :
-            <ToggleButton value="web app" onClick={() => setToggle('web app')}>WEB APP'S</ToggleButton>
+            <ToggleButton value="web app" onClick={() => setToggle('web app')}>Applications</ToggleButton>
           }
           <Divider />
-          {toggle === 'artificial intelligence' ?
-            <ToggleButton active value="artificial intelligence" onClick={() => setToggle('artificial intelligence')}>ARTIFICIAL INTELLIGENCE</ToggleButton>
+          {toggle === 'ml' ?
+            <ToggleButton active value="ml" onClick={() => setToggle('ml')}>Machine Learning & Research</ToggleButton>
             :
-            <ToggleButton value="artificial intelligence" onClick={() => setToggle('artificial intelligence')}>ARTIFICIAL INTELLIGENCE</ToggleButton>
+            <ToggleButton value="ml" onClick={() => setToggle('ml')}>Machine Learning & Research</ToggleButton>
           }
         </ToggleButtonGroup>
         <CardContainer>

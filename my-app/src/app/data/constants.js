@@ -15,12 +15,13 @@ import resume from "../../../public/images/resume-example.pdf";
 
 export const Bio = {
   name: "Ana Araújo",
-  roles: ["Full Stack Developer", "Software Engineer"],
+  roles: ["Full Stack Developer", "Software Engineer", "Data Engineer"],
   description:
-    "I’m a passionate aspiring Software Engineer with a genuine love for exploring new technologies and keeping up with the latest industry trends. I believe, however, that being a successful engineer goes beyond just specific technologies; it’s also about effective communication, collaboration, and the ability to improve ourselves every day. If you’re looking for someone who brings enthusiasm to the team, I’d love to connect and chat!",
+    "Proven ability to design, develop, and deploy software solutions, with a focus on data-driven insights and user-centric experiences. Skilled in Web Development, Databases and Machine Learning. Seeking a challenging role to contribute to innovative projects and grow as a technical professional. If you’re looking for someone who brings enthusiasm to the team, I’d love to connect and chat!",
   github: "https://github.com/acatarinaoaraujo",
   resume: resume,
   linkedin: "https://www.linkedin.com/in/acatarinaoaraujo/",
+  leetcode: "https://leetcode.com/u/acoa/",
 };
 
 export const skills = [
@@ -82,7 +83,6 @@ export const skills = [
         image:
           "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/2560px-Bootstrap_logo.svg.png",
       },
-
     ],
   },
   {
@@ -153,7 +153,8 @@ export const skills = [
       },
       {
         name: "Plotly",
-        image: "https://upload.wikimedia.org/wikipedia/commons/8/8a/Plotly-logo.png",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/8/8a/Plotly-logo.png",
       },
       {
         name: "Matplotlib",
@@ -200,8 +201,7 @@ export const skills = [
       },
       {
         name: "NLTK",
-        image:
-          "https://miro.medium.com/v2/resize:fit:1184/0*zKRz1UgqpOZ4bvuA",
+        image: "https://miro.medium.com/v2/resize:fit:1184/0*zKRz1UgqpOZ4bvuA",
       },
       {
         name: "Spacy",
@@ -238,15 +238,20 @@ export const skills = [
           "https://raw.githubusercontent.com/devicons/devicon/master/icons/jira/jira-original-wordmark.svg",
       },
       {
-        name: "Xcode",
+        name: "AWS",
         image:
-          "https://raw.githubusercontent.com/devicons/devicon/master/icons/xcode/xcode-original.svg",
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
       },
-      {
-        name: "Swift",
-        image:
-          "https://raw.githubusercontent.com/devicons/devicon/master/icons/swift/swift-original.svg",
-      },
+      // {
+      //   name: "Xcode",
+      //   image:
+      //     "https://raw.githubusercontent.com/devicons/devicon/master/icons/xcode/xcode-original.svg",
+      // },
+      // {
+      //   name: "Swift",
+      //   image:
+      //     "https://raw.githubusercontent.com/devicons/devicon/master/icons/swift/swift-original.svg",
+      // },
     ],
   },
   // {
@@ -298,7 +303,7 @@ export const experiences = [
       "Node.js",
       "JavaScript",
       "Agile",
-      "Git"
+      "Git",
     ],
   },
   {
@@ -340,7 +345,8 @@ export const education = [
     date: "Jan 2019 - May 2022",
     grade: "3.44",
     desc: "Data Structure and Algorithms, Software Engineering, Software Quality Assurance, Design for Mobile Devices, Human-Computer Interaction, Database Systems, Data Networks, Data Science Fundamentals, Probability and Statistics. ",
-    clubs: "ACM@Manoa, Programming and Algorithms Club, Supporting Women in Technology (SWITCH)",
+    clubs:
+      "ACM@Manoa, Programming and Algorithms Club, Supporting Women in Technology (SWITCH)",
     degree: "Bachelor of Science in Computer Science",
   },
 ];
@@ -348,17 +354,29 @@ export const education = [
 export const projects = [
   {
     id: 10,
-    title: "An Exploratory Examination Of Software Vulnerability Classification Using Large Language Models",
+    title:
+      "An Exploratory Examination Of Software Vulnerability Classification Using Large Language Models",
     date: "Oct 2023 - May 2024",
     description:
-      "This study addresses the challenge of accurately classifying software vulnerabilities, critical weaknesses that can endanger system security. Leveraging the National Vulnerability Database (NVD) and the Vulnerability Description Ontology from NIST, we explore the integration of Large Language Models (LLMs), such as BERT and DistilBERT, to enhance classification across 27 vulnerability categories. Our analysis shows that LLMs outperform traditional models and entropy-based methods, particularly in understanding vulnerability descriptions within specified noun groups. Additionally, the research highlights that while expanding datasets can improve classification coverage, annotation quality remains a key factor. The findings underscore the potential of LLMs and well-curated data to improve automated vulnerability assessment, advancing cybersecurity practices and precision in vulnerability management.",
+      "This study addresses the challenge of accurately classifying software vulnerabilities, critical weaknesses that can endanger system security. Leveraging the National Vulnerability Database (NVD) and the Vulnerability Description Ontology from NIST, we explore the integration of Large Language Models (LLMs), such as BERT and DistilBERT, to enhance classification across 27 vulnerability categories. Our analysis shows that LLMs outperform traditional models and entropy-based methods, particularly in understanding vulnerability descriptions within specified noun groups. Additionally, the ml highlights that while expanding datasets can improve classification coverage, annotation quality remains a key factor. The findings underscore the potential of LLMs and well-curated data to improve automated vulnerability assessment, advancing cybersecurity practices and precision in vulnerability management.",
     image: project_11,
-    tags: ["Python", "NIST", "Cybersecurity", "Pytorch", "Hugging Face", "Transformers", "Peft", "Llama 2", "XLNet", "BERT", "DeBERTa"],
-    category: "research",
+    tags: [
+      "Python",
+      "NIST",
+      "Cybersecurity",
+      "Pytorch",
+      "Hugging Face",
+      "Transformers",
+      "Peft",
+      "Llama 2",
+      "XLNet",
+      "BERT",
+      "DeBERTa",
+    ],
+    category: "ml",
     webapp: thesis,
   },
   {
-
     id: 0,
     title: "Receipt Tracker App",
     date: "Oct 2023 - Dec 2023",
@@ -380,28 +398,116 @@ export const projects = [
     category: "web app",
     github: "https://github.com/ics613/receipttracker",
     webapp: "https://receipttracker-kappa.vercel.app/",
+
+    member: [
+      {
+        name: "Ana Araújo",
+        img: "https://avatars.githubusercontent.com/u/60526884?s=70&v=4",
+        github: "https://github.com/orgs/ics613/people/acatarinaoaraujo",
+      },
+      {
+        name: "Giorgio Tran",
+        img: "https://avatars.githubusercontent.com/u/82340101?s=70&v=4",
+        github: "https://github.com/orgs/ics613/people/giorgio-tran",
+      },
+      {
+        name: "Alyssia Chen",
+        img: "https://avatars.githubusercontent.com/u/84742988?s=70&v=4",
+        github: "https://github.com/orgs/ics613/people/alyssia-chen",
+      },
+      {
+        name: "Timothy Huo",
+        img: "https://avatars.githubusercontent.com/u/61216890?s=70&v=4",
+        github: "https://github.com/orgs/ics613/people/timothyhuo1",
+      },
+    ],
   },
   {
     id: 8,
-    title: "A Developer-Centric Study Exploring Mobile Application Security Practices and Challenges",
+    title:
+      "A Developer-Centric Study Exploring Mobile Application Security Practices and Challenges",
     date: "Jun 2023 - Aug 2024",
     description:
       "This study examines the security practices and challenges faced by mobile app developers. As mobile apps increasingly handle sensitive data for essential services like banking and healthcare, securing them is critical. Through a global survey of 137 experienced mobile developers, our research provides insights into the practices developers prioritize, such as authentication and secure storage, and the obstacles they encounter, including managing vulnerabilities, permissions, and privacy concerns. The findings highlight a gap in existing resources, with many developers expressing a need for improved training and practical guidance on secure development. Developers often rely on platforms like Stack Overflow for security-related information but report that current learning materials fall short in equipping them with comprehensive security skills. This research underscores the need for better-designed tools, resources, and training programs that integrate security from the earliest stages of development, contributing to a safer mobile app ecosystem.",
     image: project_9,
-    tags: ["Python", "Data Analysis", "Stack Overflow", "Topic Modeling", "pyLDAvis", "NLTK", "Survey", "LinkedIn"],
-    category: "research",
+    tags: [
+      "Python",
+      "Data Analysis",
+      "Stack Overflow",
+      "Topic Modeling",
+      "pyLDAvis",
+      "NLTK",
+      "Survey",
+      "LinkedIn",
+    ],
+    category: "ml",
     webapp: "https://arxiv.org/pdf/2408.09032",
+    member: [
+      {
+        name: "Ana Araújo",
+        img: "https://avatars.githubusercontent.com/u/60526884?s=70&v=4",
+        github: "https://github.com/orgs/ics613/people/acatarinaoaraujo",
+      },
+      {
+        name: "Timothy Huo",
+        img: "https://avatars.githubusercontent.com/u/61216890?s=70&v=4",
+        github: "https://github.com/orgs/ics613/people/timothyhuo1",
+      },
+      {
+        name: "Jake Imanaka",
+        img: "https://avatars.githubusercontent.com/u/60174193?s=70&v=4",
+        github: "https://github.com/jimanaka",
+      },
+      {
+        name: "Dr. Anthony Peruma",
+        img: "https://avatars.githubusercontent.com/u/1944920?s=70&v=4",
+        github: "https://github.com/shehan",
+      },
+    ],
   },
   {
     id: 9,
-    title: "A Developer-Centric Study Exploring Mobile Application Security Practices and Challenges",
+    title:
+      "A Developer-Centric Study Exploring Mobile Application Security Practices and Challenges",
     date: "Jan 2023 - Aug 2024",
     description:
       "This study investigates the security challenges mobile app developers face by analyzing security-related questions on Stack Overflow. With society’s increasing reliance on mobile apps for accessing sensitive resources, app security is paramount. Our research focuses on the types of security issues developers encounter, especially on the Android platform, and identifies seven key categories: Secured Communications, Database Security, App Distribution, Encryption, Permissions, File-Specific Security, and General Security. Our findings underscore Stack Overflow's role as a primary resource for developers seeking security guidance. This study offers valuable insights that can inform the creation of more targeted tools, resources, and training by researchers and vendors to enhance mobile app security practices.",
     image: project_10,
-    tags: ["Python", "Data Analysis", "Pandas", "NLTK", "Stack Overflow", "Topic Modeling", "pyLDAvis", "Matplotlib", "Gensim"],
-    category: "research",
+    tags: [
+      "Python",
+      "Data Analysis",
+      "Pandas",
+      "NLTK",
+      "Stack Overflow",
+      "Topic Modeling",
+      "pyLDAvis",
+      "Matplotlib",
+      "Gensim",
+    ],
+    category: "ml",
     webapp: "https://arxiv.org/pdf/2409.07926",
+    member: [
+      {
+        name: "Ana Araújo",
+        img: "https://avatars.githubusercontent.com/u/60526884?s=70&v=4",
+        github: "https://github.com/orgs/ics613/people/acatarinaoaraujo",
+      },
+      {
+        name: "Timothy Huo",
+        img: "https://avatars.githubusercontent.com/u/61216890?s=70&v=4",
+        github: "https://github.com/orgs/ics613/people/timothyhuo1",
+      },
+      {
+        name: "Jake Imanaka",
+        img: "https://avatars.githubusercontent.com/u/60174193?s=70&v=4",
+        github: "https://github.com/jimanaka",
+      },
+      {
+        name: "Dr. Anthony Peruma",
+        img: "https://avatars.githubusercontent.com/u/1944920?s=70&v=4",
+        github: "https://github.com/shehan",
+      },
+    ],
   },
   {
     id: 1,
@@ -410,10 +516,48 @@ export const projects = [
     description:
       "Makai is a centralized, mobile-friendly platform developed to support the Center for Marine Debris Research in tracking and managing debris reports across Hawaii. By consolidating scattered data sources into a single, accessible database, the app enables researchers to analyze debris trends and identify pollution hotspots more effectively. This platform also promotes community involvement by allowing public reporting and provides data-driven insights to inform policymakers and support environmental agencies in resource allocation and ecosystem preservation.",
     image: project_2,
-    tags: ["Next.js", " MongoDB", "Express.js", "Node.js", "Tailwind CSS", "Vercel", "Google Dialogflow", "Google Maps API", "Mapbox API", "Nivo"],
+    tags: [
+      "Next.js",
+      " MongoDB",
+      "Express.js",
+      "Node.js",
+      "Tailwind CSS",
+      "Vercel",
+      "Google Dialogflow",
+      "Google Maps API",
+      "Mapbox API",
+      "Nivo",
+    ],
     category: "web app",
     github: "https://github.com/HACC-2023",
     webapp: "https://devpost.com/software/track-my-leader",
+    member: [
+      {
+        name: "Ana Araújo",
+        img: "https://avatars.githubusercontent.com/u/60526884?s=70&v=4",
+        github: "https://github.com/orgs/ics613/people/acatarinaoaraujo",
+      },
+      {
+        name: "Giorgio Tran",
+        img: "https://avatars.githubusercontent.com/u/82340101?s=70&v=4",
+        github: "https://github.com/orgs/ics613/people/giorgio-tran",
+      },
+      {
+        name: "James Grande",
+        img: "https://avatars.githubusercontent.com/u/30067137?s=70&v=4",
+        github: "https://github.com/orgs/HACC-2023/people/GrandeJames",
+      },
+      {
+        name: "Shin Saito",
+        img: "https://avatars.githubusercontent.com/u/47809066?s=70&v=4",
+        github: "https://github.com/orgs/HACC-2023/people/saitoshi",
+      },
+      {
+        name: "Robert Godfrey",
+        img: "https://avatars.githubusercontent.com/u/102856686?s=70&v=4",
+        github: "https://github.com/orgs/HACC-2023/people/robertgodfrey",
+      },
+    ],
   },
   {
     id: 2,
@@ -422,8 +566,16 @@ export const projects = [
     description:
       "LeafDiagnoseAI leverages deep learning techniques to tackle the challenge of identifying and quantifying diseases and pests in coffee leaves. Using the BRACOL dataset and through hyperparameter adjustments and data augmentation, this project employs a fine-tuned resnext50_32x4d model, achieving accuracy of 87.24% in classifying various conditions affecting Arabica coffee plants. LeafDiagnoseAI showcases a scalable solution for enhancing agricultural health monitoring and management, contributing significantly to the sustainability and productivity of coffee cultivation.",
     image: project_3,
-    tags: ["Python", "Resnext50", "CV2", "PyTorch", "Matplotlib", "NumPy", "Data Augmentation"],
-    category: "artificial intelligence",
+    tags: [
+      "Python",
+      "Resnext50",
+      "CV2",
+      "PyTorch",
+      "Matplotlib",
+      "NumPy",
+      "Data Augmentation",
+    ],
+    category: "ml",
     github: "https://github.com/acatarinaoaraujo/coffee-leaf-disease-detector",
     webapp: "https://devpost.com/software/translate-me-u9pv13",
   },
@@ -434,8 +586,17 @@ export const projects = [
     description:
       "The project aims to analyze sentiments in AI-related discussions on Reddit, employing various machine learning techniques such as conventional methods, Long Short-Term Memory (LSTM) models, and BERT (Bidirectional Encoder Representations from Transformers). Specific goals involve constructing and training models to classify AI-related Reddit content as positive, negative, or neutral. The project compares the performance of different machine learning models, achieving optimal results with BERT and a F1 score of 0.80.",
     image: project_4,
-    tags: ["Python", "BERT", "LSTM", "Tensorflow", "Keras", "Sklearn", "NLTK", "Matplotlib"],
-    category: "artificial intelligence",
+    tags: [
+      "Python",
+      "BERT",
+      "LSTM",
+      "Tensorflow",
+      "Keras",
+      "Sklearn",
+      "NLTK",
+      "Matplotlib",
+    ],
+    category: "ml",
     github: "https://github.com/acatarinaoaraujo/ai-sentiment-analysis",
   },
   {
@@ -445,9 +606,30 @@ export const projects = [
     description:
       "APMS is an application designed to streamline aircraft maintenance scheduling and management for improved efficiency. The platform provides intuitive, real-time feedback and familiar design patterns to enhance usability. Users can manage holidays and training days, easily filter by title, and edit or delete entries as needed. The Phase Lane Sidebar allows for quick management of phase lanes, each with a dedicated calendar for event tracking. Additionally, the Events module simplifies event creation, tracking hours and identifying key time-out dates. With .csv file import functionality, users can bulk-add events, and the system automatically adjusts dates for holidays or weekends, ensuring precise scheduling.",
     image: project_5,
-    tags: ["React.js", "Node.js", "Meteor.js", "MongoDB", "Bootstrap", "CSS", "HTML"],
+    tags: [
+      "React.js",
+      "Node.js",
+      "Meteor.js",
+      "MongoDB",
+      "Bootstrap",
+      "CSS",
+      "HTML",
+    ],
     category: "web app",
     github: "private",
+    member: [
+      {
+        name: "Ana Araújo",
+        img: "https://avatars.githubusercontent.com/u/60526884?s=70&v=4",
+        github: "https://github.com/orgs/ics613/people/acatarinaoaraujo",
+      },
+      {
+        name: "JingZhe Feng",
+        img: "https://avatars.githubusercontent.com/u/70238130?s=70&v=4",
+        github:
+          "https://github.com/orgs/Aircraft-Phase-Management-System/people/jingzhef",
+      },
+    ],
   },
   {
     id: 5,
@@ -456,9 +638,46 @@ export const projects = [
     description:
       "The modern legislative tracker app, developed for the Hawaii Department of Education, streamlines the process of staying updated on upcoming hearings and writing testimonies. Through the integration of custom-built scrapers, the app ensures accurate and real-time information retrieval, facilitating efficient engagement with legislative matters.",
     image: project_6,
-    tags: ["React.js", "Node.js", "Express.js", "MongoDB", "Bootstrap", "Cheerio", "Axios", "HTML", "CSS"],
+    tags: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Bootstrap",
+      "Cheerio",
+      "Axios",
+      "HTML",
+      "CSS",
+    ],
     category: "web app",
     github: "https://github.com/HACC2022/Cassiopeia",
+    member: [
+      {
+        name: "Ana Araújo",
+        img: "https://avatars.githubusercontent.com/u/60526884?s=70&v=4",
+        github: "https://github.com/orgs/ics613/people/acatarinaoaraujo",
+      },
+      {
+        name: "Giorgio Tran",
+        img: "https://avatars.githubusercontent.com/u/82340101?s=70&v=4",
+        github: "https://github.com/orgs/ics613/people/giorgio-tran",
+      },
+      {
+        name: "Kayla Hirano",
+        img: "https://avatars.githubusercontent.com/u/69174934?s=70&v=4",
+        github: "https://github.com/orgs/HACC-Cassiopeia/people/khirano7",
+      },
+      {
+        name: "Shin Saito",
+        img: "https://avatars.githubusercontent.com/u/47809066?s=70&v=4",
+        github: "https://github.com/orgs/HACC-2023/people/saitoshi",
+      },
+      {
+        name: "Robert Godfrey",
+        img: "https://avatars.githubusercontent.com/u/102856686?s=70&v=4",
+        github: "https://github.com/orgs/HACC-2023/people/robertgodfrey",
+      },
+    ],
   },
   {
     id: 6,
@@ -467,9 +686,44 @@ export const projects = [
     description:
       "Aeneas Medical is focused on developing a specialized application that assists the H.O.M.E project in effectively managing their medication inventory, supplies, and patient health information. This technology aims to streamline operations and improve accessibility to healthcare services. Hawaii H.O.M.E. Project is a John A. Burns School of Medicine (JABSOM) student-run free clinic staffed by volunteers from the University of Hawaii at Manoa (UHM) and the community. The clinic provides free medical care to the houseless and underserved population of Oahu.",
     image: project_7,
-    tags: ["React.js", "Node.js", "Meteor.js",  "MongoDB", "Semantic UI", "CSS", "HTML"],
+    tags: [
+      "React.js",
+      "Node.js",
+      "Meteor.js",
+      "MongoDB",
+      "Semantic UI",
+      "CSS",
+      "HTML",
+    ],
     category: "web app",
     github: "https://github.com/Runtime-Terrorz/HOME-Project-v2",
+    member: [
+      {
+        name: "Ana Araújo",
+        img: "https://avatars.githubusercontent.com/u/60526884?s=70&v=4",
+        github: "https://github.com/orgs/ics613/people/acatarinaoaraujo",
+      },
+      {
+        name: "Andre Ruiz",
+        img: "https://avatars.githubusercontent.com/u/60155925?s=60&v=4",
+        github: "https://github.com/ruizaj",
+      },
+      {
+        name: "Skyler Kimura",
+        img: "https://avatars.githubusercontent.com/u/49466672?s=60&v=4",
+        github: "https://github.com/skimura1",
+      },
+      {
+        name: "Michael Hui",
+        img: "https://avatars.githubusercontent.com/u/70671003?s=60&v=4",
+        github: "https://github.com/huimichael",
+      },
+      {
+        name: "Micah Imakyure",
+        img: "https://avatars.githubusercontent.com/u/55009261?s=60&v=4",
+        github: "https://github.com/micahima",
+      },
+    ],
   },
   {
     id: 7,
@@ -478,11 +732,18 @@ export const projects = [
     description:
       "Class Critics is a website that allows students from the University of Hawaii at Manoa to share their experiences taking different courses and professors. Students have access to a collection of professors and courses and can evaluate them based on a rating scale of 1-5. The project was conceived in response to the lack of information available to students when it comes to selecting courses and professors at the start of each semester.",
     image: project_8,
-    tags: ["React.js", "Node.js", "Meteor.js",  "MongoDB", "Semantic UI", "CSS", "HTML"],
+    tags: [
+      "React.js",
+      "Node.js",
+      "Meteor.js",
+      "MongoDB",
+      "Semantic UI",
+      "CSS",
+      "HTML",
+    ],
     category: "web app",
     github: "https://github.com/Runtime-Terrorz",
   },
-
 ];
 
 export const TimeLineData = [

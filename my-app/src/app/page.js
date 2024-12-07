@@ -8,15 +8,13 @@ import Footer from './components/Footer';
 import Experience from './components/Experience';
 import Education from './components/Education';
 import ProjectDetails from './components/ProjectDetails';
-// import Blog from './components/Blog/Blog'; // Import Blog if needed
-// import BlogPostPage from './components/Blog/BlogPostPage'; // Import BlogPostPage if needed
 import styled from 'styled-components';
+import Header from './components/Header';
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
   width: 100%;
   overflow-x: hidden;
-  padding-top: 20px;
 `;
 
 const Wrapper = styled.div`
@@ -52,6 +50,7 @@ export default function Page() {
 
   return (
     <Body>
+      <Header />
       <Wrapper2>
         <HeroSection />
       </Wrapper2>

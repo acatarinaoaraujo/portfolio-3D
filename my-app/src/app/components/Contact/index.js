@@ -57,11 +57,11 @@ const Contact = () => {
       <ContactInfoUpperContainer>
         <ContactInfoContainer>
           <Icon src="https://imaginethatcreative.net/blog/wp-content/uploads/2023/06/2250206.png" alt="Email icon" />
-          <p><ContactLink href="mailto:manaswini.vadrevu@gmail.com">manaswini.vadrevu@gmail.com</ContactLink></p>
+          <p><ContactLink href="mailto:ancoaraujo@gmail.com">ancoaraujo@gmail.com</ContactLink></p>
         </ContactInfoContainer>
         <ContactInfoContainer>
           <Icon src="https://cdn-icons-png.flaticon.com/512/61/61109.png" alt="LinkedIn icon" />
-          <p><ContactLink href="https://www.linkedin.com/in/lalitha-vadrevu">LinkedIn</ContactLink></p>
+          <p><ContactLink href="https://www.linkedin.com/in/acatarinaoaraujo/">LinkedIn</ContactLink></p>
         </ContactInfoContainer>
       </ContactInfoUpperContainer>
     </Section>
