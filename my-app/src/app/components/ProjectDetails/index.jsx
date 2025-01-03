@@ -20,7 +20,6 @@ const Container = styled.div`
 const Wrapper = styled.div`
   max-width: 1100px;
   width: 100%;
-  border-radius: 16px;
   margin: 50px 12px;
   height: min-content;
   background-color: ${({ theme }) => theme.card};
@@ -38,6 +37,28 @@ const Title = styled.div`
   margin: 8px 6px 0px 6px;
   @media only screen and (max-width: 600px) {
     font-size: 24px;
+    margin: 6px 6px 0px 6px;
+  }
+`;
+
+const SubTitle = styled.div`
+  font-size: 20px;
+  font-weight: 500;
+  color: ${({ theme }) => theme.text_primary};
+  margin: 18px 6px 14px 6px;
+  @media only screen and (max-width: 600px) {
+    font-size: 20px;
+    margin: 6px 6px 0px 6px;
+  }
+`;
+
+const SubSubTitle = styled.div`
+  font-size: 14px;
+  font-weight: 400;
+  color: ${({ theme }) => theme.text_primary};
+  margin: 8px 6px 0px 6px;
+  @media only screen and (max-width: 600px) {
+    font-size: 16px;
     margin: 6px 6px 0px 6px;
   }
 `;
@@ -66,16 +87,15 @@ const Desc = styled.div`
 const Image = styled.img`
   width: 100%;
   object-fit: cover;
-  border-radius: 12px;
   margin-top: 30px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
 `;
 
 const Label = styled.div`
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 500;
   color: ${({ theme }) => theme.text_primary};
-  margin: 8px 6px;
+  margin: 4px 2px;
   @media only screen and (max-width: 600px) {
     font-size: 16px;
     margin: 8px 6px;
@@ -97,50 +117,9 @@ const Tag = styled.div`
   color: ${({ theme }) => theme.primary};
   margin: 4px;
   padding: 4px 8px;
-  border-radius: 8px;
   background-color: ${({ theme }) => theme.primary + 20};
   @media only screen and (max-width: 600px) {
     font-size: 12px;
-  }
-`;
-
-const Members = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  flex-wrap: wrap;
-  margin: 12px 6px;
-  @media only screen and (max-width: 600px) {
-    margin: 4px 6px;
-  }
-`;
-
-const Member = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 12px;
-`;
-
-const MemberImage = styled.img`
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 4px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
-  @media only screen and (max-width: 600px) {
-    width: 32px;
-    height: 32px;
-  }
-`;
-
-const MemberName = styled.div`
-  font-size: 16px;
-  font-weight: 500;
-  width: 200px;
-  color: ${({ theme }) => theme.text_primary};
-  @media only screen and (max-width: 600px) {
-    font-size: 14px;
   }
 `;
 
@@ -158,7 +137,6 @@ const Button = styled.a`
   font-weight: 600;
   color: ${({ theme }) => theme.text_primary};
   padding: 12px 16px;
-  border-radius: 8px;
   background-color: ${({ theme }) => theme.primary};
   ${({ dull, theme }) =>
     dull &&
@@ -182,12 +160,12 @@ const Button = styled.a`
 
 const MemberGrid = ({ members }) => (
   <Box>
-    <Typography variant="h6" component="div" gutterBottom>
+    <SubTitle variant="h6" component="div" gutterBottom>
       Members
-    </Typography>
-    <Grid container spacing={3}>
+    </SubTitle>
+    <Grid container spacing={2}>
       {members.map((member, index) => (
-        <Grid item xs={12} sm={6} md={4} lg={2} key={index}>
+        <Grid item xs={12} sm={2} key={index}>
           <Box
             display="flex"
             flexDirection="column"
@@ -202,12 +180,10 @@ const MemberGrid = ({ members }) => (
                 height: "70px",
                 borderRadius: "50%",
                 objectFit: "cover",
-                marginBottom: "8px",
+                marginBottom: "10px",
               }}
             />
-            <Typography variant="body1" component="div">
-              {member.name}
-            </Typography>
+            <SubSubTitle>{member.name}</SubSubTitle>
             <a
               href={member.github}
               target="_blank"
@@ -253,14 +229,22 @@ const index = ({ openModal, setOpenModal }) => {
             ))}
           </Tags>
 
-            {/* <Image
-              src={project?.image}
-              alt={project.title}
-              width={306}
-              height={180}
-            /> */}
-
           <Desc>{project?.description}</Desc>
+
+          {project.images && (
+            <Grid container spacing={4}>
+              {project.images.map((image, index) => (
+                <Grid item xs={12} md={4} key={index}>
+                  <Image
+                    src={`../../../../images/${image.url}`}
+                    alt={image.title}
+                  />
+                  <Label>{image.title}</Label>
+                </Grid>
+              ))}
+            </Grid>
+          )}
+
           {project?.member && <MemberGrid members={project.member} />}
           <ButtonGroup>
             {project?.github && project.github.trim() && (

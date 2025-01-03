@@ -52,6 +52,28 @@ const Title = styled.div`
   }
 `;
 
+const SubTitle = styled.div`
+  font-size: 20px;
+  font-weight: 500;
+  color: ${({ theme }) => theme.text_primary};
+  margin: 18px 6px 14px 6px;
+  @media only screen and (max-width: 600px) {
+    font-size: 20px;
+    margin: 6px 6px 0px 6px;
+  }
+`;
+
+const SubSubTitle = styled.div`
+  font-size: 14px;
+  font-weight: 400;
+  color: ${({ theme }) => theme.text_primary};
+  margin: 8px 6px 0px 6px;
+  @media only screen and (max-width: 600px) {
+    font-size: 16px;
+    margin: 6px 6px 0px 6px;
+  }
+`;
+
 const Date = styled.div`
   font-size: 16px;
   margin: 2px 6px;
@@ -66,7 +88,8 @@ const Desc = styled.div`
   font-size: 16px;
   font-weight: 400;
   color: ${({ theme }) => theme.text_primary};
-  margin: 8px 6px;
+  margin: 6px 8px 30px 8px;
+
   @media only screen and (max-width: 600px) {
     font-size: 14px;
     margin: 6px 6px;
@@ -75,7 +98,7 @@ const Desc = styled.div`
 
 const Image = styled.img`
   width: 100%;
-  object-fit: cover;  // Ensures the image covers the area without distortion
+  object-fit: cover; // Ensures the image covers the area without distortion
   margin-top: 10px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
 `;
@@ -119,13 +142,14 @@ const ButtonGroup = styled.div`
   gap: 12px;
 `;
 
-const Button = styled.a`
+const ButtonBar = styled.a`
   width: 100%;
+  display: flex;
   text-align: center;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 400;
   color: ${({ theme }) => theme.text_primary};
-  padding: 12px 16px;
+  padding: 12px 12px;
   background-color: ${({ theme }) => theme.primary};
   ${({ dull, theme }) =>
     dull &&
@@ -147,11 +171,40 @@ const Button = styled.a`
   }
 `;
 
+const Button = styled.a`
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: ${({ theme }) => theme.text_primary};
+  padding: 12px 16px;
+  border-radius: 8px;
+  background-color: ${({ theme }) => theme.primary};
+  ${({ dull, theme }) =>
+    dull &&
+    `
+        background-color: ${theme.bgLight};
+        color: ${theme.text_secondary};
+        &:hover {
+            background-color: ${({ theme }) => theme.bg + 99} !important;
+        }
+    `}
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.5s ease;
+  &:hover {
+    background-color: ${({ theme }) => theme.primary + 99} !important;
+  }
+  @media only screen and (max-width: 600px) {
+    font-size: 12px;
+  }
+`;
+
 const MemberGrid = ({ members }) => (
   <Box>
-    <Typography variant="h6" component="div" gutterBottom>
+    <SubTitle variant="h6" component="div" gutterBottom>
       Members
-    </Typography>
+    </SubTitle>
     <Grid container spacing={2}>
       {members.map((member, index) => (
         <Grid item xs={12} sm={6} md={4} lg={2} key={index}>
@@ -172,9 +225,7 @@ const MemberGrid = ({ members }) => (
                 marginBottom: "10px",
               }}
             />
-            <Typography variant="body1" component="div">
-              {member.name}
-            </Typography>
+            <SubSubTitle>{member.name}</SubSubTitle>
             <a
               href={member.github}
               target="_blank"
@@ -204,22 +255,21 @@ const Navbar = ({ project }) => {
   return (
     <Grid container justifyContent="space-between" alignItems="center" mb={2}>
       <Grid item>
-        <Button href={`/projects/${prevProjectId}`} target="new">
-          <ArrowBack />
-          Prev
-        </Button>
+        <ButtonBar dull href={`/projects/${prevProjectId}`} target="new">
+          <ArrowBack /> Prev
+        </ButtonBar>
       </Grid>
-      {/*
-      <Grid item>
-        <Button href={"/"} target="new">
-          Return to Home
-        </Button>
-      </Grid> */}
 
       <Grid item>
-        <Button href={`/projects/${nextProjectId}`} target="new">
-          Next <ArrowForward />
-        </Button>
+        <ButtonBar dull href={"/"} target="new">
+          <Home />
+        </ButtonBar>
+      </Grid>
+
+      <Grid item>
+        <ButtonBar dull href={`/projects/${nextProjectId}`} target="new">
+         Next <ArrowForward />
+        </ButtonBar>
       </Grid>
     </Grid>
   );

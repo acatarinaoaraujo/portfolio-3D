@@ -625,10 +625,7 @@ export const projects = [
         url: "debris-tracker/mobile.png",
         title: "Fig. 9: Mobile",
       },
-      {
-        url: "debris-tracker/report.png",
-        title: "Fig. 10: Report",
-      },
+
     ],
   },
   {
