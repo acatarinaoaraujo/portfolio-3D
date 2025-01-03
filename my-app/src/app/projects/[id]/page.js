@@ -10,9 +10,6 @@ import {
   Home,
 } from "@mui/icons-material";
 import { Box, Typography, Grid } from "@mui/material";
-import image1 from "../../../../public/images/aeneas/aeneas-additem.png";
-
-console.log(image1);
 
 const Container = styled.div`
   width: 100%;
@@ -178,7 +175,6 @@ const Button = styled.a`
   font-weight: 600;
   color: ${({ theme }) => theme.text_primary};
   padding: 12px 16px;
-  border-radius: 8px;
   background-color: ${({ theme }) => theme.primary};
   ${({ dull, theme }) =>
     dull &&
@@ -186,14 +182,14 @@ const Button = styled.a`
         background-color: ${theme.bgLight};
         color: ${theme.text_secondary};
         &:hover {
-            background-color: ${({ theme }) => theme.bg + 99} !important;
+            background-color: ${({ theme }) => theme.bg + 99} ;
         }
     `}
   cursor: pointer;
   text-decoration: none;
   transition: all 0.5s ease;
   &:hover {
-    background-color: ${({ theme }) => theme.primary + 99} !important;
+    background-color: ${({ theme }) => theme.primary + 99};
   }
   @media only screen and (max-width: 600px) {
     font-size: 12px;

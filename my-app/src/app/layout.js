@@ -16,7 +16,7 @@ export default function Layout({ children }) {
     return (
         <html lang="en">
             <body>
-                <ThemeProvider theme={lightMode ? darkTheme : lightTheme}>
+                <ThemeProvider theme={lightMode ? lightTheme: darkTheme}>
                     <main>{children}</main>
                 </ThemeProvider>
             </body>

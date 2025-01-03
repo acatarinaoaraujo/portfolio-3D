@@ -12,14 +12,16 @@ export const darkTheme = {
 }
 
 export const lightTheme = {
-    bg: "#FFFFFF",          // Completely white background
-    bgLight: "#E6E6F0",     // Light lavender with a hint of blue
-    primary: "#5F6F9F",     // Black for primary elements
-    text_primary: "#000000", // Black for primary text
-    text_secondary: "#4A4A4A", // Dark grey for secondary text
-    card: "#F2F2F9",        // Light lavender for cards
-    card_light: "#E6D8EB",  // Light lavender for card backgrounds
-    button: "#000000",      // Black for buttons
-    white: "#FFFFFF",       // White
-    black: "#000000",       // Black
-};
+    bg: "#E8E8E8",            // White for the main background
+    bgLight: "#BFBFBF",       // Soft grey for secondary background elements
+    primary: "#661566",       // Deep plum for primary elements
+    text_primary: "#564256",  // Black for primary text
+    text_secondary: "#8d8992", // Muted grey for secondary text
+    card: "#E8E8E8",          // White for cards to keep them clean and consistent
+    card_light: "#BFBFBF",    // Soft grey for card backgrounds
+    button: "#FC814A",        // Vibrant orange for call-to-action buttons
+    white: "#E8E8E8",         // White for contrast
+    black: "#000000",         // Black for text and essential elements
+  };
+
+
