@@ -1,109 +1,285 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';  // Change this line
-import { Box, Grid, Typography } from '@mui/material';
-import { GitHub, LaptopMac } from '@mui/icons-material';
-import { projects } from '../../data/constants'; // Adjust the import according to your project structure
+"use client";
+import styled from "styled-components";
+import { useParams } from "next/navigation";
+import { projects } from "../../data/constants"; // Adjust path if needed
+import {
+  GitHub,
+  LaptopMac,
+  ArrowBack,
+  ArrowForward,
+  Home,
+} from "@mui/icons-material";
+import { Box, Typography, Grid } from "@mui/material";
+
+const Container = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000000a7;
+  display: flex;
+  align-items: top;
+  justify-content: center;
+  overflow-y: scroll;
+  transition: all 0.5s ease;
+`;
+
+const Wrapper = styled.div`
+  max-width: 1500px;
+  width: 100%;
+  margin: 20px 20px;
+  height: min-content;
+  background-color: ${({ theme }) => theme.card};
+  color: ${({ theme }) => theme.text_primary};
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+`;
+
+const Title = styled.div`
+  font-size: 28px;
+  font-weight: 600;
+  color: ${({ theme }) => theme.text_primary};
+  margin: 8px 6px 0px 6px;
+  @media only screen and (max-width: 600px) {
+    font-size: 24px;
+    margin: 6px 6px 0px 6px;
+  }
+`;
+
+const Date = styled.div`
+  font-size: 16px;
+  margin: 2px 6px;
+  font-weight: 400;
+  color: ${({ theme }) => theme.text_secondary};
+  @media only screen and (max-width: 768px) {
+    font-size: 12px;
+  }
+`;
+
+const Desc = styled.div`
+  font-size: 16px;
+  font-weight: 400;
+  color: ${({ theme }) => theme.text_primary};
+  margin: 8px 6px;
+  @media only screen and (max-width: 600px) {
+    font-size: 14px;
+    margin: 6px 6px;
+  }
+`;
+
+const Image = styled.img`
+  width: 100%;
+  object-fit: cover;
+  margin-top: 30px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+`;
+
+const Label = styled.div`
+  font-size: 20px;
+  font-weight: 600;
+  color: ${({ theme }) => theme.text_primary};
+  margin: 8px 6px;
+  @media only screen and (max-width: 600px) {
+    font-size: 16px;
+    margin: 8px 6px;
+  }
+`;
+
+const Tags = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  margin: 8px 0px;
+  @media only screen and (max-width: 600px) {
+    margin: 4px 0px;
+  }
+`;
+
+const Tag = styled.div`
+  font-size: 14px;
+  font-weight: 400;
+  color: ${({ theme }) => theme.primary};
+  margin: 4px;
+  padding: 4px 8px;
+  background-color: ${({ theme }) => theme.primary + 20};
+  @media only screen and (max-width: 600px) {
+    font-size: 12px;
+  }
+`;
+
+const ButtonGroup = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  margin: 12px 0px;
+  gap: 12px;
+`;
+
+const Button = styled.a`
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: ${({ theme }) => theme.text_primary};
+  padding: 12px 16px;
+  background-color: ${({ theme }) => theme.primary};
+  ${({ dull, theme }) =>
+    dull &&
+    `
+        background-color: ${theme.bgLight};
+        color: ${theme.text_secondary};
+        &:hover {
+            background-color: ${theme.bg + 99} !important;
+        }
+    `}
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.5s ease;
+  &:hover {
+    background-color: ${({ theme }) => theme.primary + 99} !important;
+  }
+  @media only screen and (max-width: 600px) {
+    font-size: 12px;
+  }
+`;
+
+const MemberGrid = ({ members }) => (
+  <Box>
+    <Typography variant="h6" component="div" gutterBottom>
+      Members
+    </Typography>
+    <Grid container spacing={2}>
+      {members.map((member, index) => (
+        <Grid item xs={12} sm={6} md={4} lg={2} key={index}>
+          <Box
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+            textAlign="center"
+          >
+            <img
+              src={member.img}
+              alt={member.name}
+              style={{
+                width: "70px",
+                height: "70px",
+                borderRadius: "50%",
+                objectFit: "cover",
+                marginBottom: "10px",
+              }}
+            />
+            <Typography variant="body1" component="div">
+              {member.name}
+            </Typography>
+            <a
+              href={member.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                textDecoration: "none",
+                color: "inherit",
+                marginTop: "4px",
+              }}
+            >
+              <GitHub />
+            </a>
+          </Box>
+        </Grid>
+      ))}
+    </Grid>
+  </Box>
+);
+
+const Navbar = ({ project }) => {
+  const currentId = parseInt(project.id);
+  const totalProjects = 10;
+
+  const prevProjectId = currentId === 0 ? totalProjects : currentId - 1;
+  const nextProjectId = currentId === totalProjects ? 0 : currentId + 1;
+
+  return (
+    <Grid container justifyContent="space-between" alignItems="center" mb={2}>
+      <Grid item>
+        <Button href={`/projects/${prevProjectId}`} target="new">
+          <ArrowBack />
+          Prev
+        </Button>
+      </Grid>
+{/*
+      <Grid item>
+        <Button href={"/"} target="new">
+          Return to Home
+        </Button>
+      </Grid> */}
+
+      <Grid item>
+        <Button href={`/projects/${nextProjectId}`} target="new">
+          Next <ArrowForward />
+        </Button>
+      </Grid>
+    </Grid>
+  );
+};
 
 const Page = () => {
-  const router = useRouter();
-  const [project, setProject] = useState(null);
-
-  useEffect(() => {
-    console.log(router.isReady);
-    if (router.isReady) {
-      const { id } = router.query;
-      console.log(id);
-      const foundProject = projects.find((project) => project.id === parseInt(id));
-      setProject(foundProject);
-    }
-  }, [router.isReady, router.query]);
+  const { id } = useParams();
+  const project = projects.find((project) => project.id === parseInt(id));
 
   if (!project) return <Typography>Project not found</Typography>;
 
   return (
-    <Box>
-      <Typography variant="h3" component="div" gutterBottom>
-        {project.title}
-      </Typography>
-      <Typography variant="body1" color="textSecondary" gutterBottom>
-        {project.date}
-      </Typography>
-      <Typography variant="body2" color="textPrimary" gutterBottom>
-        {project.description}
-      </Typography>
+    <Container>
+      <Wrapper>
+        <Navbar project={project} />
 
-      <Grid container spacing={2}>
-        {project.images.map((image, index) => (
-          <Grid item xs={12} md={6} key={index}>
-            <img src={image.url} alt={image.title} style={{ width: '100%', borderRadius: '8px' }} />
-            <Typography variant="caption" display="block" color="textSecondary" align="center">
-              {image.title}
-            </Typography>
-          </Grid>
-        ))}
-      </Grid>
+        <Title>{project?.title}</Title>
+        <Date>{project.date}</Date>
+        <Tags>
+          {project?.tags.map((tag, index) => (
+            <Tag key={index}>{tag}</Tag>
+          ))}
+        </Tags>
 
-      <Typography variant="h6" component="div" gutterBottom>
-        Tags
-      </Typography>
-      <Box display="flex" flexWrap="wrap">
-        {project.tags.map((tag, index) => (
-          <Box
-            key={index}
-            sx={{
-              bgcolor: 'primary.main',
-              borderRadius: '8px',
-              margin: '4px',
-              padding: '4px 8px',
-              color: 'white',
-            }}
-          >
-            {tag}
-          </Box>
-        ))}
-      </Box>
+        {/* {project.images && (
+           <Grid container spacing={2}>
+             {project.images.map((image, index) => (
+               <Grid item xs={12} md={6} key={index}>
+                 <img
+                   src={image.url}
+                   alt={image.title}
+                   style={{ width: "100%", borderRadius: "8px" }}
+                 />
+                 <Typography
+                   variant="caption"
+                   display="block"
+                   color="textSecondary"
+                   align="center"
+                 >
+                   {image.title}
+                 </Typography>
+               </Grid>
+             ))}
+           </Grid>
+         )} */}
 
-      <Typography variant="h6" component="div" gutterBottom>
-        Team Members
-      </Typography>
-      <Grid container spacing={2}>
-        {project.member.map((member, index) => (
-          <Grid item xs={12} sm={6} md={3} key={index}>
-            <Box textAlign="center">
-              <img
-                src={member.img}
-                alt={member.name}
-                style={{
-                  width: '70px',
-                  height: '70px',
-                  borderRadius: '50%',
-                  objectFit: 'cover',
-                  marginBottom: '8px',
-                }}
-              />
-              <Typography variant="body1">{member.name}</Typography>
-              <a href={member.github} target="_blank" rel="noopener noreferrer">
-                <GitHub />
-              </a>
-            </Box>
-          </Grid>
-        ))}
-      </Grid>
+        <Desc>{project?.description}</Desc>
+        {project?.member && <MemberGrid members={project.member} />}
 
-      <Box mt={4} display="flex" justifyContent="flex-end" gap={2}>
-        {project.github && (
-          <a href={project.github} target="_blank" rel="noopener noreferrer">
-            <LaptopMac />
-          </a>
-        )}
-        {project.webapp && (
-          <a href={project.webapp} target="_blank" rel="noopener noreferrer">
-            <LaptopMac />
-          </a>
-        )}
-      </Box>
-    </Box>
+        <ButtonGroup>
+          {project?.github && project.github.trim() && (
+            <Button dull href={project.github} target="new">
+              <GitHub />
+            </Button>
+          )}
+          {project?.webapp && project.webapp.trim() && (
+            <Button dull href={project.webapp} target="new">
+              <LaptopMac />
+            </Button>
+          )}
+        </ButtonGroup>
+      </Wrapper>
+    </Container>
   );
 };
 
