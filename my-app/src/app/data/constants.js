@@ -375,6 +375,7 @@ export const projects = [
     ],
     category: "ml",
     webapp: thesis,
+    images: []
   },
   {
     id: 0,
@@ -421,6 +422,33 @@ export const projects = [
         github: "https://github.com/orgs/ics613/people/timothyhuo1",
       },
     ],
+
+    images: [
+      {
+        url: "receipt-tracker/expenses.png",
+        title: "Fig. 1: Expenses",
+      },
+      {
+        url: "receipt-tracker/items.png",
+        title: "Fig. 2: Items",
+      },
+      {
+        url: "receipt-tracker/receipts.png",
+        title: "Fig. 3: Receipts",
+      },
+      {
+        url: "receipt-tracker/scan.png",
+        title: "Fig. 4: Scan",
+      },
+      {
+        url: "receipt-tracker/stores.png",
+        title: "Fig. 5: Stores",
+      },
+      {
+        url: "receipt-tracker/welcome.png",
+        title: "Fig. 6: Welcome",
+      },
+    ],
   },
   {
     id: 8,
@@ -464,6 +492,7 @@ export const projects = [
         github: "https://github.com/shehan",
       },
     ],
+    images: [],
   },
   {
     id: 9,
@@ -508,6 +537,7 @@ export const projects = [
         github: "https://github.com/shehan",
       },
     ],
+    images: [],
   },
   {
     id: 1,
@@ -558,6 +588,48 @@ export const projects = [
         github: "https://github.com/orgs/HACC-2023/people/robertgodfrey",
       },
     ],
+    images: [
+      {
+        url: "debris-tracker/chatbox.png",
+        title: "Fig. 1: Chatbox",
+      },
+      {
+        url: "debris-tracker/discussions.png",
+        title: "Fig. 2: Discussions",
+      },
+      {
+        url: "debris-tracker/event.png",
+        title: "Fig. 3: Event",
+      },
+      {
+        url: "debris-tracker/events.png",
+        title: "Fig. 4: Events",
+      },
+      {
+        url: "debris-tracker/graphs.png",
+        title: "Fig. 5: Graphs",
+      },
+      {
+        url: "debris-tracker/home.png",
+        title: "Fig. 6: Home",
+      },
+      {
+        url: "debris-tracker/landing.png",
+        title: "Fig. 7: Landing",
+      },
+      {
+        url: "debris-tracker/MAKAI_Poster.png",
+        title: "Fig. 8: MAKAI Poster",
+      },
+      {
+        url: "debris-tracker/mobile.png",
+        title: "Fig. 9: Mobile",
+      },
+      {
+        url: "debris-tracker/report.png",
+        title: "Fig. 10: Report",
+      },
+    ],
   },
   {
     id: 2,
@@ -578,6 +650,24 @@ export const projects = [
     category: "ml",
     github: "https://github.com/acatarinaoaraujo/coffee-leaf-disease-detector",
     webapp: "https://devpost.com/software/translate-me-u9pv13",
+    images: [
+      {
+        url: "coffee/coffee-leaves-transformed.png",
+        title: "Fig. 1: Transformed Coffee Leaves",
+      },
+      {
+        url: "coffee/coffee-leaves.png",
+        title: "Fig. 2: Coffee Leaves",
+      },
+      {
+        url: "coffee/loss.png",
+        title: "Fig. 3: Loss",
+      },
+      {
+        url: "coffee/resnet_arch.png",
+        title: "Fig. 4: ResNet Architecture",
+      },
+    ],
   },
   {
     id: 3,
@@ -598,6 +688,41 @@ export const projects = [
     ],
     category: "ml",
     github: "https://github.com/acatarinaoaraujo/ai-sentiment-analysis",
+    images: [
+      {
+        url: "sentiment-analysis/ai-methodology.png",
+        title: "Fig. 1: Methodology",
+      },
+      {
+        url: "sentiment-analysis/linear-matrix.png",
+        title: "Fig. 2: Linear Matrix",
+      },
+
+      {
+        url: "sentiment-analysis/lstm-matrix.png",
+        title: "Fig. 3: LSTM Matrix",
+      },
+      {
+        url: "sentiment-analysis/neg_worldcloud.png",
+        title: "Fig. 4: Negative Word Cloud",
+      },
+      {
+        url: "sentiment-analysis/neu_worldcloud.png",
+        title: "Fig. 5: Neutral Word Cloud",
+      },
+      {
+        url: "sentiment-analysis/pos-worldcloud.png",
+        title: "Fig. 6: Positive Word Cloud",
+      },
+      {
+        url: "sentiment-analysis/over-years.png",
+        title: "Fig. 7: Sentiment Over Years",
+      },
+      {
+        url: "sentiment-analysis/lstm-arch.png",
+        title: "Fig. 8: LSTM Architecture",
+      },
+    ],
   },
   {
     id: 4,
@@ -628,6 +753,32 @@ export const projects = [
         img: "https://avatars.githubusercontent.com/u/70238130?s=70&v=4",
         github:
           "https://github.com/orgs/Aircraft-Phase-Management-System/people/jingzhef",
+      },
+    ],
+    images: [
+      {
+        url: "apms/apms-cover.png",
+        title: "Fig. 1: Cover Page",
+      },
+      {
+        url: "apms/apms-calendar.png",
+        title: "Fig. 2: Calendar",
+      },
+      {
+        url: "apms/apms-add-new-event-report.png",
+        title: "Fig. 3: Add New Event Report",
+      },
+      {
+        url: "apms/apms-add-timeouts.png",
+        title: "Fig. 4: Add Timeouts",
+      },
+      {
+        url: "apms/apms-list-timeouts.png",
+        title: "Fig. 5: List Timeouts",
+      },
+      {
+        url: "apms/apms-poster.png",
+        title: "Fig. 6: Poster",
       },
     ],
   },
@@ -678,6 +829,24 @@ export const projects = [
         github: "https://github.com/orgs/HACC-2023/people/robertgodfrey",
       },
     ],
+    images: [
+      {
+        url: "doelt/doelt-landing.png",
+        title: "Fig. 1: Landing Page",
+      },
+      {
+        url: "doelt/doelt-all-bills.png",
+        title: "Fig. 2: All Bills Page",
+      },
+      {
+        url: "doelt/doelt-bill-details.png",
+        title: "Fig. 3: Bill Details Page",
+      },
+      {
+        url: "doelt/doelt-edit-testimony.png",
+        title: "Fig. 4: Edit Testimony Page",
+      },
+    ],
   },
   {
     id: 6,
@@ -724,6 +893,28 @@ export const projects = [
         github: "https://github.com/micahima",
       },
     ],
+    images: [
+      {
+        url: "aeneas/aeneas-signin.png",
+        title: "Fig. 1: Sign In Page",
+      },
+      {
+        url: "aeneas/aeneas-inventory.png",
+        title: "Fig. 2: Inventory Page",
+      },
+      {
+        url: "aeneas/aeneas-additem.png",
+        title: "Fig. 3: Add Item Page",
+      },
+      {
+        url: "aeneas/aeneas-notifications.png",
+        title: "Fig. 4: Notifications Page",
+      },
+      {
+        url: "aeneas/aeneas-csv-report.png",
+        title: "Fig. 5: CSV Report Page",
+      },
+    ],
   },
   {
     id: 7,
@@ -743,13 +934,23 @@ export const projects = [
     ],
     category: "web app",
     github: "https://github.com/Runtime-Terrorz",
+    images: [
+      {
+        url: "class-critics/homepage.png",
+        title: "Fig. 1: Home Page",
+      },
+      {
+        url: "class-critics/new-course.png",
+        title: "Fig. 2: Course Page",
+      },
+      {
+        url: "class-critics/professors.png",
+        title: "Fig. 3: Professor Page",
+      },
+      {
+        url: "class-critics/review.png",
+        title: "Fig. 4: Review Page",
+      },
+    ],
   },
-];
-
-export const TimeLineData = [
-  { year: 2017, text: "Started my journey" },
-  { year: 2018, text: "Worked as a freelance developer" },
-  { year: 2019, text: "Founded JavaScript Mastery" },
-  { year: 2020, text: "Shared my projects with the world" },
-  { year: 2021, text: "Started my own platform" },
 ];

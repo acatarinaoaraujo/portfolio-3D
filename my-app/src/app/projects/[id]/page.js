@@ -10,6 +10,9 @@ import {
   Home,
 } from "@mui/icons-material";
 import { Box, Typography, Grid } from "@mui/material";
+import image1 from "../../../../public/images/aeneas/aeneas-additem.png";
+
+console.log(image1);
 
 const Container = styled.div`
   width: 100%;
@@ -72,16 +75,16 @@ const Desc = styled.div`
 
 const Image = styled.img`
   width: 100%;
-  object-fit: cover;
-  margin-top: 30px;
+  object-fit: cover;  // Ensures the image covers the area without distortion
+  margin-top: 10px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
 `;
 
 const Label = styled.div`
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 500;
   color: ${({ theme }) => theme.text_primary};
-  margin: 8px 6px;
+  margin: 0px 10px;
   @media only screen and (max-width: 600px) {
     font-size: 16px;
     margin: 8px 6px;
@@ -206,7 +209,7 @@ const Navbar = ({ project }) => {
           Prev
         </Button>
       </Grid>
-{/*
+      {/*
       <Grid item>
         <Button href={"/"} target="new">
           Return to Home
@@ -241,29 +244,22 @@ const Page = () => {
           ))}
         </Tags>
 
-        {/* {project.images && (
-           <Grid container spacing={2}>
-             {project.images.map((image, index) => (
-               <Grid item xs={12} md={6} key={index}>
-                 <img
-                   src={image.url}
-                   alt={image.title}
-                   style={{ width: "100%", borderRadius: "8px" }}
-                 />
-                 <Typography
-                   variant="caption"
-                   display="block"
-                   color="textSecondary"
-                   align="center"
-                 >
-                   {image.title}
-                 </Typography>
-               </Grid>
-             ))}
-           </Grid>
-         )} */}
-
         <Desc>{project?.description}</Desc>
+
+        {project.images && (
+          <Grid container spacing={4}>
+            {project.images.map((image, index) => (
+              <Grid item xs={12} md={4} key={index}>
+                <Image
+                  src={`../../../../images/${image.url}`}
+                  alt={image.title}
+                />
+                <Label>{image.title}</Label>
+              </Grid>
+            ))}
+          </Grid>
+        )}
+
         {project?.member && <MemberGrid members={project.member} />}
 
         <ButtonGroup>
