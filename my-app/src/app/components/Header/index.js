@@ -26,7 +26,7 @@ const Nav = styled.nav`
   margin-top: -1rem;
   margin-bottom: -1rem;
   flex-direction: row;
-  gap: 2rem;
+  gap: 5rem;
   justify-content: center;
   @media (max-width: 768px) {
     flex-wrap: wrap;
@@ -61,7 +61,7 @@ function Header() {
           <NavLink href="#projects">Projects</NavLink>
           <NavLink href="#education">Education</NavLink>
           <NavLink href="#publications">Publications</NavLink>
-          <NavLink href="#awards">Awards & Leadership</NavLink>
+          <NavLink href="#awards">Awards</NavLink>
         </Nav>
       </FooterWrapper>
     </FooterContainer>

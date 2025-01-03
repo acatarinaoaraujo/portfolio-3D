@@ -5,6 +5,9 @@ import TimelineItem from "@mui/lab/TimelineItem";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
 import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
+import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
+import { MenuBookTwoTone } from "@mui/icons-material";
+
 import TimelineDot from "@mui/lab/TimelineDot";
 import { education, experiences } from "../../data/constants";
 import EducationCard from "../Cards/EducationCard";
@@ -49,6 +52,16 @@ const Title = styled.div`
   }
 `;
 
+const SubTitle = styled.div`
+  font-size: 20px;
+  font-weight: 500;
+  color: ${({ theme }) => theme.text_primary};
+  @media (max-width: 768px) {
+    margin-top: 12px;
+    font-size: 24px;
+  }
+`;
+
 const Desc = styled.div`
   font-size: 18px;
   text-align: center;
@@ -62,11 +75,11 @@ const Desc = styled.div`
 
 const TimelineSection = styled.div`
   width: 100%;
+  display: flex;
   max-width: 1000px;
   margin-top: 10px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   gap: 12px;
   @media (max-width: 660px) {
@@ -82,22 +95,37 @@ const index = () => {
         <Desc>
           My academic journey has been a transformative experience, mixing
           curiosity and dedication to mastering the world of computer science.
-          Here&apos;s a glimpse into my educational path and the knowledge I&apos;ve
-          gained along the way:
+          Here&apos;s a glimpse into my educational path and the knowledge
+          I&apos;ve gained along the way:
         </Desc>
         <TimelineSection>
-          <Timeline>
+          <Timeline position="alternate">
             {education.map((education, index) => (
               <TimelineItem>
+                <TimelineOppositeContent
+                  sx={{ m: "auto 0" }}
+                  align="right"
+                  variant="body2"
+                  color="text.secondary"
+                >
+                  <SubTitle>
+                    {education.date.split(" ")[1]} -{" "}
+                    {education.date.split(" ")[4]}
+                  </SubTitle>
+                </TimelineOppositeContent>
+
+                <TimelineSeparator>
+                  <TimelineConnector style={{ background: "#B7CB99" }}  />
+                  <TimelineDot sx={{ bgcolor: '#431D32' }} >
+                    <MenuBookTwoTone  />
+                  </TimelineDot>
+                  <TimelineConnector style={{ background: "#B7CB99" }} />
+                </TimelineSeparator>
+
                 <TimelineContent sx={{ py: "12px", px: 2 }}>
                   <EducationCard education={education} />
                 </TimelineContent>
-                <TimelineSeparator>
-                  <TimelineDot variant="outlined" color="secondary" />
-                  {index !== experiences.length && (
-                    <TimelineConnector style={{ background: "#854CE6" }} />
-                  )}
-                </TimelineSeparator>
+
               </TimelineItem>
             ))}
           </Timeline>

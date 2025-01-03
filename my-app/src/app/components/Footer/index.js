@@ -88,20 +88,17 @@ function Footer() {
   return (
     <FooterContainer>
       <FooterWrapper>
-        <Logo>Ana Oliveira Araújo</Logo>
         <Nav>
           <NavLink href="#about">About</NavLink>
           <NavLink href="#skills">Skills</NavLink>
           <NavLink href="#experience">Experience</NavLink>
           <NavLink href="#projects">Projects</NavLink>
           <NavLink href="#education">Education</NavLink>
-          <NavLink href="/blog">Blogs</NavLink>
+          <NavLink href="#publications">Publications</NavLink>
         </Nav>
-        <SocialMediaIcons>
-          <SocialMediaIcon href={Bio.linkedin} target="display"><LinkedInIcon /></SocialMediaIcon>
-        </SocialMediaIcons>
+
         <Copyright>
-          &copy; 2024 Ana Araújo. All rights reserved.
+          &copy; 2025 Ana Araújo. All rights reserved.
         </Copyright>
 
       </FooterWrapper>

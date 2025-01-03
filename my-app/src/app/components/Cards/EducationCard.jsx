@@ -7,7 +7,6 @@ const Document = styled.img`
     height: 70px;
     width: fit-content;
     background-color: #000;
-    border-radius: 10px;
     &:hover{
         cursor: pointer;
         opacity: 0.8;
@@ -35,7 +34,7 @@ text-overflow: ellipsis;
 `
 
 const Card = styled.div`
-    width: 650px;
+    width: 400px;
     border-radius: 10px;
     box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
     padding: 12px 16px;
@@ -87,7 +86,7 @@ const Image = styled.img`
 const Body = styled.div`
     width: 100%;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
 `
 
 

@@ -13,9 +13,18 @@ import {
 import Typewriter from "typewriter-effect";
 import { Bio } from "../../data/constants";
 import Image from "next/image";
-import HeroImg from "../../../../public/images/ProfileImg.jpeg";
+import HeroImg from "../../../../public/images/profile.jpeg";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import styled from "styled-components";
+
+const ImageContainer = styled.div`
+  display: inline-block;
+  border: 2px solid rgba(44, 43, 43, 0.1); /* Light border */
+  border-radius: 2px; /* Rounded corners */
+  overflow: hidden; /* Ensures the border-radius applies */
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1); /* Optional subtle shadow for depth */
+`;
 
 const HeroSection = () => {
   return (
@@ -79,7 +88,9 @@ const HeroSection = () => {
           </HeroLeftContainer>
 
           <HeroRightContainer id="Right">
-            <Image src={HeroImg} alt="hero-image" width={500} height={360} />
+            <ImageContainer>
+            <Image src={HeroImg} alt="hero-image"  width={420} height={430} />
+            </ImageContainer>
           </HeroRightContainer>
         </HeroInnerContainer>
       </HeroContainer>

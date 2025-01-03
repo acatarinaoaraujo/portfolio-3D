@@ -170,12 +170,12 @@ export const ResumeButton = styled.a`
     text-align: center;
     padding: 16px 0;
     color: ${({ theme }) => theme.white};
-    border-radius: 20px;
+
     cursor: pointer;
     font-size: 20px;
     font-weight: 600;
     transition: all 0.2s ease-in-out !important;
-    background: linear-gradient(225deg, #779ECB 0%, #A2C2E2 100%);
+    background: linear-gradient(225deg,rgb(70, 72, 166) 0%,rgb(134, 148, 164) 100%);
     box-shadow: 5px 5px 15px rgba(119, 158, 203, 0.3), /* Dark Pastel Blue shadow */
                 -5px -5px 15px rgba(119, 158, 203, 0.3); /* Dark Pastel Blue shadow */
     &:hover {
