@@ -33,7 +33,7 @@ text-overflow: ellipsis;
 `
 
 const Card = styled.div`
-    width: 780px;
+    width: 880px;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
     padding: 12px 16px;
     justify-content: space-between;

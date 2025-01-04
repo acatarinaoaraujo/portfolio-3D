@@ -1,5 +1,5 @@
-import { CloseRounded, GitHub, LaptopMac, LinkedIn } from "@mui/icons-material";
-import { Modal, Box, Typography, Grid } from "@mui/material";
+import { CloseRounded, GitHub, LaptopMac } from "@mui/icons-material";
+import { Modal, Box, Grid } from "@mui/material";
 import React from "react";
 import styled from "styled-components";
 
@@ -221,7 +221,9 @@ const index = ({ openModal, setOpenModal }) => {
             }}
             onClick={() => setOpenModal({ state: false, project: null })}
           />
+
           <Title>{project?.title}</Title>
+
           <Date>{project.date}</Date>
           <Tags>
             {project?.tags.map((tag, index) => (

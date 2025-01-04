@@ -1,7 +1,5 @@
-import React from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
-import { ButtonContainer } from '../Navbar/NavbarStyledComponent';
 import Image from 'next/image';
 
 const Button = styled(Link)`
@@ -30,9 +28,8 @@ const Button = styled(Link)`
 const Card = styled.div`
     width: 342px;
     height: 550px;
-    background-color: #BCCCE7;
+    background-color:rgb(214, 220, 208);
     cursor: pointer;
-    border-radius: 2px;
     box-shadow: 0 0 12px 4px rgba(0,0,0,0.4);
     overflow: hidden;
     padding: 26px 18px;
@@ -72,7 +69,7 @@ const Tag = styled.span`
     font-size: 12px;
     font-weight: 400;
     color: ${({ theme }) => theme.primary};
-    background-color: ${({ theme }) => theme.primary + 15};
+    background-color: ${({ theme }) => theme.primary + 16};
     padding: 2px 8px;
     border-radius: 10px;
 `;
@@ -86,7 +83,7 @@ const Details = styled.div`
 `;
 
 const Title = styled.div`
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
     color: ${({ theme }) => theme.text_secondary};
     overflow: hidden;
@@ -101,8 +98,8 @@ const Title = styled.div`
 const Date = styled.div`
     font-size: 12px;
     margin-left: 2px;
-    font-weight: 400;
-    color: ${({ theme }) => theme.text_secondary + 80};
+    font-weight: 500;
+    color: ${({ theme }) => theme.text_secondary + 99};
 
     @media only screen and (max-width: 768px) {
         font-size: 10px;
@@ -163,6 +160,8 @@ const ProjectCards = ({ project, setOpenModal }) => {
                     <Avatar key={index} src={member.img} alt={`Member ${index}`} />
                 ))}
             </Members>
+
+
         </Card>
     );
 };
