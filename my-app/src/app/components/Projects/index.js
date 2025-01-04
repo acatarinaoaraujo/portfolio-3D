@@ -21,13 +21,13 @@ const Projects = ({ openModal, setOpenModal }) => {
         <Title>Projects</Title>
         <Desc>
           Over the past few years, I&apos;ve had the opportunity to work on a
-          diverse range of projects, including <b>application development</b>, <b>machine
-          learning</b> and <b>data science</b>. Here are some of the projects
-          I&apos;ve contributed to.
+          diverse range of projects, including <b>application development</b>,{" "}
+          <b>machine learning</b> and <b>data science</b>. Here are some of the
+          projects I&apos;ve contributed to.
         </Desc>
         <ToggleButtonGroup>
           {toggle === "all" ? (
-            <ToggleButton active value="all" onClick={() => setToggle("all")}>
+            <ToggleButton $active={true} value="all" onClick={() => setToggle("all")}>
               All
             </ToggleButton>
           ) : (
@@ -38,7 +38,8 @@ const Projects = ({ openModal, setOpenModal }) => {
           <Divider />
           {toggle === "web app" ? (
             <ToggleButton
-              active
+            $active={true}
+
               value="web app"
               onClick={() => setToggle("web app")}
             >
@@ -51,7 +52,7 @@ const Projects = ({ openModal, setOpenModal }) => {
           )}
           <Divider />
           {toggle === "ml" ? (
-            <ToggleButton active value="ml" onClick={() => setToggle("ml")}>
+            <ToggleButton $$active={true} value="ml" onClick={() => setToggle("ml")}>
               Machine Learning & Data Science
             </ToggleButton>
           ) : (
@@ -60,10 +61,13 @@ const Projects = ({ openModal, setOpenModal }) => {
             </ToggleButton>
           )}
         </ToggleButtonGroup>
+
+
         <CardContainer>
           {toggle === "all" &&
             projects.map((project) => (
               <ProjectCard
+                key={project.id}
                 project={project}
                 openModal={openModal}
                 setOpenModal={setOpenModal}
@@ -73,6 +77,7 @@ const Projects = ({ openModal, setOpenModal }) => {
             .filter((item) => item.category == toggle)
             .map((project) => (
               <ProjectCard
+                key={project.id}
                 project={project}
                 openModal={openModal}
                 setOpenModal={setOpenModal}

@@ -160,8 +160,6 @@ const ProjectCards = ({ project, setOpenModal }) => {
                     <Avatar key={index} src={member.img} alt={`Member ${index}`} />
                 ))}
             </Members>
-
-
         </Card>
     );
 };

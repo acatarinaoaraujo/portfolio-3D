@@ -1,6 +1,6 @@
+import { useState, useEffect } from "react";
 import { CloseRounded, GitHub, LaptopMac } from "@mui/icons-material";
 import { Modal, Box, Grid } from "@mui/material";
-import React from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -130,7 +130,7 @@ const ButtonGroup = styled.div`
   gap: 12px;
 `;
 
-const Button = styled.a`
+const StyledButton = styled.a`
   width: 100%;
   text-align: center;
   font-size: 16px;
@@ -138,8 +138,8 @@ const Button = styled.a`
   color: ${({ theme }) => theme.text_primary};
   padding: 12px 16px;
   background-color: ${({ theme }) => theme.primary};
-  ${({ dull, theme }) =>
-    dull &&
+  ${({ $dull, theme }) =>
+    $dull &&
     `
         background-color: ${theme.bgLight};
         color: ${theme.text_secondary};
@@ -158,11 +158,24 @@ const Button = styled.a`
   }
 `;
 
+const Button = ({ $dull, ...props }) => {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  return (
+    <StyledButton
+      {...props}
+      $dull={isMounted && $dull}
+    />
+  );
+};
+
 const MemberGrid = ({ members }) => (
   <Box>
-    <SubTitle variant="h6" component="div" gutterBottom>
-      Members
-    </SubTitle>
+    <SubTitle>Members</SubTitle>
     <Grid container spacing={2}>
       {members.map((member, index) => (
         <Grid item xs={12} sm={2} key={index}>
@@ -250,12 +263,12 @@ const index = ({ openModal, setOpenModal }) => {
           {project?.member && <MemberGrid members={project.member} />}
           <ButtonGroup>
             {project?.github && project.github.trim() && (
-              <Button dull href={project.github} target="new">
+              <Button $dull={true} href={project.github} target="new">
                 <GitHub />
               </Button>
             )}
             {project?.webapp && project.webapp.trim() && (
-              <Button dull href={project.webapp} target="new">
+              <Button $dull={true} href={project.webapp} target="new">
                 <LaptopMac />
               </Button>
             )}

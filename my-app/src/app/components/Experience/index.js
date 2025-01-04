@@ -96,7 +96,7 @@ const index = () => {
         <TimelineSection >
           <Timeline>
             {experiences.map((experience, index) => (
-              <TimelineItem>
+              <TimelineItem key={index}>
                 <TimelineOppositeContent
                   sx={{ m: "auto 0" }}
                   align="right"

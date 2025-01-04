@@ -47,8 +47,6 @@ const Wrapper2 = styled.div`
   clip-path: polygon(0 0, 100% 0, 0% 99%, 0% 100%, 0 60);
 `;
 
-
-
 export default function Page() {
   const [openModal, setOpenModal] = useState({ state: false, project: null });
 

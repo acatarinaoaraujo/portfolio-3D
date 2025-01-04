@@ -103,7 +103,7 @@ const index = () => {
         <TimelineSection>
           <Timeline position="alternate">
             {education.map((education, index) => (
-              <TimelineItem>
+              <TimelineItem key={index}>
                 <TimelineOppositeContent
                   sx={{ m: "auto 0" }}
                   align="right"

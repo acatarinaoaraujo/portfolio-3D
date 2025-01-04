@@ -65,8 +65,8 @@ export const ToggleButtonGroup = styled.div`
 export const ToggleButton = styled.div`
     padding: 8px 18px;
     cursor: pointer;
-    ${({ active, theme }) =>
-        active && `
+    ${({ $active, theme }) =>
+        $active && `
     background: ${theme.primary + 20};
     `
     }

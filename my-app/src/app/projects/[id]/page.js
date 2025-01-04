@@ -1,14 +1,9 @@
 "use client";
 import styled from "styled-components";
+import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import { projects } from "../../data/constants"; // Adjust path if needed
-import {
-  GitHub,
-  LaptopMac,
-  ArrowBack,
-  ArrowForward,
-  Home,
-} from "@mui/icons-material";
+import { GitHub, ArrowBack, ArrowForward, Home, LaptopMac } from "@mui/icons-material";
 import { Box, Typography, Grid } from "@mui/material";
 
 const Container = styled.div`
@@ -139,7 +134,7 @@ const ButtonGroup = styled.div`
   gap: 12px;
 `;
 
-const ButtonBar = styled.a`
+const StyledButtonBar = styled.a`
   width: 100%;
   display: flex;
   text-align: center;
@@ -148,8 +143,8 @@ const ButtonBar = styled.a`
   color: ${({ theme }) => theme.text_primary};
   padding: 12px 12px;
   background-color: ${({ theme }) => theme.primary};
-  ${({ dull, theme }) =>
-    dull &&
+  ${({ $dull, theme }) =>
+    $dull &&
     `
         background-color: ${theme.bgLight};
         color: ${theme.text_secondary};
@@ -168,7 +163,7 @@ const ButtonBar = styled.a`
   }
 `;
 
-const Button = styled.a`
+const StyledButton = styled.a`
   width: 100%;
   text-align: center;
   font-size: 16px;
@@ -176,8 +171,8 @@ const Button = styled.a`
   color: ${({ theme }) => theme.text_primary};
   padding: 12px 16px;
   background-color: ${({ theme }) => theme.primary};
-  ${({ dull, theme }) =>
-    dull &&
+  ${({ $dull, theme }) =>
+    $dull &&
     `
         background-color: ${theme.bgLight};
         color: ${theme.text_secondary};
@@ -196,11 +191,29 @@ const Button = styled.a`
   }
 `;
 
+const Button = ({ $dull, ...props }) => {
+  const [isButtonMounted, setIsButtonMounted] = useState(false);
+
+  useEffect(() => {
+    setIsButtonMounted(true);
+  }, []);
+
+  return <StyledButton {...props} $dull={isButtonMounted && $dull} />;
+};
+
+const ButtonBar = ({ $dull, ...props }) => {
+  const [isButtonBarMounted, setIsButtonBarMounted] = useState(false);
+
+  useEffect(() => {
+    setIsButtonBarMounted(true);
+  }, []);
+
+  return <StyledButtonBar {...props} $dull={isButtonBarMounted && $dull} />;
+};
+
 const MemberGrid = ({ members }) => (
   <Box>
-    <SubTitle variant="h6" component="div" gutterBottom>
-      Members
-    </SubTitle>
+    <SubTitle>Members</SubTitle>
     <Grid container spacing={2}>
       {members.map((member, index) => (
         <Grid item xs={12} sm={6} md={4} lg={2} key={index}>
@@ -244,27 +257,34 @@ const MemberGrid = ({ members }) => (
 const Navbar = ({ project }) => {
   const currentId = parseInt(project.id);
   const totalProjects = 10;
-
   const prevProjectId = currentId === 0 ? totalProjects : currentId - 1;
   const nextProjectId = currentId === totalProjects ? 0 : currentId + 1;
 
   return (
     <Grid container justifyContent="space-between" alignItems="center" mb={2}>
       <Grid item>
-        <ButtonBar dull href={`/projects/${prevProjectId}`} target="new">
+        <ButtonBar
+          $dull={true}
+          href={`/projects/${prevProjectId}`}
+          target="new"
+        >
           <ArrowBack /> Prev
         </ButtonBar>
       </Grid>
 
       <Grid item>
-        <ButtonBar dull href={"/"} target="new">
+        <ButtonBar $dull={true} href={"/"} target="new">
           <Home />
-        </ButtonBar>
+        </ ButtonBar>
       </Grid>
 
       <Grid item>
-        <ButtonBar dull href={`/projects/${nextProjectId}`} target="new">
-         Next <ArrowForward />
+        <ButtonBar
+          $dull={true}
+          href={`/projects/${nextProjectId}`}
+          target="new"
+        >
+          Next <ArrowForward />
         </ButtonBar>
       </Grid>
     </Grid>
@@ -310,12 +330,12 @@ const Page = () => {
 
         <ButtonGroup>
           {project?.github && project.github.trim() && (
-            <Button dull href={project.github} target="new">
+            <Button $dull={true} href={project.github} target="new">
               <GitHub />
             </Button>
           )}
           {project?.webapp && project.webapp.trim() && (
-            <Button dull href={project.webapp} target="new">
+            <Button $dull={true} href={project.webapp} target="new">
               <LaptopMac />
             </Button>
           )}
