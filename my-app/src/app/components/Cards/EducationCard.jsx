@@ -35,7 +35,6 @@ text-overflow: ellipsis;
 
 const Card = styled.div`
     width: 400px;
-    border-radius: 10px;
     box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
     padding: 12px 16px;
     justify-content: space-between;
@@ -76,7 +75,6 @@ const Top = styled.div`
 const Image = styled.img`
     height: 50px;
     background-color: #000;
-    border-radius: 10px;
     margin-top: 4px;
     @media only screen and (max-width: 768px){
         height: 40px;

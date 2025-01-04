@@ -93,10 +93,12 @@ const index = () => {
       <Wrapper>
         <Title>Education</Title>
         <Desc>
-          My academic journey has been a transformative experience, mixing
-          curiosity and dedication to mastering the world of computer science.
-          Here&apos;s a glimpse into my educational path and the knowledge
-          I&apos;ve gained along the way:
+          During my undergraduate studies, I built a strong foundation in
+          computer science, focusing on <b>algorithms</b>,{" "}
+          <b>database systems</b>, and <b>software development</b>. My master&apos;s degree deepened my
+          expertise in <b>data science</b> and <b>machine learning</b>, with an
+          emphasis on human-centered design and advanced visualization
+          techniques.
         </Desc>
         <TimelineSection>
           <Timeline position="alternate">
@@ -115,9 +117,9 @@ const index = () => {
                 </TimelineOppositeContent>
 
                 <TimelineSeparator>
-                  <TimelineConnector style={{ background: "#B7CB99" }}  />
-                  <TimelineDot sx={{ bgcolor: '#431D32' }} >
-                    <MenuBookTwoTone  />
+                  <TimelineConnector style={{ background: "#B7CB99" }} />
+                  <TimelineDot sx={{ bgcolor: "#431D32" }}>
+                    <MenuBookTwoTone />
                   </TimelineDot>
                   <TimelineConnector style={{ background: "#B7CB99" }} />
                 </TimelineSeparator>
@@ -125,7 +127,6 @@ const index = () => {
                 <TimelineContent sx={{ py: "12px", px: 2 }}>
                   <EducationCard education={education} />
                 </TimelineContent>
-
               </TimelineItem>
             ))}
           </Timeline>
