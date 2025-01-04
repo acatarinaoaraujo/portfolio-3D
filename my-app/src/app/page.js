@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import Experience from "./components/Experience";
 import Education from "./components/Education";
 import ProjectDetails from "./components/ProjectDetails";
+import Publication from "./components/Publication";
 import styled from "styled-components";
 import Header from "./components/Header";
 
@@ -60,8 +61,8 @@ export default function Page() {
       <Wrapper2>
         <Experience />
         <Projects openModal={openModal} setOpenModal={setOpenModal} />
+        <Publication />
       </Wrapper2>
-
       <Education />
       <Wrapper>
         <Contact />

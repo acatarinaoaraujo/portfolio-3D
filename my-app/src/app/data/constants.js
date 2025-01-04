@@ -351,32 +351,51 @@ export const education = [
   },
 ];
 
-export const projects = [
+export const publications = [
   {
-    id: 10,
+    id: 0,
     title:
       "An Exploratory Examination Of Software Vulnerability Classification Using Large Language Models",
-    date: "Oct 2023 - May 2024",
+    date: "Jun 2024",
+    journal:
+      "Thesis Accepted: Master of Science in Computer Science, University of Hawaii at Mānoa",
     description:
       "This study addresses the challenge of accurately classifying software vulnerabilities, critical weaknesses that can endanger system security. Leveraging the National Vulnerability Database (NVD) and the Vulnerability Description Ontology from NIST, we explore the integration of Large Language Models (LLMs), such as BERT and DistilBERT, to enhance classification across 27 vulnerability categories. Our analysis shows that LLMs outperform traditional models and entropy-based methods, particularly in understanding vulnerability descriptions within specified noun groups. Additionally, the ml highlights that while expanding datasets can improve classification coverage, annotation quality remains a key factor. The findings underscore the potential of LLMs and well-curated data to improve automated vulnerability assessment, advancing cybersecurity practices and precision in vulnerability management.",
     image: project_11,
-    tags: [
-      "Python",
-      "NIST",
-      "Cybersecurity",
-      "Pytorch",
-      "Hugging Face",
-      "Transformers",
-      "Peft",
-      "Llama 2",
-      "XLNet",
-      "BERT",
-      "DeBERTa",
-    ],
-    category: "ml",
+    tags: ["Cybersecurity", "Software Vulnerability", "Large Language Models"],
+    category: "Large Language Models",
     webapp: thesis,
-    images: []
   },
+  {
+    id: 1,
+    title:
+      "A Developer-Centric Study Exploring Mobile Application Security Practices and Challenges",
+    date: "Sep 2024",
+    journal:
+      "International Conference on Software Maintenance and Evolution (ICSME 2024)",
+    description:
+      "This study examines the security practices and challenges faced by mobile app developers. As mobile apps increasingly handle sensitive data for essential services like banking and healthcare, securing them is critical. Through a global survey of 137 experienced mobile developers, our research provides insights into the practices developers prioritize, such as authentication and secure storage, and the obstacles they encounter, including managing vulnerabilities, permissions, and privacy concerns. The findings highlight a gap in existing resources, with many developers expressing a need for improved training and practical guidance on secure development. Developers often rely on platforms like Stack Overflow for security-related information but report that current learning materials fall short in equipping them with comprehensive security skills. This research underscores the need for better-designed tools, resources, and training programs that integrate security from the earliest stages of development, contributing to a safer mobile app ecosystem.",
+    image: project_9,
+    tags: ["Mobile Application", "Security", "Survey", "Developer"],
+    category: "Natural Language Processing",
+    webapp: "https://arxiv.org/pdf/2408.09032",
+  },
+  {
+    id: 2,
+    title:
+      "Mobile App Security Trends and Topics: An Examination of Questions From Stack Overflow",
+    date: "Aug 2024",
+    journal: "58th Hawaii International Conference on System Sciences (HICSS 2024)",
+    description:
+      "This study investigates the security challenges mobile app developers face by analyzing security-related questions on Stack Overflow. With society’s increasing reliance on mobile apps for accessing sensitive resources, app security is paramount. Our research focuses on the types of security issues developers encounter, especially on the Android platform, and identifies seven key categories: Secured Communications, Database Security, App Distribution, Encryption, Permissions, File-Specific Security, and General Security. Our findings underscore Stack Overflow's role as a primary resource for developers seeking security guidance. This study offers valuable insights that can inform the creation of more targeted tools, resources, and training by researchers and vendors to enhance mobile app security practices.",
+    image: project_10,
+    tags: ["Stack Overflow", "Android", "iOS", "Security"],
+    category: "Natural Language Processing",
+    webapp: "https://arxiv.org/pdf/2409.07926",
+  },
+];
+
+export const projects = [
   {
     id: 0,
     title: "Receipt Tracker App",
@@ -450,52 +469,9 @@ export const projects = [
       },
     ],
   },
+
   {
-    id: 8,
-    title:
-      "A Developer-Centric Study Exploring Mobile Application Security Practices and Challenges",
-    date: "Jun 2023 - Aug 2024",
-    description:
-      "This study examines the security practices and challenges faced by mobile app developers. As mobile apps increasingly handle sensitive data for essential services like banking and healthcare, securing them is critical. Through a global survey of 137 experienced mobile developers, our research provides insights into the practices developers prioritize, such as authentication and secure storage, and the obstacles they encounter, including managing vulnerabilities, permissions, and privacy concerns. The findings highlight a gap in existing resources, with many developers expressing a need for improved training and practical guidance on secure development. Developers often rely on platforms like Stack Overflow for security-related information but report that current learning materials fall short in equipping them with comprehensive security skills. This research underscores the need for better-designed tools, resources, and training programs that integrate security from the earliest stages of development, contributing to a safer mobile app ecosystem.",
-    image: project_9,
-    tags: [
-      "Python",
-      "Data Analysis",
-      "Stack Overflow",
-      "Topic Modeling",
-      "pyLDAvis",
-      "NLTK",
-      "Survey",
-      "LinkedIn",
-    ],
-    category: "ml",
-    webapp: "https://arxiv.org/pdf/2408.09032",
-    member: [
-      {
-        name: "Ana Araújo",
-        img: "https://avatars.githubusercontent.com/u/60526884?s=70&v=4",
-        github: "https://github.com/orgs/ics613/people/acatarinaoaraujo",
-      },
-      {
-        name: "Timothy Huo",
-        img: "https://avatars.githubusercontent.com/u/61216890?s=70&v=4",
-        github: "https://github.com/orgs/ics613/people/timothyhuo1",
-      },
-      {
-        name: "Jake Imanaka",
-        img: "https://avatars.githubusercontent.com/u/60174193?s=70&v=4",
-        github: "https://github.com/jimanaka",
-      },
-      {
-        name: "Dr. Anthony Peruma",
-        img: "https://avatars.githubusercontent.com/u/1944920?s=70&v=4",
-        github: "https://github.com/shehan",
-      },
-    ],
-    images: [],
-  },
-  {
-    id: 9,
+    id: 1,
     title:
       "A Developer-Centric Study Exploring Mobile Application Security Practices and Challenges",
     date: "Jan 2023 - Aug 2024",
@@ -540,7 +516,7 @@ export const projects = [
     images: [],
   },
   {
-    id: 1,
+    id: 2,
     title: "Marine Debris Reporting App",
     date: "Oct 2023 - Nov 2023",
     description:
@@ -625,11 +601,10 @@ export const projects = [
         url: "debris-tracker/mobile.png",
         title: "Fig. 9: Mobile",
       },
-
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: "Coffee Leaf Disease Diagnoser",
     date: "Jan 2023 - Apr 2023",
     description:
@@ -667,7 +642,7 @@ export const projects = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: "Sentiment Analysis on AI-Related Discussion",
     date: "Feb 2024 - May 2024",
     description:
@@ -722,7 +697,7 @@ export const projects = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: "Aircraft Phase Maintenance System (APMS)",
     date: "Jan 2023 - May 2023",
     description:
@@ -780,7 +755,7 @@ export const projects = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     title: "Department of Education Legislative Tracker",
     date: "Oct 2022 - Nov 2022",
     description:
@@ -846,7 +821,7 @@ export const projects = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     title: "Medical Inventory Management System",
     date: "Aug 2021 - Dec 2021",
     description:
@@ -914,7 +889,7 @@ export const projects = [
     ],
   },
   {
-    id: 7,
+    id: 8,
     title: "UH Class Critics",
     date: "Apr 2021 - May 2021",
     description:
