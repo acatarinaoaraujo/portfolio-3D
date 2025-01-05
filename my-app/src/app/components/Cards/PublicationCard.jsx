@@ -1,5 +1,7 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
+import { Box, Grid } from "@mui/material";
+import { Link } from "@mui/icons-material";
 
 const Document = styled.img`
   display: none;
@@ -18,6 +20,7 @@ const Description = styled.div`
   font-weight: 400;
   color: ${({ theme }) => theme.text_primary + 99};
   margin-bottom: 10px;
+  margin-top: 10px;
   @media only screen and (max-width: 768px) {
     font-size: 12px;
   }
@@ -33,7 +36,7 @@ const Span = styled.span`
 `;
 
 const Card = styled.div`
-  width: 860px;
+  width: 900px;
   box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
   padding: 12px 16px;
   justify-content: space-between;
@@ -71,9 +74,7 @@ const Top = styled.div`
 `;
 
 const Image = styled.img`
-  height: 50px;
-  background-color: #000;
-  margin-top: 4px;
+  width: 100%;
   @media only screen and (max-width: 768px) {
     height: 40px;
   }
@@ -94,15 +95,6 @@ const Name = styled.div`
   }
 `;
 
-const Degree = styled.div`
-  font-size: 14px;
-  font-weight: 500;
-  color: ${({ theme }) => theme.text_secondary + 99};
-  @media only screen and (max-width: 768px) {
-    font-size: 12px;
-  }
-`;
-
 const Journal = styled.div`
   font-size: 14px;
   font-weight: 300;
@@ -112,53 +104,115 @@ const Journal = styled.div`
   }
 `;
 
-const Grade = styled.div`
-  font-size: 14px;
-  font-weight: 500;
-  color: ${({ theme }) => theme.text_secondary + 99};
-  @media only screen and (max-width: 768px) {
-    font-size: 12px;
-  }
-`;
-
 const CardImageWrapper = styled.div`
   width: 100%;
   height: 180px;
   background-color: ${({ theme }) => theme.white};
-  border-radius: 2px;
   box-shadow: 0 0 16px 2px rgba(0, 0, 0, 0.3);
   overflow: hidden;
   display: flex;
 `;
 
+const Keywords = styled.div`
+  font-weight: 500;
+  width: 100%;
+  display: flex;
+  gap: 6px;
+`;
+
+const ItemWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+`;
+
+const Keyword = styled.div`
+  font-size: 14px;
+  font-weight: 400;
+  color: ${({ theme }) => theme.text_primary + 99};
+  @media only screen and (max-width: 768px) {
+    font-size: 12px;
+  }
+`;
+
+const StyledButton = styled.a`
+  width: 80px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 8px;
+  color: ${({ theme }) => theme.text_primary};
+  padding: 6px 6px;
+  background-color: ${({ theme }) => theme.primary};
+  ${({ $dull, theme }) =>
+    $dull &&
+    `
+        background-color: ${theme.bgLight};
+        color: ${theme.text_secondary};
+        &:hover {
+            background-color: ${({ theme }) => theme.bg + 99};
+        }
+    `}
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.5s ease;
+  &:hover {
+    background-color: ${({ theme }) => theme.primary + 99};
+  }
+  @media only screen and (max-width: 600px) {
+    font-size: 12px;
+  }
+`;
+
+const Button = ({ $dull, ...props }) => {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  return <StyledButton {...props} $dull={isMounted && $dull} />;
+};
+
 const PublicationCard = ({ publication }) => {
-  console.log(publication);
+  console.log(publication.image);
   return (
     <Card>
-      <CardImageWrapper>
-        <Image
-          src={publication.image}
-          alt={publication.id}
-          width={306}
-          height={280}
-        />
-      </CardImageWrapper>
-      <Top>
-        <Body>
-          <Name>{publication.title}</Name>
-          {/* <Degree>{publication.degree}</Degree> */}
-          <Journal>{publication.journal}</Journal>
-        </Body>
-      </Top>
+      <Grid container spacing={2}>
+        <Grid item xs={4}>
+          <CardImageWrapper>
+            <Image src={publication.image} alt={publication.id} />
+          </CardImageWrapper>
+        </Grid>
+        <Grid item xs={8}>
+          <Box>
+            <Top>
+              <Body>
+                <Name>{publication.title}</Name>
+                <Journal>{publication.journal}</Journal>
 
+                <Description>
+                  <Keywords>
+                    Keywords:
+                    <ItemWrapper>
+                      {publication.tags.map((tag, index) => (
+                        <Keyword key={index}>• {tag}</Keyword>
+                      ))}
+                    </ItemWrapper>
+                  </Keywords>
+                </Description>
+
+                <Button $dull={true} href={publication.webapp} target="new">
+                  <Link color="secondary" />
+                </Button>
+              </Body>
+            </Top>
+          </Box>
+        </Grid>
+      </Grid>
       <Description>
         <Span>{publication.description}</Span>
       </Description>
-
-      {/* <Grade><b>GPA: </b>{publication.grade}</Grade>
-            <Description>
-                <Span>{publication.desc}</Span>
-            </Description> */}
     </Card>
   );
 };

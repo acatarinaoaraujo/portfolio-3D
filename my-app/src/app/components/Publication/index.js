@@ -64,19 +64,16 @@ const Desc = styled.div`
   }
 `;
 
-
 const index = () => {
   return (
     <Container id="publications">
       <Wrapper>
         <Title>Publications</Title>
         <Desc>
-          During my undergraduate studies, I built a strong foundation in
-          computer science, focusing on <b>algorithms</b>,{" "}
-          <b>database systems</b>, and <b>software development</b>. My
-          master&apos;s degree deepened my expertise in <b>data science</b> and{" "}
-          <b>machine learning</b>, with an emphasis on human-centered design and
-          advanced visualization techniques.
+          Conducted research on <b>software vulnerabilities</b> and{" "}
+          <b>mobile app security</b>, leveraging <b>large language models</b>,{" "}
+          <b>developer surveys</b>, and <b>Stack Overflow analysis</b> to enhance classification accuracy,
+          identify key challenges, and improve security practices.
         </Desc>
 
         {publications.map((publication, index) => (

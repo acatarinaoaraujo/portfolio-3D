@@ -6,12 +6,14 @@ import project_5 from "../../../public/images/project-5.png";
 import project_6 from "../../../public/images/project-6.png";
 import project_7 from "../../../public/images/project-7.png";
 import project_8 from "../../../public/images/project-8.png";
-import project_9 from "../../../public/images/project-9.png";
-import project_10 from "../../../public/images/project-10.png";
-import project_11 from "../../../public/images/project-11.png";
+import project_10 from "../../../public/images/publication-1.png";
 
 import thesis from "../../../public/images/thesis.pdf";
 import resume from "../../../public/images/resume-example.pdf";
+
+const publication_0 = "./images/publication-0.png";
+const publication_1 = "./images/publication-1.png";
+const publication_2 = "./images/publication-2.png";
 
 export const Bio = {
   name: "Ana Araújo",
@@ -358,10 +360,10 @@ export const publications = [
       "An Exploratory Examination Of Software Vulnerability Classification Using Large Language Models",
     date: "Jun 2024",
     journal:
-      "Thesis Accepted: Master of Science in Computer Science, University of Hawaii at Mānoa",
+      "Thesis Accepted: Master of Science in Computer Science",
     description:
       "This study addresses the challenge of accurately classifying software vulnerabilities, critical weaknesses that can endanger system security. Leveraging the National Vulnerability Database (NVD) and the Vulnerability Description Ontology from NIST, we explore the integration of Large Language Models (LLMs), such as BERT and DistilBERT, to enhance classification across 27 vulnerability categories. Our analysis shows that LLMs outperform traditional models and entropy-based methods, particularly in understanding vulnerability descriptions within specified noun groups. Additionally, the ml highlights that while expanding datasets can improve classification coverage, annotation quality remains a key factor. The findings underscore the potential of LLMs and well-curated data to improve automated vulnerability assessment, advancing cybersecurity practices and precision in vulnerability management.",
-    image: project_11,
+    image: publication_2,
     tags: ["Cybersecurity", "Software Vulnerability", "Large Language Models"],
     category: "Large Language Models",
     webapp: thesis,
@@ -375,10 +377,10 @@ export const publications = [
       "International Conference on Software Maintenance and Evolution (ICSME 2024)",
     description:
       "This study examines the security practices and challenges faced by mobile app developers. As mobile apps increasingly handle sensitive data for essential services like banking and healthcare, securing them is critical. Through a global survey of 137 experienced mobile developers, our research provides insights into the practices developers prioritize, such as authentication and secure storage, and the obstacles they encounter, including managing vulnerabilities, permissions, and privacy concerns. The findings highlight a gap in existing resources, with many developers expressing a need for improved training and practical guidance on secure development. Developers often rely on platforms like Stack Overflow for security-related information but report that current learning materials fall short in equipping them with comprehensive security skills. This research underscores the need for better-designed tools, resources, and training programs that integrate security from the earliest stages of development, contributing to a safer mobile app ecosystem.",
-    image: project_9,
+    image: publication_0,
     tags: ["Mobile Application", "Security", "Survey", "Developer"],
     category: "Natural Language Processing",
-    webapp: "https://arxiv.org/pdf/2408.09032",
+    webapp: "https://arxiv.org/abs/2408.09032",
   },
   {
     id: 2,
@@ -388,10 +390,10 @@ export const publications = [
     journal: "58th Hawaii International Conference on System Sciences (HICSS 2024)",
     description:
       "This study investigates the security challenges mobile app developers face by analyzing security-related questions on Stack Overflow. With society’s increasing reliance on mobile apps for accessing sensitive resources, app security is paramount. Our research focuses on the types of security issues developers encounter, especially on the Android platform, and identifies seven key categories: Secured Communications, Database Security, App Distribution, Encryption, Permissions, File-Specific Security, and General Security. Our findings underscore Stack Overflow's role as a primary resource for developers seeking security guidance. This study offers valuable insights that can inform the creation of more targeted tools, resources, and training by researchers and vendors to enhance mobile app security practices.",
-    image: project_10,
+    image: publication_1,
     tags: ["Stack Overflow", "Android", "iOS", "Security"],
     category: "Natural Language Processing",
-    webapp: "https://arxiv.org/pdf/2409.07926",
+    webapp: "https://arxiv.org/abs/2409.07926",
   },
 ];
 

@@ -9,7 +9,7 @@ import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import { MenuBookTwoTone } from "@mui/icons-material";
 
 import TimelineDot from "@mui/lab/TimelineDot";
-import { education, experiences } from "../../data/constants";
+import { education } from "../../data/constants";
 import EducationCard from "../Cards/EducationCard";
 
 const Container = styled.div`
