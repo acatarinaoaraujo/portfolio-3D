@@ -33,7 +33,7 @@ const Span = styled.span`
 `;
 
 const Card = styled.div`
-  width: 880px;
+  width: 550px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   padding: 12px 16px;
   justify-content: space-between;

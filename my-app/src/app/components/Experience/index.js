@@ -31,7 +31,7 @@ const Wrapper = styled.div`
   align-items: center;
   flex-direction: column;
   width: 100%;
-  max-width: 1350px;
+  max-width: 1250px;
   padding: 80px 0;
   gap: 12px;
   @media (max-width: 960px) {
@@ -74,13 +74,15 @@ const Desc = styled.div`
 
 const TimelineSection = styled.div`
   width: 100%;
-  max-width: 1200px;
+  max-width: 1250px;
   margin-top: 10px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   gap: 12px;
+  @media (max-width: 660px) {
+    align-items: end;
+  }
 `;
 
 const index = () => {
@@ -94,7 +96,7 @@ const index = () => {
           further!
         </Desc>
         <TimelineSection >
-          <Timeline>
+          <Timeline position="alternate">
             {experiences.map((experience, index) => (
               <TimelineItem key={index}>
                 <TimelineOppositeContent

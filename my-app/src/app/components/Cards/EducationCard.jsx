@@ -124,8 +124,6 @@ const Grade = styled.div`
     }
 `
 
-
-
 const EducationCard = ({ education }) => {
     return (
         <Card>

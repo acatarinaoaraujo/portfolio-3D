@@ -75,7 +75,6 @@ const Desc = styled.div`
 
 const TimelineSection = styled.div`
   width: 100%;
-  display: flex;
   max-width: 1000px;
   margin-top: 10px;
   display: flex;

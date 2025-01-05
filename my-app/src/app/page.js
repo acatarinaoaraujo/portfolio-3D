@@ -11,6 +11,7 @@ import ProjectDetails from "./components/ProjectDetails";
 import Publication from "./components/Publication";
 import styled from "styled-components";
 import Header from "./components/Header";
+import Awards from "./components/Awards";
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -36,13 +37,13 @@ const Wrapper = styled.div`
 const Wrapper2 = styled.div`
   background: linear-gradient(
       38.73deg,
-      rgba(101, 141, 58, 0.15) 0%,
-      rgba(52, 110, 7, 0) 50%
+      rgba(184, 192, 170, 0.3) 20%,
+      rgba(100, 119, 67, 0) 50%
     ),
     linear-gradient(
       141.27deg,
-      rgba(107, 154, 73, 0) 50%,
-      rgba(51, 90, 6, 0.15) 100%
+      rgba(207, 193, 213, 0) 100%,
+      rgba(152, 102, 177, 0.15) 100%
     );
   width: 100%;
   clip-path: polygon(0 0, 100% 0, 0% 99%, 0% 100%, 0 60);
@@ -62,6 +63,7 @@ export default function Page() {
         <Experience />
         <Projects openModal={openModal} setOpenModal={setOpenModal} />
         <Publication />
+        <Awards />
       </Wrapper2>
       <Education />
       <Wrapper>

@@ -1,9 +1,10 @@
-"use client"; // Mark this file as a client component
+"use client";
 import { useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { useState } from 'react';
-import { lightTheme, darkTheme } from './utils/Themes'; // Adjust path if needed
-import '../app/styles/globals.css'; // Ensure this path is correct
+import { lightTheme, darkTheme } from './utils/Themes';
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import '../app/styles/globals.css';
 
 
 export default function Layout({ children }) {
