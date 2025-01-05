@@ -53,16 +53,16 @@ const Contact = () => {
   return (
     <Section id="contact">
       <Title>Contact Me</Title>
-      <SectionText>Get in Touch with Me!</SectionText>
+      {/* <SectionText>Get in Touch with Me!</SectionText> */}
       <ContactInfoUpperContainer>
         <ContactInfoContainer>
           <Icon src="https://imaginethatcreative.net/blog/wp-content/uploads/2023/06/2250206.png" alt="Email icon" />
           <p><ContactLink href="mailto:ancoaraujo@gmail.com">ancoaraujo@gmail.com</ContactLink></p>
         </ContactInfoContainer>
-        <ContactInfoContainer>
+        {/* <ContactInfoContainer>
           <Icon src="https://cdn-icons-png.flaticon.com/512/61/61109.png" alt="LinkedIn icon" />
           <p><ContactLink href="https://www.linkedin.com/in/acatarinaoaraujo/">LinkedIn</ContactLink></p>
-        </ContactInfoContainer>
+        </ContactInfoContainer> */}
       </ContactInfoUpperContainer>
     </Section>
   );

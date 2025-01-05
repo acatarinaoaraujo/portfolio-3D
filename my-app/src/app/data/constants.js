@@ -6,7 +6,8 @@ import project_5 from "../../../public/images/project-5.png";
 import project_6 from "../../../public/images/project-6.png";
 import project_7 from "../../../public/images/project-7.png";
 import project_8 from "../../../public/images/project-8.png";
-import project_10 from "../../../public/images/publication-1.png";
+import project_9 from "../../../public/images/project-9.png";
+import project_10 from "../../../public/images/project-10.png";
 
 import thesis from "../../../public/images/thesis.pdf";
 import resume from "../../../public/images/resume-example.pdf";
@@ -17,7 +18,7 @@ const publication_2 = "./images/publication-2.png";
 
 export const Bio = {
   name: "Ana Araújo",
-  roles: ["Full Stack Developer", "Software Engineer", "Data Engineer"],
+  roles: ["Full-Stack Developer", "Software Engineer"],
   description:
     "Proven ability to design, develop, and deploy software solutions, with a focus on data-driven insights and user-centric experiences. Skilled in Web Development, Databases and Machine Learning. Seeking a challenging role to contribute to innovative projects and grow as a technical professional. If you’re looking for someone who brings enthusiasm to the team, I’d love to connect and chat!",
   github: "https://github.com/acatarinaoaraujo",
@@ -359,8 +360,7 @@ export const publications = [
     title:
       "An Exploratory Examination Of Software Vulnerability Classification Using Large Language Models",
     date: "Jun 2024",
-    journal:
-      "Thesis Accepted: Master of Science in Computer Science",
+    journal: "Thesis Accepted: Master of Science in Computer Science",
     description:
       "This study addresses the challenge of accurately classifying software vulnerabilities, critical weaknesses that can endanger system security. Leveraging the National Vulnerability Database (NVD) and the Vulnerability Description Ontology from NIST, we explore the integration of Large Language Models (LLMs), such as BERT and DistilBERT, to enhance classification across 27 vulnerability categories. Our analysis shows that LLMs outperform traditional models and entropy-based methods, particularly in understanding vulnerability descriptions within specified noun groups. Additionally, the ml highlights that while expanding datasets can improve classification coverage, annotation quality remains a key factor. The findings underscore the potential of LLMs and well-curated data to improve automated vulnerability assessment, advancing cybersecurity practices and precision in vulnerability management.",
     image: publication_2,
@@ -387,7 +387,8 @@ export const publications = [
     title:
       "Mobile App Security Trends and Topics: An Examination of Questions From Stack Overflow",
     date: "Aug 2024",
-    journal: "58th Hawaii International Conference on System Sciences (HICSS 2024)",
+    journal:
+      "58th Hawaii International Conference on System Sciences (HICSS 2024)",
     description:
       "This study investigates the security challenges mobile app developers face by analyzing security-related questions on Stack Overflow. With society’s increasing reliance on mobile apps for accessing sensitive resources, app security is paramount. Our research focuses on the types of security issues developers encounter, especially on the Android platform, and identifies seven key categories: Secured Communications, Database Security, App Distribution, Encryption, Permissions, File-Specific Security, and General Security. Our findings underscore Stack Overflow's role as a primary resource for developers seeking security guidance. This study offers valuable insights that can inform the creation of more targeted tools, resources, and training by researchers and vendors to enhance mobile app security practices.",
     image: publication_1,
@@ -474,51 +475,6 @@ export const projects = [
 
   {
     id: 1,
-    title:
-      "A Developer-Centric Study Exploring Mobile Application Security Practices and Challenges",
-    date: "Jan 2023 - Aug 2024",
-    description:
-      "This study investigates the security challenges mobile app developers face by analyzing security-related questions on Stack Overflow. With society’s increasing reliance on mobile apps for accessing sensitive resources, app security is paramount. Our research focuses on the types of security issues developers encounter, especially on the Android platform, and identifies seven key categories: Secured Communications, Database Security, App Distribution, Encryption, Permissions, File-Specific Security, and General Security. Our findings underscore Stack Overflow's role as a primary resource for developers seeking security guidance. This study offers valuable insights that can inform the creation of more targeted tools, resources, and training by researchers and vendors to enhance mobile app security practices.",
-    image: project_10,
-    tags: [
-      "Python",
-      "Data Analysis",
-      "Pandas",
-      "NLTK",
-      "Stack Overflow",
-      "Topic Modeling",
-      "pyLDAvis",
-      "Matplotlib",
-      "Gensim",
-    ],
-    category: "ml",
-    webapp: "https://arxiv.org/pdf/2409.07926",
-    member: [
-      {
-        name: "Ana Araújo",
-        img: "https://avatars.githubusercontent.com/u/60526884?s=70&v=4",
-        github: "https://github.com/orgs/ics613/people/acatarinaoaraujo",
-      },
-      {
-        name: "Timothy Huo",
-        img: "https://avatars.githubusercontent.com/u/61216890?s=70&v=4",
-        github: "https://github.com/orgs/ics613/people/timothyhuo1",
-      },
-      {
-        name: "Jake Imanaka",
-        img: "https://avatars.githubusercontent.com/u/60174193?s=70&v=4",
-        github: "https://github.com/jimanaka",
-      },
-      {
-        name: "Dr. Anthony Peruma",
-        img: "https://avatars.githubusercontent.com/u/1944920?s=70&v=4",
-        github: "https://github.com/shehan",
-      },
-    ],
-    images: [],
-  },
-  {
-    id: 2,
     title: "Marine Debris Reporting App",
     date: "Oct 2023 - Nov 2023",
     description:
@@ -606,7 +562,7 @@ export const projects = [
     ],
   },
   {
-    id: 3,
+    id: 2,
     title: "Coffee Leaf Disease Diagnoser",
     date: "Jan 2023 - Apr 2023",
     description:
@@ -644,7 +600,7 @@ export const projects = [
     ],
   },
   {
-    id: 4,
+    id: 3,
     title: "Sentiment Analysis on AI-Related Discussion",
     date: "Feb 2024 - May 2024",
     description:
@@ -699,7 +655,7 @@ export const projects = [
     ],
   },
   {
-    id: 5,
+    id: 4,
     title: "Aircraft Phase Maintenance System (APMS)",
     date: "Jan 2023 - May 2023",
     description:
@@ -729,6 +685,7 @@ export const projects = [
           "https://github.com/orgs/Aircraft-Phase-Management-System/people/jingzhef",
       },
     ],
+
     images: [
       {
         url: "apms/apms-cover.png",
@@ -756,8 +713,9 @@ export const projects = [
       },
     ],
   },
+
   {
-    id: 6,
+    id: 5,
     title: "Department of Education Legislative Tracker",
     date: "Oct 2022 - Nov 2022",
     description:
@@ -823,12 +781,81 @@ export const projects = [
     ],
   },
   {
+    id: 6,
+    title: "Data Science Project Collection",
+    date: "Jan 2022 - May 2022",
+    description:
+      "A collection of diverse data science projects exploring domains such as clustering, time series analysis, data wrangling, and machine learning. These projects include identifying activity patterns using wearable device data, analyzing Medicaid spending by state, simulating revenue trends for a membership-based website, modeling synthetic time series data, and classifying wine quality with various machine learning techniques. Each project focuses on practical datasets and real-world applications to enhance analytical and technical skills.",
+    image: project_7,
+    tags: [
+      "Python",
+      "Clustering",
+      "Time Series Analysis",
+      "Data Wrangling",
+      "Simulation",
+    ],
+    category: "ml",
+    github: "https://github.com/acatarinaoaraujo/data-science-notebooks",
+    images: [
+      {
+        url: "ds-collection/simulation.png",
+        title: "Fig. 1: Simulation and Hypothesis (Memberships)",
+      },
+      {
+        url: "ds-collection/time-series.png",
+        title: "Fig. 2: Time Series Analysis (Revenue Trends)",
+      },
+      {
+        url: "ds-collection/ml.png",
+        title: "Fig. 3: Machine Learning (Wine Quality)",
+      },
+    ],
+  },
+  {
     id: 7,
+    title: "Buy From Her",
+    date: "Aug 2021 - Dec 2021",
+    description:
+      "Buy From Her is a high-fidelity mobile app prototype designed to support businesswomen by promoting their products and services. The platform helps customers discover and purchase from local female entrepreneurs, reducing the need for extensive travel while enhancing accessibility and convenience. This project aims to empower women, foster economic growth, and improve income distribution by encouraging support for local businesses.",
+    image: project_8,
+    tags: ["Mobile App", "UI/UX Design", "Prototype"],
+    category: "design",
+    github: "",
+    images : [
+      {
+        url: "buy-from-her/signup.png",
+        title: "Fig. 1: Sign Up Page",
+      },
+      {
+        url: "buy-from-her/dashboard.png",
+        title: "Fig. 2: Seller Dashboard and Reports",
+      },
+      {
+        url: "buy-from-her/product.png",
+        title: "Fig. 3: Search and Product Details",
+      },
+      {
+        url: "buy-from-her/feed.png",
+        title: "Fig. 4: Feed and Location",
+      },
+      {
+        url: "buy-from-her/location.png",
+        title: "Fig. 5: Map and Latest Products",
+      },
+      {
+        url: "buy-from-her/mindmap.png",
+        title: "Fig. 6: Mind Map",
+      }
+    ],
+  },
+
+  {
+    id: 8,
     title: "Medical Inventory Management System",
     date: "Aug 2021 - Dec 2021",
     description:
       "Aeneas Medical is focused on developing a specialized application that assists the H.O.M.E project in effectively managing their medication inventory, supplies, and patient health information. This technology aims to streamline operations and improve accessibility to healthcare services. Hawaii H.O.M.E. Project is a John A. Burns School of Medicine (JABSOM) student-run free clinic staffed by volunteers from the University of Hawaii at Manoa (UHM) and the community. The clinic provides free medical care to the houseless and underserved population of Oahu.",
-    image: project_7,
+    image: project_9,
     tags: [
       "React.js",
       "Node.js",
@@ -891,12 +918,12 @@ export const projects = [
     ],
   },
   {
-    id: 8,
+    id: 9,
     title: "UH Class Critics",
     date: "Apr 2021 - May 2021",
     description:
       "Class Critics is a website that allows students from the University of Hawaii at Manoa to share their experiences taking different courses and professors. Students have access to a collection of professors and courses and can evaluate them based on a rating scale of 1-5. The project was conceived in response to the lack of information available to students when it comes to selecting courses and professors at the start of each semester.",
-    image: project_8,
+    image: project_10,
     tags: [
       "React.js",
       "Node.js",
