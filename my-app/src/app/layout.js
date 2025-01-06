@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { lightTheme, darkTheme } from './utils/Themes';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import '../app/styles/globals.css';
+import Head from 'next/head';
 
 
 export default function Layout({ children }) {
@@ -16,6 +17,9 @@ export default function Layout({ children }) {
 
     return (
         <html lang="en">
+            <Head>
+                <title>Ana Araujo</title>
+            </Head>
             <body>
                 <ThemeProvider theme={lightMode ? lightTheme: darkTheme}>
                     <main>{children}</main>

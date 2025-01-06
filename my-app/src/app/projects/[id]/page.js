@@ -256,7 +256,7 @@ const MemberGrid = ({ members }) => (
 
 const Navbar = ({ project }) => {
   const currentId = parseInt(project.id);
-  const totalProjects = 10;
+  const totalProjects = projects.length - 1;
   const prevProjectId = currentId === 0 ? totalProjects : currentId - 1;
   const nextProjectId = currentId === totalProjects ? 0 : currentId + 1;
 

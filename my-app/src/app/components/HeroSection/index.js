@@ -16,6 +16,7 @@ import Image from "next/image";
 import HeroImg from "../../../../public/images/profile.jpeg";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import EmailIcon from "@mui/icons-material/Email";
 import styled from "styled-components";
 
 const ImageContainer = styled.div`
@@ -57,6 +58,12 @@ const HeroSection = () => {
               }}
             >
               <a
+                href={`mailto:${Bio.email}`}
+                style={{ color: "inherit", textDecoration: "none" }}
+              >
+                <EmailIcon fontSize="large" />
+              </a>
+              <a
                 href={Bio.github}
                 target="display"
                 style={{ color: "inherit", textDecoration: "none" }}
@@ -82,6 +89,7 @@ const HeroSection = () => {
                 />
               </a>
             </div>
+
             <ResumeButton href={Bio.resume} target="display">
               Resume
             </ResumeButton>
@@ -89,7 +97,7 @@ const HeroSection = () => {
 
           <HeroRightContainer id="Right">
             <ImageContainer>
-            <Image src={HeroImg} alt="hero-image"  width={420} height={430} />
+              <Image src={HeroImg} alt="hero-image" width={420} height={430} />
             </ImageContainer>
           </HeroRightContainer>
         </HeroInnerContainer>

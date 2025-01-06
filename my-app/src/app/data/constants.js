@@ -16,15 +16,26 @@ const publication_0 = "./images/publication-0.png";
 const publication_1 = "./images/publication-1.png";
 const publication_2 = "./images/publication-2.png";
 
+const descriptionStyle = (
+  <>
+    Proven ability to design, develop, and deploy software solutions, with a
+    focus on <strong>data-driven insights</strong>, and <strong>user-centric experiences</strong>. Skilled in Web Development,
+    Algorithms, Databases, Machine Learning. Seeking a challenging role to
+    contribute to innovative projects and grow as a technical professional. If
+    you're looking for someone who brings enthusiasm to the team, I'd love to
+    connect and chat!
+  </>
+);
+
 export const Bio = {
   name: "Ana Araújo",
   roles: ["Full-Stack Developer", "Software Engineer"],
-  description:
-    "Proven ability to design, develop, and deploy software solutions, with a focus on data-driven insights and user-centric experiences. Skilled in Web Development, Databases and Machine Learning. Seeking a challenging role to contribute to innovative projects and grow as a technical professional. If you’re looking for someone who brings enthusiasm to the team, I’d love to connect and chat!",
+  description: descriptionStyle,
   github: "https://github.com/acatarinaoaraujo",
   resume: resume,
   linkedin: "https://www.linkedin.com/in/acatarinaoaraujo/",
   leetcode: "https://leetcode.com/u/acoa/",
+  email: "ancoaraujo@gmail.com"
 };
 
 export const skills = [
@@ -821,7 +832,7 @@ export const projects = [
     tags: ["Mobile App", "UI/UX Design", "Prototype"],
     category: "design",
     github: "",
-    images : [
+    images: [
       {
         url: "buy-from-her/signup.png",
         title: "Fig. 1: Sign Up Page",
@@ -845,7 +856,7 @@ export const projects = [
       {
         url: "buy-from-her/mindmap.png",
         title: "Fig. 6: Mind Map",
-      }
+      },
     ],
   },
 
