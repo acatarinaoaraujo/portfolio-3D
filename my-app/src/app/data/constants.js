@@ -504,8 +504,8 @@ export const projects = [
       "Nivo",
     ],
     category: "web app",
-    github: "https://github.com/HACC-2023",
-    webapp: "https://devpost.com/software/track-my-leader",
+    github: "https://github.com/HACC-2023/makai",
+    webapp: "https://makai-marine.vercel.app/",
     member: [
       {
         name: "Ana Araújo",
@@ -590,7 +590,13 @@ export const projects = [
     ],
     category: "ml",
     github: "https://github.com/acatarinaoaraujo/coffee-leaf-disease-detector",
-    webapp: "https://devpost.com/software/translate-me-u9pv13",
+    member: [
+      {
+        name: "Ana Araújo",
+        img: "https://avatars.githubusercontent.com/u/60526884?s=70&v=4",
+        github: "https://github.com/orgs/ics613/people/acatarinaoaraujo",
+      }
+    ],
     images: [
       {
         url: "coffee/coffee-leaves-transformed.png",
@@ -628,6 +634,13 @@ export const projects = [
       "Matplotlib",
     ],
     category: "ml",
+    member: [
+      {
+        name: "Ana Araújo",
+        img: "https://avatars.githubusercontent.com/u/60526884?s=70&v=4",
+        github: "https://github.com/orgs/ics613/people/acatarinaoaraujo",
+      }
+    ],
     github: "https://github.com/acatarinaoaraujo/ai-sentiment-analysis",
     images: [
       {
@@ -744,7 +757,8 @@ export const projects = [
       "CSS",
     ],
     category: "web app",
-    github: "https://github.com/HACC2022/Cassiopeia",
+    github: "https://github.com/HACC-Cassiopeia/Legislative-Scraper-Production",
+
     member: [
       {
         name: "Ana Araújo",
@@ -806,6 +820,13 @@ export const projects = [
       "Simulation",
     ],
     category: "ml",
+    member: [
+      {
+        name: "Ana Araújo",
+        img: "https://avatars.githubusercontent.com/u/60526884?s=70&v=4",
+        github: "https://github.com/orgs/ics613/people/acatarinaoaraujo",
+      }
+    ],
     github: "https://github.com/acatarinaoaraujo/data-science-notebooks",
     images: [
       {
@@ -829,9 +850,16 @@ export const projects = [
     description:
       "Buy From Her is a high-fidelity mobile app prototype designed to support businesswomen by promoting their products and services. The platform helps customers discover and purchase from local female entrepreneurs, reducing the need for extensive travel while enhancing accessibility and convenience. This project aims to empower women, foster economic growth, and improve income distribution by encouraging support for local businesses.",
     image: project_8,
-    tags: ["Mobile App", "UI/UX Design", "Prototype"],
+    tags: ["Mobile App Design", "High-Fidelity Prototype", "UI/UX", "Human-Computer Interaction"],
     category: "design",
     github: "",
+    member: [
+      {
+        name: "Ana Araújo",
+        img: "https://avatars.githubusercontent.com/u/60526884?s=70&v=4",
+        github: "https://github.com/orgs/ics613/people/acatarinaoaraujo",
+      }
+    ],
     images: [
       {
         url: "buy-from-her/signup.png",
@@ -945,7 +973,14 @@ export const projects = [
       "HTML",
     ],
     category: "web app",
-    github: "https://github.com/Runtime-Terrorz",
+    member: [
+      {
+        name: "Ana Araújo",
+        img: "https://avatars.githubusercontent.com/u/60526884?s=70&v=4",
+        github: "https://github.com/orgs/ics613/people/acatarinaoaraujo",
+      }
+    ],
+    github: "https://github.com/uh-class-critics/uh-class-critics",
     images: [
       {
         url: "class-critics/homepage.png",
