@@ -3,24 +3,26 @@ import nodemailer from 'nodemailer';
 export async function POST(request) {
     try {
         const { name, email, title, message } = await request.json();
-        console.log(name, email, title, message);
 
-        console.log(process.env.GMAIL_USER);
+        console.log('Received data:', { name, email, title, message });
 
         const transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
-                user: process.env.GMAIL_USER,
+                user: process.env.NEXT_PUBLIC_GMAIL_USER,
                 pass: process.env.GMAIL_PASS,
             },
+            debug: false,
+            logger: false,
         });
 
-        await transporter.sendMail({
+        const info = await transporter.sendMail({
             from: `"${name}" <${email}>`,
-            to: process.env.GMAIL_USER,
+            to: process.env.NEXT_PUBLIC_GMAIL_USER,
             subject: title,
             text: message,
         });
+
 
         return new Response(JSON.stringify({ message: 'Email sent successfully!' }), { status: 200 });
     } catch (error) {

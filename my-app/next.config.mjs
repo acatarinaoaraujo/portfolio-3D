@@ -20,4 +20,7 @@ const nextConfig = {
   },
 };
 
+console.log('Loaded ENV:', process.env.NEXT_PUBLIC_GMAIL_USER);
+
+
 export default nextConfig;
