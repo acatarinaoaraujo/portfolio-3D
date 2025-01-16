@@ -11,6 +11,7 @@ import project_10 from "../../../public/images/project-10.png";
 
 import thesis from "../../../public/images/thesis.pdf";
 import resume from "../../../public/images/resume-example.pdf";
+import { keys } from "@mui/system";
 
 const publication_0 = "./images/publication-0.png";
 const publication_1 = "./images/publication-1.png";
@@ -414,8 +415,25 @@ export const projects = [
     id: 0,
     title: "Receipt Tracker App",
     date: "Oct 2023 - Dec 2023",
-    description:
-      "The Mejiro project was developed to address the common yet overlooked challenge of financial management within small organizations. Drawing inspiration from personal experiences of manual bookkeeping and informal price tracking, our team set out to create a solution that streamlines the process of managing receipts and financial records. Mejiro combines OCR technology for scanning receipts with GPT-4 AI for parsing data, offering a comprehensive, user-friendly application designed to make financial oversight more accessible and efficient.",
+    description: "Mejiro is a financial management tool designed for small organizations, addressing the common challenges of manual bookkeeping and informal price tracking. By combining OCR technology for efficient receipt scanning and GPT-4 AI for data parsing, Mejiro enables users to manage and track their financial records easily. The app allows users to interact with their data using natural language queries for instant insights. It securely stores financial data using MongoDB and offers visualizations through Chart.js, helping users understand their spending patterns and identify savings opportunities. Mejiro aims to simplify and streamline financial oversight for better decision-making.",
+  keyDetails: {
+    goals: [
+      "Simplify financial management for small organizations and individuals.",
+      "Provide an intuitive solution for tracking receipts and analyzing financial patterns."
+    ],
+    keyAchievements: [
+      "Developed OCR functionality for accurate digitization of receipts.",
+      "Integrated GPT-4 AI to enable natural language queries and insightful analysis.",
+      "Built an interactive dashboard with Chart.js for financial visualizations.",
+      "Added filter features to sort receipts by store and date.",
+      "Organized a usability survey with 33 participants to test functionality and gather feedback."
+    ],
+    results: [
+      "Awarded the Kalo Grant for further development.",
+      "Received positive user feedback highlighting the app's ease of use and features.",
+      "Identified key areas for enhancement to improve business scalability."
+    ],
+  },
     image: project_1,
     tags: [
       "Next.js",
@@ -488,9 +506,29 @@ export const projects = [
     id: 1,
     title: "Marine Debris Reporting App",
     date: "Oct 2023 - Nov 2023",
-    description:
-      "Makai is a centralized, mobile-friendly platform developed to support the Center for Marine Debris Research in tracking and managing debris reports across Hawaii. By consolidating scattered data sources into a single, accessible database, the app enables researchers to analyze debris trends and identify pollution hotspots more effectively. This platform also promotes community involvement by allowing public reporting and provides data-driven insights to inform policymakers and support environmental agencies in resource allocation and ecosystem preservation.",
     image: project_2,
+    description: "Makai was developed as part of the Hawaii Annual Code Challenge to address the disorganized reporting system for marine debris at the Center for Marine Debris Research (CMDR). The existing system lacked a centralized database, making it difficult to track and analyze debris trends, with data scattered across Google Drives, Access databases, and Excel spreadsheets. Makai introduced a mobile-friendly platform with a centralized database for debris reports, accessible to both the public and debris removal organizations. This solution enables researchers to monitor debris types and hotspots while streamlining the reporting process. The platform aims to positively impact Hawaii in four areas. First, it contributes to preserving marine ecosystems by facilitating debris removal. Second, it encourages community engagement by raising environmental awareness. Third, it provides data visualizations that empower policymakers, environmental agencies, and researchers to make informed decisions about conservation strategies. Lastly, it helps debris removal organizations optimize resource allocation, making the process more efficient.",
+  keyDetails: {
+    goals: [
+      "Centralize marine debris data for accurate tracking and analysis.",
+      "Provide a user-friendly platform for reporting and visualizing debris.",
+      "Promote community involvement and environmental awareness.",
+      "Offer actionable insights for resource optimization and policymaking."
+    ],
+    keyAchievements: [
+      "Designed a database schema and implemented REST APIs to handle debris reports.",
+      "Integrated Google Dialogflow to develop a chatbot for user assistance and real-time reporting.",
+      "Created a form for uploading debris images and automatically detecting locations via Google API.",
+      "Developed interactive data visualizations to track debris patterns across the Hawaiian Islands.",
+      "Collaborated effectively with a team of five to deliver a cohesive, impactful solution."
+    ],
+    results: [
+      "Secured 3rd place out of 54 teams in the Hawaii Annual Code Challenge.",
+      "Enhanced researchers' ability to monitor debris trends and optimize removal strategies.",
+      "Gained hands-on experience with chatbots, Google APIs, and data visualization.",
+      "Improved teamwork, communication, and public speaking skills through collaboration and presentations."
+    ]
+  },
     tags: [
       "Next.js",
       " MongoDB",
@@ -576,8 +614,26 @@ export const projects = [
     id: 2,
     title: "Coffee Leaf Disease Diagnoser",
     date: "Jan 2023 - Apr 2023",
-    description:
-      "LeafDiagnoseAI leverages deep learning techniques to tackle the challenge of identifying and quantifying diseases and pests in coffee leaves. Using the BRACOL dataset and through hyperparameter adjustments and data augmentation, this project employs a fine-tuned resnext50_32x4d model, achieving accuracy of 87.24% in classifying various conditions affecting Arabica coffee plants. LeafDiagnoseAI showcases a scalable solution for enhancing agricultural health monitoring and management, contributing significantly to the sustainability and productivity of coffee cultivation.",
+    description: "This project tackled the challenge of identifying and quantifying diseases and pests in Brazilian Arabica coffee plants using advanced deep learning techniques. The focus was on leveraging the BRACOL dataset, a specialized collection of coffee leaf images, to classify five conditions: healthy, miner, rust, phoma, and cercospora. Early detection and accurate classification of these diseases can significantly improve coffee production by reducing losses and enhancing sustainability. To achieve this, a fine-tuned ResNeXt50_32x4d model was employed, chosen for its robustness in handling complex image classification tasks. Key methodologies included data augmentation to enhance dataset diversity, hyperparameter tuning for improved accuracy, and employing adaptive learning rate strategies with the CosineAnnealingWarmRestarts scheduler. This approach enabled the model to achieve high accuracy while maintaining scalability.",
+  keyDetails: {
+    goals: [
+      "Develop an automated deep learning solution for early detection of coffee leaf diseases.",
+      "Improve agricultural productivity by providing actionable insights into plant health.",
+      "Demonstrate the scalability and practical application of AI in agriculture."
+    ],
+    keyAchievements: [
+      "Built a fine-tuned ResNeXt50_32x4d model, achieving an accuracy of 87.24% on the BRACOL dataset.",
+      "Utilized data augmentation techniques, such as horizontal flipping, sharpening, and normalization, to enhance model generalization.",
+      "Designed a training process with optimized hyperparameters, including a batch size of 64, 8 epochs, and a learning rate scheduler for stable progress.",
+      "Applied cross-validation and transformations to ensure robust model performance on unseen data.",
+      "Highlighted the potential for machine learning to revolutionize agricultural disease monitoring and management."
+    ],
+    results: [
+      "Achieved a final accuracy of 87.24% in classifying coffee leaf conditions.",
+      "Validated the potential of the solution to support farmers in improving sustainability and productivity.",
+      "Showcased the role of AI in providing scalable and efficient tools for agriculture, paving the way for innovative disease management techniques."
+    ]
+  },
     image: project_3,
     tags: [
       "Python",
@@ -622,6 +678,25 @@ export const projects = [
     date: "Feb 2024 - May 2024",
     description:
       "The project aims to analyze sentiments in AI-related discussions on Reddit, employing various machine learning techniques such as conventional methods, Long Short-Term Memory (LSTM) models, and BERT (Bidirectional Encoder Representations from Transformers). Specific goals involve constructing and training models to classify AI-related Reddit content as positive, negative, or neutral. The project compares the performance of different machine learning models, achieving optimal results with BERT and a F1 score of 0.80.",
+    keyDetails: {
+    goals: [
+      "Build machine learning models to classify Reddit posts and comments on AI into sentiment categories.",
+      "Compare the performance of traditional ML methods and advanced techniques like LSTM and BERT.",
+      "Explore sentiment trends in AI-related discussions over time."
+    ],
+    keyAchievements: [
+      "Collected 7,735 Reddit posts and comments related to AI using the PRAW API for data extraction.",
+      "Performed preprocessing steps like tokenization, lemmatization, stop-word removal, and vectorization.",
+      "Trained and evaluated models, including Naive Bayes, SVM, Random Forest, LSTM, and BERT, on an 80:10:10 train-validation-test split.",
+      "Fine-tuned the BERT model, achieving the highest F1 score of 0.80.",
+      "Conducted sentiment trend analysis, revealing that most discussions were neutral to positive."
+    ],
+    results: [
+      "Demonstrated that transformer-based models like BERT outperform traditional and RNN-based methods in sentiment classification tasks.",
+      "Highlighted public sentiment trends towards AI, providing data-driven insights for understanding societal perspectives.",
+      "Validated the use of NLP and machine learning techniques for analyzing social media sentiment at scale."
+    ]
+  },
     image: project_4,
     tags: [
       "Python",
@@ -651,7 +726,6 @@ export const projects = [
         url: "sentiment-analysis/linear-matrix.png",
         title: "Fig. 2: Linear Matrix",
       },
-
       {
         url: "sentiment-analysis/lstm-matrix.png",
         title: "Fig. 3: LSTM Matrix",
@@ -683,8 +757,25 @@ export const projects = [
     title: "Aircraft Phase Maintenance System (APMS)",
     date: "Jan 2023 - May 2023",
     description:
-      "APMS is an application designed to streamline aircraft maintenance scheduling and management for improved efficiency. The platform provides intuitive, real-time feedback and familiar design patterns to enhance usability. Users can manage holidays and training days, easily filter by title, and edit or delete entries as needed. The Phase Lane Sidebar allows for quick management of phase lanes, each with a dedicated calendar for event tracking. Additionally, the Events module simplifies event creation, tracking hours and identifying key time-out dates. With .csv file import functionality, users can bulk-add events, and the system automatically adjusts dates for holidays or weekends, ensuring precise scheduling.",
+      "This project developed a Phase Maintenance Inspection Scheduler for military aircraft, optimizing scheduling and tracking during maintenance phases. The system was designed to handle complex scheduling, CSV file imports, event management, and report generation while prioritizing user-friendly design, real-time feedback, and seamless workflows for military personnel.",
     image: project_5,
+    keyDetails: {
+    goals: [
+      "Phase Lane Sidebar: Enabled users to create, edit, and delete phase lanes with dedicated calendars and event management pages.",
+      "Timeouts Page: Allowed creation, filtering, and management of holidays, training days, and special events.",
+      "Events Module: Provided an interface for creating events and generating reports to analyze hours used and identify time-out periods.",
+      "CSV Import Functionality: Supported bulk event imports and adjusted dates for holidays or weekends automatically."
+    ],
+    keyAchievements: [
+      "Streamlined maintenance operations by suggesting start times based on workman-hours, holidays, and events.",
+      "Improved usability with real-time feedback, familiar design patterns, and organized workflows.",
+      "Automated scheduling adjustments and provided actionable insights through detailed reports."
+    ],
+    results: [
+      "Met all project requirements, delivering an efficient and reliable aircraft maintenance scheduling solution.",
+      "Earned praise for user-centric design, practical automation, and significant operational impact."
+    ]
+  },
     tags: [
       "React.js",
       "Node.js",
@@ -742,8 +833,27 @@ export const projects = [
     id: 5,
     title: "Department of Education Legislative Tracker",
     date: "Oct 2022 - Nov 2022",
-    description:
-      "The modern legislative tracker app, developed for the Hawaii Department of Education, streamlines the process of staying updated on upcoming hearings and writing testimonies. Through the integration of custom-built scrapers, the app ensures accurate and real-time information retrieval, facilitating efficient engagement with legislative matters.",
+    description: "Department of Education Legislative Tracker (DOELT) is a modern system designed to replace Hawaii's outdated legislative tracker. It improves accessibility and usability with a custom data scraper API that pulls real-time information from the Hawaii State Legislature. The system tracks bills, measures, and hearings, enabling users to search, save, and manage legislative data. Users can also write and track testimony through various roles, from creating initial drafts to final approval. The DOELT ensures the DOE can efficiently evaluate new bills, supporting the mission of enhancing educational excellence and access for Hawaii’s students.",
+  keyDetails: {
+    goals: [
+      "Data Scraper API: Gathered bills, detailed measure information, and hearing events in real time from the Hawaii State Legislature site.",
+      "Bills and Database Management: Supported searching, saving, editing, and managing bill data with CRUD functionality.",
+      "Calendar System: Enabled users to visualize and track upcoming hearings in an intuitive interface.",
+      "Testimony Workflow: Streamlined processes for creating, editing, approving, and tracking testimonies with defined roles."
+    ],
+    keyAchievements: [
+      "Set up MongoDB collections and CRUD methods for managing legislative data efficiently.",
+      "Developed role-based access control and integrated permissions into the UI for workflow management.",
+      "Implemented a calendar feature for visualizing hearing schedules.",
+      "Collaborated on integrating a real-time scraper API for accurate legislative information."
+    ],
+    results: [
+      "Achieved 2nd place out of 54 teams at the hackathon.",
+      "Delivered a functional prototype for DOE use, enhancing their ability to track legislative processes.",
+      "Gained experience with MongoDB, data scraping, and collaborative project development."
+    ]
+  },
+
     image: project_6,
     tags: [
       "React.js",
@@ -809,8 +919,30 @@ export const projects = [
     id: 6,
     title: "Data Science Project Collection",
     date: "Jan 2022 - May 2022",
-    description:
-      "A collection of diverse data science projects exploring domains such as clustering, time series analysis, data wrangling, and machine learning. These projects include identifying activity patterns using wearable device data, analyzing Medicaid spending by state, simulating revenue trends for a membership-based website, modeling synthetic time series data, and classifying wine quality with various machine learning techniques. Each project focuses on practical datasets and real-world applications to enhance analytical and technical skills.",
+    description: "This project collection focuses on various data science techniques applied to real-world datasets. It includes exercises in clustering, time series analysis, machine learning, and data wrangling. Each sub-project provides valuable insights and demonstrates a broad range of data science skills.",
+  keyDetails: {
+    goals: [
+      "Apply clustering, time series analysis, and machine learning techniques to diverse real-world datasets.",
+      "Gain hands-on experience with data wrangling, cleaning, and pre-processing.",
+      "Build and evaluate models for different types of data, from time series to classification.",
+      "Interpret results and visualize findings to uncover insights."
+    ],
+    keyAchievements: [
+      "Successfully implemented k-means clustering on wearable activity data to classify activity patterns.",
+      "Cleaned and merged Medicaid and IRS datasets to analyze drug spending across states.",
+      "Developed a generative model to predict revenue trends for a membership-based service.",
+      "Created synthetic time series data, combined trends and seasonality, and visualized results.",
+      "Built multiple machine learning models (KNN, Logistic Regression, Random Forest, XGBoost) for classifying wine quality."
+    ],
+    results: [
+      "Uncovered hidden patterns in activity data through clustering.",
+      "Created a comprehensive summary of Medicaid drug spending by state.",
+      "Predicted membership revenue with a model that factors in growth and demographic patterns.",
+      "Synthesized and visualized time series data that shows seasonal trends and noise.",
+      "Successfully classified wine quality and compared model performance, using confusion matrices and accuracy scores."
+    ],
+  },
+
     image: project_7,
     tags: [
       "Python",
@@ -847,8 +979,24 @@ export const projects = [
     id: 7,
     title: "Buy From Her",
     date: "Aug 2021 - Dec 2021",
-    description:
-      "Buy From Her is a high-fidelity mobile app prototype designed to support businesswomen by promoting their products and services. The platform helps customers discover and purchase from local female entrepreneurs, reducing the need for extensive travel while enhancing accessibility and convenience. This project aims to empower women, foster economic growth, and improve income distribution by encouraging support for local businesses.",
+description: "Buy From Her is a platform designed to support local female entrepreneurs by promoting their products and services. It helps customers discover and purchase items without extensive travel, making it easier to access products from businesswomen. The project aims to empower women, stimulate local economies, and create employment opportunities while promoting social progress. The design process followed a top-down approach, beginning with research and a mind map, followed by the creation of user flows and prototypes. The platform’s ultimate goal is to foster economic growth and convenience through digital accessibility.",
+  keyDetails: {
+    goals: [
+      "Empower women by promoting their products and services to a wider audience.",
+      "Enhance the accessibility and convenience for consumers, reducing the need for extensive travel.",
+      "Stimulate the growth and diversification of the local economy, creating opportunities for female entrepreneurs."
+    ],
+    keyAchievements: [
+      "Developed a comprehensive design process, from mind mapping to creating a high-fidelity prototype.",
+      "Conducted user research and gathered feedback to refine the user experience and functionality.",
+      "Implemented a seamless platform for promoting women-owned businesses, designed to drive consumer engagement."
+    ],
+    results: [
+      "The high-fidelity prototype provided a user-friendly platform, helping female entrepreneurs reach customers more easily.",
+      "Encouraged local economic growth by promoting the products and services of women entrepreneurs.",
+      "Successfully created an application that facilitates social and economic progress through increased accessibility to women-owned businesses."
+    ]
+  },
     image: project_8,
     tags: ["Mobile App Design", "High-Fidelity Prototype", "UI/UX", "Human-Computer Interaction"],
     category: "design",
@@ -894,6 +1042,23 @@ export const projects = [
     date: "Aug 2021 - Dec 2021",
     description:
       "Aeneas Medical is focused on developing a specialized application that assists the H.O.M.E project in effectively managing their medication inventory, supplies, and patient health information. This technology aims to streamline operations and improve accessibility to healthcare services. Hawaii H.O.M.E. Project is a John A. Burns School of Medicine (JABSOM) student-run free clinic staffed by volunteers from the University of Hawaii at Manoa (UHM) and the community. The clinic provides free medical care to the houseless and underserved population of Oahu.",
+      keyDetails: {
+    goals: [
+      "Develop a system to track and manage medication inventory and patient health information.",
+      "Enable mobile clinics to manage orders, dispensations, and low inventory reports.",
+      "Provide role-based access and notifications to improve clinic workflow and efficiency."
+    ],
+    keyAchievements: [
+      "Designed a user-friendly interface for sign-in/sign-up, inventory management, and order tracking.",
+      "Implemented real-time notifications and low inventory alerts to enhance operational efficiency.",
+      "Developed role-based access control to manage different user permissions, including administrative functionalities."
+    ],
+    results: [
+      "The application streamlined inventory management, reducing medication wastage and ensuring timely replenishment.",
+      "Enhanced communication and coordination among mobile clinic staff through notifications and account management features.",
+      "Contributed to the Hawaii H.O.M.E. Project's success by supporting healthcare access for homeless individuals in Hawaii."
+    ]
+  },
     image: project_9,
     tags: [
       "React.js",
@@ -960,8 +1125,24 @@ export const projects = [
     id: 9,
     title: "UH Class Critics",
     date: "Apr 2021 - May 2021",
-    description:
-      "Class Critics is a website that allows students from the University of Hawaii at Manoa to share their experiences taking different courses and professors. Students have access to a collection of professors and courses and can evaluate them based on a rating scale of 1-5. The project was conceived in response to the lack of information available to students when it comes to selecting courses and professors at the start of each semester.",
+    description: "UH Class Critics is a platform for students at the University of Hawaii at Manoa to share reviews of courses and professors. It helps students make informed decisions during course registration by providing insights based on past student experiences. The platform addresses the challenge of limited course feedback by offering a space for students to rate and review courses in various disciplines. Key features include a list of available professors and courses, along with a review system for sharing experiences. This tool enhances transparency, helping students choose courses that best fit their needs.",
+  keyDetails: {
+    goals: [
+      "Create a platform for students to review professors and courses to aid in course selection.",
+      "Provide an organized and searchable list of professors and courses across various disciplines.",
+      "Enable students to share experiences to help future students make informed decisions."
+    ],
+    keyAchievements: [
+      "Developed a comprehensive course and professor listing system to ensure students have access to relevant information.",
+      "Implemented a review system that allows students to rate and comment on professors and courses.",
+      "Provided an intuitive user interface for easy navigation and review submissions."
+    ],
+    results: [
+      "The platform empowered students with valuable insights, improving their decision-making during course selection.",
+      "Increased student engagement and interaction, enhancing the learning environment at UH Manoa.",
+      "Successfully filled the gap in course selection information, offering current students a powerful resource."
+    ]
+  },
     image: project_10,
     tags: [
       "React.js",
