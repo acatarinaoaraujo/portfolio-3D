@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import HeroSection from "./components/HeroSection";
+import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
@@ -57,6 +58,7 @@ export default function Page() {
       <Header />
       <Wrapper>
         <HeroSection />
+        <About />
       </Wrapper>
       <Skills />
       <Wrapper2>

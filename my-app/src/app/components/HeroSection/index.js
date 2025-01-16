@@ -95,11 +95,11 @@ const HeroSection = () => {
             </ResumeButton>
           </HeroLeftContainer>
 
-          <HeroRightContainer id="Right">
+          {/* <HeroRightContainer id="Right">
             <ImageContainer>
               <Image src={HeroImg} alt="hero-image" width={420} height={430} />
             </ImageContainer>
-          </HeroRightContainer>
+          </HeroRightContainer> */}
         </HeroInnerContainer>
       </HeroContainer>
     </div>
