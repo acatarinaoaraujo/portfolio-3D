@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { CloseRounded, GitHub, LaptopMac } from "@mui/icons-material";
-import { Modal, Box, Grid } from "@mui/material";
+import { Modal, Grid, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Box } from '@mui/material';
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -125,26 +125,23 @@ const Tag = styled.div`
 
 const ButtonGroup = styled.div`
   display: flex;
-  justify-content: flex-end;
-  margin: 12px 0px;
-  gap: 12px;
 `;
 
 const StyledButton = styled.a`
-  width: 100%;
+  //width: 100%;
   text-align: center;
   font-size: 16px;
   font-weight: 600;
-  color: ${({ theme }) => theme.text_primary};
-  padding: 12px 16px;
-  background-color: ${({ theme }) => theme.primary};
+  color: ${({ theme }) => theme.text_primary + 80};
+  padding: 6px 14px;
+  background-color: ${({ theme }) => theme.primary + 50};
   ${({ $dull, theme }) =>
     $dull &&
     `
         background-color: ${theme.bgLight};
         color: ${theme.text_secondary};
         &:hover {
-            background-color: ${({ theme }) => theme.bg + 99};
+            background-color: ${({ theme }) => theme.bg + 99} ;
         }
     `}
   cursor: pointer;
@@ -235,6 +232,24 @@ const index = ({ openModal, setOpenModal }) => {
             onClick={() => setOpenModal({ state: false, project: null })}
           />
 
+            <ButtonGroup>
+
+          {project?.github && project.github.trim() && (
+            <Button $dull={false} href={project.github} target="new" style={{ display: 'flex', alignItems: 'center' }}>
+          GitHub
+          <GitHub style={{ marginLeft: '8px' }} />
+          </Button>
+          )}
+
+          {project?.webapp && project.webapp.trim() && (
+          <Button $dull={false} href={project.webapp} target="new" style={{ display: 'flex', alignItems: 'center' }}>
+          WebApp
+          <LaptopMac style={{ marginLeft: '8px' }} />
+          </Button>
+          )}
+
+          </ButtonGroup>
+
           <Title>{project?.title}</Title>
 
           <Date>{project.date}</Date>
@@ -260,19 +275,65 @@ const index = ({ openModal, setOpenModal }) => {
             </Grid>
           )}
 
+<br/>
+{/* Table with key details */}
+{project.keyDetails && (
+  <Grid item xs={12} md={8}>
+    <TableContainer component={Paper}>
+      <Table size="small" aria-label="a dense table">
+        <TableHead>
+          <TableRow>
+            <TableCell><strong>Key Detail</strong></TableCell>
+            <TableCell><strong>Details</strong></TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {/* Goals */}
+          {project.keyDetails.goals.length > 0 && (
+            <TableRow>
+              <TableCell rowSpan={project.keyDetails.goals.length}><strong>Goal</strong></TableCell>
+              <TableCell>{project.keyDetails.goals[0]}</TableCell>
+            </TableRow>
+          )}
+          {project.keyDetails.goals.slice(1).map((goal, index) => (
+            <TableRow key={`goal-${index}`}>
+              <TableCell>{goal}</TableCell>
+            </TableRow>
+          ))}
+
+          {/* Key Achievements */}
+          {project.keyDetails.keyAchievements.length > 0 && (
+            <TableRow>
+              <TableCell rowSpan={project.keyDetails.keyAchievements.length}><strong>Key Achievement</strong></TableCell>
+              <TableCell>{project.keyDetails.keyAchievements[0]}</TableCell>
+            </TableRow>
+          )}
+          {project.keyDetails.keyAchievements.slice(1).map((achievement, index) => (
+            <TableRow key={`achievement-${index}`}>
+              <TableCell>{achievement}</TableCell>
+            </TableRow>
+          ))}
+
+          {/* Results */}
+          {project.keyDetails.results.length > 0 && (
+            <TableRow>
+              <TableCell rowSpan={project.keyDetails.results.length}><strong>Result</strong></TableCell>
+              <TableCell>{project.keyDetails.results[0]}</TableCell>
+            </TableRow>
+          )}
+          {project.keyDetails.results.slice(1).map((result, index) => (
+            <TableRow key={`result-${index}`}>
+              <TableCell>{result}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+  </Grid>
+)}
+
           {project?.member && <MemberGrid members={project.member} />}
-          <ButtonGroup>
-            {project?.github && project.github.trim() && (
-              <Button $dull={true} href={project.github} target="new">
-                <GitHub />
-              </Button>
-            )}
-            {project?.webapp && project.webapp.trim() && (
-              <Button $dull={true} href={project.webapp} target="new">
-                <LaptopMac />
-              </Button>
-            )}
-          </ButtonGroup>
+
         </Wrapper>
       </Container>
     </Modal>
