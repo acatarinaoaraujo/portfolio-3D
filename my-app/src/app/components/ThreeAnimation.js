@@ -6,6 +6,9 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import Stats from 'three/examples/jsm/libs/stats.module.js';
 import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment';
 import styled from 'styled-components';
+import { Bio } from "../data/constants";
+import Typewriter from "typewriter-effect";
+
 
 const SpeechBubble = styled.div`
   position: absolute;
@@ -16,9 +19,10 @@ const SpeechBubble = styled.div`
   padding: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   font-size: 14px;
-  max-width: 200px;
+  max-width: 220px;
   z-index: 10;
 `;
+
 
 export default function ThreeAnimation() {
   const containerRef = useRef(null);
@@ -60,8 +64,9 @@ export default function ThreeAnimation() {
     loader.setDRACOLoader(dracoLoader);
 
     let mixer;
-
-    loader.load('/models/gltf/LittlestTokyo.glb', (gltf) => {
+    let littleTokyo = 'LittlestTokyo.glb';
+    let Globe = 'earth-cartoon.glb';
+    loader.load('/models/gltf/earth-cartoon.glb/', (gltf) => {
       const model = gltf.scene;
       model.position.set(1, 1, 0);
       model.scale.set(0.01, 0.01, 0.01);
@@ -96,8 +101,9 @@ export default function ThreeAnimation() {
   return (
     <>
       <SpeechBubble>
-        Hi, I'm [Your Name]. Welcome to my 3D world!
+        Hi, I'm Ana Araújo. 🙋🏻‍♀️ Welcome to my 3D world! 🌎
       </SpeechBubble>
+
       <div ref={containerRef} style={{ width: '100%', height: '100%' }} />
     </>
   );
