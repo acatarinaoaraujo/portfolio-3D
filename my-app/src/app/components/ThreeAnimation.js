@@ -5,6 +5,20 @@ import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import Stats from 'three/examples/jsm/libs/stats.module.js';
 import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment';
+import styled from 'styled-components';
+
+const SpeechBubble = styled.div`
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  max-width: 200px;
+  z-index: 10;
+`;
 
 export default function ThreeAnimation() {
   const containerRef = useRef(null);
@@ -79,5 +93,12 @@ export default function ThreeAnimation() {
     };
   }, []);
 
-  return <div ref={containerRef} style={{ width: '100%', height: '100%' }} />;
+  return (
+    <>
+      <SpeechBubble>
+        Hi, I'm [Your Name]. Welcome to my 3D world!
+      </SpeechBubble>
+      <div ref={containerRef} style={{ width: '100%', height: '100%' }} />
+    </>
+  );
 }
