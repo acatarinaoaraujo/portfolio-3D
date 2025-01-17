@@ -5,9 +5,7 @@ export const HeroContainer = styled.div`
   display: flex;
   justify-content: center;
   position: relative;
-  padding: 100px 30px;
   margin: 0; /* Ensure no margin */
-
   z-index: 1;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 95%, 0 100%);
 `;
@@ -42,14 +40,14 @@ export const HeroInnerContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1100px;
+  max-width: 1200px;
 
   @media (max-width: 960px) {
     flex-direction: column;
   }
 `;
 export const HeroLeftContainer = styled.div`
-  width: 100%;
+   width: 200px;
   order: 1;
   @media (max-width: 960px) {
     order: 2;
@@ -69,11 +67,12 @@ export const HeroLeftContainer = styled.div`
 `;
 
 export const HeroRightContainer = styled.div`
-  width: 100%;
+  width: 500px;
   display: flex;
   order: 2;
-  justify-content: end;
   gap: 12px;
+  height: 500px; /* Ensure container has height */
+
   @media (max-width: 960px) {
     order: 1;
     justify-content: center;
@@ -85,6 +84,7 @@ export const HeroRightContainer = styled.div`
     margin-bottom: 30px;
   }
 `;
+
 
 export const Img = styled.img`
   position: relative;

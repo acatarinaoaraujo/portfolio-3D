@@ -18,6 +18,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
 import styled from "styled-components";
+import ThreeAnimation from "../ThreeAnimation";
 
 const ImageContainer = styled.div`
   display: inline-block;
@@ -31,7 +32,7 @@ const HeroSection = () => {
   return (
     <div id="about">
       <HeroContainer>
-        <HeroInnerContainer>
+        {/* <HeroInnerContainer>
           <HeroLeftContainer id="Left">
             <Title>Hi, I am {Bio.name}</Title>
             <TextLoop>
@@ -95,12 +96,11 @@ const HeroSection = () => {
             </ResumeButton>
           </HeroLeftContainer>
 
-          {/* <HeroRightContainer id="Right">
-            <ImageContainer>
-              <Image src={HeroImg} alt="hero-image" width={420} height={430} />
-            </ImageContainer>
-          </HeroRightContainer> */}
-        </HeroInnerContainer>
+          <HeroRightContainer id="Right">
+
+          </HeroRightContainer>
+        </HeroInnerContainer> */}
+        <ThreeAnimation />
       </HeroContainer>
     </div>
   );

@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Image from "next/image";
 import HeroImg from "../../../../public/images/profile.jpeg";
 import { Grid } from "@mui/material";
+import ThreeAnimation from "../ThreeAnimation";
 
 const Container = styled.div`
   display: flex;
@@ -59,7 +60,6 @@ export const SubDesc = styled.div`
     font-size: 14px;
   }
 `;
-
 
 
 const AboutContainer = styled.div`
@@ -129,13 +129,12 @@ const About = () => {
               When I'm not writing code, I enjoy staying active by working out 🏋️‍♀️, cooking new dishes 🍝, and exploring different music genres 🎸.
               </SubDesc>
 
-
             </Grid>
           </Grid>
 
-
         </AboutContainer>
       </Wrapper>
+
     </Container>
   );
 };
