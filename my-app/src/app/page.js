@@ -13,6 +13,7 @@ import Publication from "./components/Publication";
 import styled from "styled-components";
 import Header from "./components/Header";
 import Awards from "./components/Awards";
+import Navbar from "./components/Navbar";
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -55,7 +56,8 @@ export default function Page() {
 
   return (
     <Body>
-      <Header />
+      <Navbar />
+
       <Wrapper>
         <HeroSection />
         <About />

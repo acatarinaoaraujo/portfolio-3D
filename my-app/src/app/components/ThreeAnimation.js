@@ -6,8 +6,6 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import Stats from 'three/examples/jsm/libs/stats.module.js';
 import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment';
 import styled from 'styled-components';
-import { Bio } from "../data/constants";
-import Typewriter from "typewriter-effect";
 
 
 const SpeechBubble = styled.div`
@@ -65,11 +63,12 @@ export default function ThreeAnimation() {
 
     let mixer;
     let littleTokyo = 'LittlestTokyo.glb';
-    let Globe = 'earth-cartoon.glb';
+    let globe = 'earth-cartoon.glb';
     loader.load('/models/gltf/earth-cartoon.glb/', (gltf) => {
       const model = gltf.scene;
-      model.position.set(1, 1, 0);
-      model.scale.set(0.01, 0.01, 0.01);
+      model.position.set(1, 1, 1);
+      // model.scale.set(0.01, 0.01, 0.01);
+      model.scale.set(2.0, 2.0, 2.0);
       scene.add(model);
 
       mixer = new THREE.AnimationMixer(model);

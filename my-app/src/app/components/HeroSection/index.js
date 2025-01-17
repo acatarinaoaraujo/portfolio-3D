@@ -14,7 +14,7 @@ export const HeroContainer = styled.div`
 const HeroSection = () => {
   return (
       <HeroContainer>
-        {/* <ThreeAnimation /> */}
+        <ThreeAnimation />
       </HeroContainer>
   );
 };

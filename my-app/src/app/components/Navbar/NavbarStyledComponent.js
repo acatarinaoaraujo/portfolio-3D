@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const Nav = styled.div`
     background-color: white;
-    height: 80px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,20 +12,19 @@ export const Nav = styled.div`
     top: 0;
     z-index: 10;
     margin: 0;
+
     padding: 0;
     box-sizing: border-box; /* Include padding in the height */
 `;
-
 
 export const NavbarContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60px;
     z-index: 1;
     width: 100%;
-    padding: 0 24px;
-    max-width: 1200px;
+    padding: 0 20px;
+    max-width: 1400px;
 `;
 
 export const NavLogo = styled(Link)`
@@ -50,7 +49,7 @@ export const NavItems = styled.ul`
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: end;
     gap: 32px;
     padding: 0 6px;
     list-style: none;
@@ -61,12 +60,13 @@ export const NavItems = styled.ul`
 
 export const NavLink = styled.a`
     color: ${({ theme }) => theme.text_primary};
-    font-weight: 500;
+    font-weight: 400;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     text-decoration: none;
     &:hover {
         color: ${({ theme }) => theme.primary};
+        font-weight: 600;
     }
     &.active {
         border-bottom: 2px solid ${({ theme }) => theme.primary};
@@ -79,13 +79,13 @@ export const GitHubButton = styled.a`
     display: flex;
     align-items: center;
     height: 70%;
-    border-radius: 20px;
     color: ${({ theme }) => theme.primary};
     cursor: pointer;
     padding: 0 20px;
-    font-weight: 500;
+    font-weight: 400;
     text-decoration: none;
-    font-size: 16px;
+    margin-right: 4px;
+    font-size: 14px;
     transition: all 0.6s ease-in-out;
     &:hover {
         background: ${({ theme }) => theme.primary};
@@ -102,13 +102,12 @@ export const LinkedInButton = styled.a`
     display: flex;
     align-items: center;
     height: 70%;
-    border-radius: 20px;
     color: ${({ theme }) => theme.primary};
     cursor: pointer;
     padding: 0 20px;
-    font-weight: 500;
+    font-weight: 400;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 14px;
     transition: all 0.6s ease-in-out;
     &:hover {
         background: ${({ theme }) => theme.primary};
@@ -121,7 +120,7 @@ export const LinkedInButton = styled.a`
 
 
 export const ButtonContainer = styled.div`
-    width: 80%;
+    width: 100%;
     height: 100%;
     display: flex;
     justify-content: end;
