@@ -59,7 +59,6 @@ const ContactLink = styled.a`
 `;
 
 const index = () => {
-  console.log("GMAIL_USER:", process.env.NEXT_PUBLIC_GMAIL_USER);
 
   const [form, setForm] = useState({
     name: "",
