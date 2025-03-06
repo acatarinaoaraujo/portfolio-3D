@@ -48,6 +48,7 @@ const SocialLinks = () => {
     >
       <LinkedInIcon />
     </a>
+{/*
     <a
       href={Bio.leetcode}
       target="display"
@@ -58,7 +59,7 @@ const SocialLinks = () => {
         alt="LeetCode"
         style={{ width: "80px", height: "80px" }} // Adjust dimensions as needed
       />
-    </a>
+    </a> */}
   </div>
   );
 };
