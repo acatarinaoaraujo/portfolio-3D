@@ -24,8 +24,8 @@ const SocialLinks = () => {
       gap: "20px",
       justifyContent: "left",
       alignItems: "center",
-      marginTop: "-50px",
-      marginBottom: "-30px",
+      // marginTop: "-50px",
+      // marginBottom: "-30px",
     }}
   >
     <a
