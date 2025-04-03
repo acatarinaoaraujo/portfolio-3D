@@ -22,6 +22,12 @@ const badges = [
     icon: "fa-award",
     label: "WWT Internship 2023 - Best Technical Solution",
   },
+  {
+    isCertificate: true,
+    img: "images/data-analytics-certificate.png",
+    label: "Google Advanced Data Analytics",
+    link: "https://www.credly.com/badges/03e94c3c-ce2a-43fb-80a4-6257f723827e/public_url",
+  },
 ];
 
 const Container = styled.div`
@@ -40,7 +46,7 @@ const Container = styled.div`
 const Wrapper = styled.div`
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100%;
@@ -76,10 +82,13 @@ const Desc = styled.div`
 `;
 
 const index = () => {
+  const awards = badges.filter((badge) => !badge.isCertificate);
+  const certificates = badges.filter((badge) => badge.isCertificate);
+
   return (
     <Container id="awards">
       <Wrapper>
-        <Title>Awards</Title>
+        <Title>Awards & Certificates</Title>
         <Desc>
           Recognized for excellence in collaborative software development and
           innovation, including awards at the{" "}
@@ -89,13 +98,13 @@ const index = () => {
         </Desc>
 
         <div className={styles.mainWrapper}>
-          {badges.map((badge, index) => (
+          {/* Display Awards */}
+          {awards.map((badge, index) => (
             <div
               key={index}
               className={`${styles.badge} ${styles[badge.color]}`}
             >
               <div className={styles.circle}>
-                <div>{styles.customContent}</div>
                 {badge.icon ? (
                   <i
                     className={`fa ${badge.icon} fa-2xl`}
@@ -106,6 +115,18 @@ const index = () => {
                 )}
               </div>
               <div className={styles.ribbon}>{badge.label}</div>
+            </div>
+          ))}
+        </div>
+
+        <div className={styles.certificates}>
+          {/* Display Certificates */}
+          {certificates.map((certificate, index) => (
+            <div key={index} className={styles.certificateCard}>
+              <img src={certificate.img} alt="Certificate" />
+              <a href={certificate.link} target="_blank" rel="noopener noreferrer">
+                View Certificate
+              </a>
             </div>
           ))}
         </div>

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const Nav = styled.div`
     background-color: white;
-    height: 60px;
+    height: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -50,13 +50,16 @@ export const NavItems = styled.ul`
     display: flex;
     align-items: center;
     justify-content: end;
-    gap: 32px;
+    gap: 54px; 
     padding: 0 6px;
     list-style: none;
+    white-space: nowrap; /* Prevents text from wrapping */
+    flex-wrap: nowrap; /* Ensures everything stays in one line */
     @media screen and (max-width: 768px) {
         display: none;
     }
 `;
+
 
 export const NavLink = styled.a`
     color: ${({ theme }) => theme.text_primary};
@@ -78,7 +81,7 @@ export const GitHubButton = styled.a`
     justify-content: center;
     display: flex;
     align-items: center;
-    height: 70%;
+    height: 90%;
     color: ${({ theme }) => theme.primary};
     cursor: pointer;
     padding: 0 20px;
