@@ -1238,7 +1238,28 @@ description: "Buy From Her is a platform designed to support local female entrep
         name: "Ana Araújo",
         img: "https://avatars.githubusercontent.com/u/60526884?s=70&v=4",
         github: "https://github.com/orgs/ics613/people/acatarinaoaraujo",
-      }
+      },
+      {
+        name: "John Suelen",
+        img: "https://avatars.githubusercontent.com/u/77768166?s=64&v=4",
+        github: "",
+      },
+      {
+        name: "JingZhe Feng",
+        img: "https://avatars.githubusercontent.com/u/54689008?s=64&v=4",
+        github: "",
+      },
+      {
+        name: "Johny Ho",
+        img: "https://avatars.githubusercontent.com/u/77767808?s=64&v=4",
+        github: "",
+      },
+      {
+        name: "Steven Lee",
+        img: "https://avatars.githubusercontent.com/u/77819979?s=64&v=4",
+        github: "",
+      },
+
     ],
     github: "https://github.com/uh-class-critics/uh-class-critics",
     images: [
