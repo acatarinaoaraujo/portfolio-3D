@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import { projects } from "../../data/constants"; // Adjust path if needed
 import { GitHub, ArrowBack, ArrowForward, Home, LaptopMac } from "@mui/icons-material";
+import { FaTools } from "react-icons/fa";
 import { Grid, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Box, Typography } from '@mui/material';
 
 const Container = styled.div`
@@ -65,6 +66,36 @@ const SubSubTitle = styled.div`
     margin: 6px 6px 0px 6px;
   }
 `;
+
+const ConstructionTag = styled.div`
+    background: linear-gradient(135deg, #ffcc00, #ffdd55);
+    color: #1a1a1a;
+    font-size: 11px;
+    width: 170px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    backdrop-filter: blur(3px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    transition: transform 0.3s ease;
+    ${({ inline }) => inline && `
+        position: static;
+        box-shadow: none;
+        padding: 4px 8px;
+        font-size: 10px;
+    `}
+
+    &:hover {
+        transform: scale(1.05);
+    }
+`;
+
 
 const Date = styled.div`
   font-size: 16px;
@@ -321,7 +352,15 @@ WebApp
 
 </ButtonGroup>
 
-        <Title>{project?.title}</Title>
+
+    <Title>{project?.title}</Title>
+    {project?.isInConstruction && (
+        <ConstructionTag inline>
+            <FaTools size={12} />
+            Under Construction
+        </ConstructionTag>
+    )}
+
 
         <Date>{project.date}</Date>
 
@@ -350,7 +389,7 @@ WebApp
         )}
 <br/>
 {/* Table with key details */}
-{project.keyDetails && (
+{project.keyDetails && Object.keys(project.keyDetails).length > 0 &&  (
   <Grid item xs={12} md={8}>
     <TableContainer component={Paper}>
       <Table size="small" aria-label="a dense table">

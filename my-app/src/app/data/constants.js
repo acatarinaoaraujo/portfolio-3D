@@ -1,3 +1,4 @@
+import project_0 from "../../../public/images/project-0.png";
 import project_1 from "../../../public/images/project-1.png";
 import project_2 from "../../../public/images/project-2.png";
 import project_3 from "../../../public/images/project-3.png";
@@ -11,7 +12,6 @@ import project_10 from "../../../public/images/project-10.png";
 
 import thesis from "../../../public/images/thesis.pdf";
 import resume from "../../../public/images/resume-example.pdf";
-import { keys } from "@mui/system";
 
 const publication_0 = "./images/publication-0.png";
 const publication_1 = "./images/publication-1.png";
@@ -84,6 +84,12 @@ export const skills = [
       },
 
       {
+        name: "Angular",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/angularjs/angularjs-original.svg",
+      },
+
+      {
         name: "DaisyUI",
         image:
           "https://raw.githubusercontent.com/saadeghi/daisyui-images/master/images/daisyui-logo/favicon-192.png",
@@ -128,6 +134,17 @@ export const skills = [
         image:
           "data:image/png;base64,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",
       },
+      {
+        name: ".NET",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/dot-net/dot-net-original.svg",
+      },
+      {
+        name: "Flask",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/flask/flask-original-wordmark.svg",
+      },
+    
       {
         name: "REST API",
         image:
@@ -228,6 +245,13 @@ export const skills = [
         image:
           "https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg",
       },
+  
+      {
+        name: "Transformers",
+        image:
+          "https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/huggingface-color.png",
+      },
+    
     ],
   },
   {
@@ -390,7 +414,7 @@ export const publications = [
     description:
       "This study examines the security practices and challenges faced by mobile app developers. As mobile apps increasingly handle sensitive data for essential services like banking and healthcare, securing them is critical. Through a global survey of 137 experienced mobile developers, our research provides insights into the practices developers prioritize, such as authentication and secure storage, and the obstacles they encounter, including managing vulnerabilities, permissions, and privacy concerns. The findings highlight a gap in existing resources, with many developers expressing a need for improved training and practical guidance on secure development. Developers often rely on platforms like Stack Overflow for security-related information but report that current learning materials fall short in equipping them with comprehensive security skills. This research underscores the need for better-designed tools, resources, and training programs that integrate security from the earliest stages of development, contributing to a safer mobile app ecosystem.",
     image: publication_0,
-    tags: ["Mobile Application", "Security", "Survey", "Developer"],
+    tags: ["Mobile Development", "Security", "Survey", "Stack Overflow"],
     category: "Natural Language Processing",
     webapp: "https://arxiv.org/abs/2408.09032",
   },
@@ -404,7 +428,7 @@ export const publications = [
     description:
       "This study investigates the security challenges mobile app developers face by analyzing security-related questions on Stack Overflow. With society’s increasing reliance on mobile apps for accessing sensitive resources, app security is paramount. Our research focuses on the types of security issues developers encounter, especially on the Android platform, and identifies seven key categories: Secured Communications, Database Security, App Distribution, Encryption, Permissions, File-Specific Security, and General Security. Our findings underscore Stack Overflow's role as a primary resource for developers seeking security guidance. This study offers valuable insights that can inform the creation of more targeted tools, resources, and training by researchers and vendors to enhance mobile app security practices.",
     image: publication_1,
-    tags: ["Stack Overflow", "Android", "iOS", "Security"],
+    tags: ["Stack Overflow", "Security", "Unsupervised Learning"],
     category: "Natural Language Processing",
     webapp: "https://arxiv.org/abs/2409.07926",
   },
@@ -412,9 +436,54 @@ export const publications = [
 
 export const projects = [
   {
+    id: 12,
+    title: "Climate Impact Visualizer",
+    date: "Jan 2025 - May 2025",
+    description: "Climate Impact Visualizer is a full-stack web application designed to help researchers, policymakers, and the public explore a country’s progress on climate change indicators. Built with ASP.NET and Angular, it visualizes high-impact climate metrics sourced from the IMF Climate Change Dashboard, including emissions, energy transition, forest coverage, and projected economic loss. The app features a 3D interactive globe for intuitive navigation, dynamic charts for year-over-year comparisons, and plans to integrate a large language model for natural language explanations. With upcoming support for persistent storage and containerized deployment, Climate Impact Visualizer aims to offer transparent, accessible insights into climate risks and progress across nations.",
+  keyDetails: {},
+    image: project_0,
+    isInConstruction: true,
+    tags: [
+      "ASP.NET",
+      "C#",
+      "Angular",
+      "IMF API",
+      "Globe.gl",
+      "Cohere API",
+      "Material UI",
+      "Unit Testing",
+    ],
+    category: "web app",
+    github: "https://github.com/acatarinaoaraujo/climate-impact-visualizer",
+    webapp: "",
+
+    member: [
+      {
+        name: "Ana Araújo",
+        img: "https://avatars.githubusercontent.com/u/60526884?s=70&v=4",
+        github: "https://github.com/orgs/ics613/people/acatarinaoaraujo",
+      },
+    ],
+
+    images: [
+      {
+        url: "climate-visualizer/gross-imports.png",
+        title: "Fig. 1: Gross Imports",
+      },
+      {
+        url: "climate-visualizer/carbon-in-forests.png",
+        title: "Fig. 2: Carbon in Forests",
+      },
+      {
+        url: "climate-visualizer/modal-country.png",
+        title: "Fig. 3: Country Information with LLM Prompting",
+      },
+    ],
+  },
+  {
     id: 0,
     title: "Receipt Tracker App",
-    date: "Oct 2023 - Dec 2023",
+    date: "Oct 2023 - Jan 2024",
     description: "Mejiro is a financial management tool designed for small organizations, addressing the common challenges of manual bookkeeping and informal price tracking. By combining OCR technology for efficient receipt scanning and GPT-4 AI for data parsing, Mejiro enables users to manage and track their financial records easily. The app allows users to interact with their data using natural language queries for instant insights. It securely stores financial data using MongoDB and offers visualizations through Chart.js, helping users understand their spending patterns and identify savings opportunities. Mejiro aims to simplify and streamline financial oversight for better decision-making.",
   keyDetails: {
     goals: [
@@ -435,6 +504,7 @@ export const projects = [
     ],
   },
     image: project_1,
+    isInConstruction: false,
     tags: [
       "Next.js",
       "Node.js",
@@ -507,6 +577,7 @@ export const projects = [
     title: "Marine Debris Reporting App",
     date: "Oct 2023 - Nov 2023",
     image: project_2,
+    isInConstruction: false,
     description: "Makai was developed as part of the Hawaii Annual Code Challenge to address the disorganized reporting system for marine debris at the Center for Marine Debris Research (CMDR). The existing system lacked a centralized database, making it difficult to track and analyze debris trends, with data scattered across Google Drives, Access databases, and Excel spreadsheets. Makai introduced a mobile-friendly platform with a centralized database for debris reports, accessible to both the public and debris removal organizations. This solution enables researchers to monitor debris types and hotspots while streamlining the reporting process. The platform aims to positively impact Hawaii in four areas. First, it contributes to preserving marine ecosystems by facilitating debris removal. Second, it encourages community engagement by raising environmental awareness. Third, it provides data visualizations that empower policymakers, environmental agencies, and researchers to make informed decisions about conservation strategies. Lastly, it helps debris removal organizations optimize resource allocation, making the process more efficient.",
   keyDetails: {
     goals: [
@@ -635,6 +706,7 @@ export const projects = [
     ]
   },
     image: project_3,
+    isInConstruction: false,
     tags: [
       "Python",
       "Resnext50",
@@ -675,7 +747,7 @@ export const projects = [
   {
     id: 3,
     title: "Sentiment Analysis on AI-Related Discussion",
-    date: "Feb 2024 - May 2024",
+    date: "Feb 2023 - May 2023",
     description:
       "The project aims to analyze sentiments in AI-related discussions on Reddit, employing various machine learning techniques such as conventional methods, Long Short-Term Memory (LSTM) models, and BERT (Bidirectional Encoder Representations from Transformers). Specific goals involve constructing and training models to classify AI-related Reddit content as positive, negative, or neutral. The project compares the performance of different machine learning models, achieving optimal results with BERT and a F1 score of 0.80.",
     keyDetails: {
@@ -698,6 +770,7 @@ export const projects = [
     ]
   },
     image: project_4,
+    isInConstruction: false,
     tags: [
       "Python",
       "BERT",
@@ -759,6 +832,7 @@ export const projects = [
     description:
       "This project developed a Phase Maintenance Inspection Scheduler for military aircraft, optimizing scheduling and tracking during maintenance phases. The system was designed to handle complex scheduling, CSV file imports, event management, and report generation while prioritizing user-friendly design, real-time feedback, and seamless workflows for military personnel.",
     image: project_5,
+    isInConstruction: false,
     keyDetails: {
     goals: [
       "Phase Lane Sidebar: Enabled users to create, edit, and delete phase lanes with dedicated calendars and event management pages.",
@@ -855,6 +929,7 @@ export const projects = [
   },
 
     image: project_6,
+    isInConstruction: false,
     tags: [
       "React.js",
       "Node.js",
@@ -944,6 +1019,7 @@ export const projects = [
   },
 
     image: project_7,
+    isInConstruction: false,
     tags: [
       "Python",
       "Clustering",
@@ -998,6 +1074,7 @@ description: "Buy From Her is a platform designed to support local female entrep
     ]
   },
     image: project_8,
+    isInConstruction: false,
     tags: ["Mobile App Design", "High-Fidelity Prototype", "UI/UX", "Human-Computer Interaction"],
     category: "design",
     github: "",
@@ -1060,6 +1137,7 @@ description: "Buy From Her is a platform designed to support local female entrep
     ]
   },
     image: project_9,
+    isInConstruction: false,
     tags: [
       "React.js",
       "Node.js",
@@ -1144,6 +1222,7 @@ description: "Buy From Her is a platform designed to support local female entrep
     ]
   },
     image: project_10,
+    isInConstruction: false,
     tags: [
       "React.js",
       "Node.js",

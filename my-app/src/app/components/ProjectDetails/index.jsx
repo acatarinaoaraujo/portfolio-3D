@@ -277,7 +277,8 @@ const index = ({ openModal, setOpenModal }) => {
 
 <br/>
 {/* Table with key details */}
-{project.keyDetails && (
+
+{project.keyDetails && Object.keys(project.keyDetails).length > 0 && (
   <Grid item xs={12} md={8}>
     <TableContainer component={Paper}>
       <Table size="small" aria-label="a dense table">

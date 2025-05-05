@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Link from 'next/link';
 import Image from 'next/image';
+import { FaTools } from 'react-icons/fa'; 
 
 const Button = styled(Link)`
     display: block; /* Ensure the button is always visible */
@@ -22,6 +23,36 @@ const Button = styled(Link)`
     &:hover {
         background-color: ${({ theme }) => theme.primary};
         color: ${({ theme }) => theme.white};
+    }
+`;
+
+const ConstructionTag = styled.div`
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: linear-gradient(135deg, #ffcc00, #ffdd55);
+    color: #1a1a1a;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    backdrop-filter: blur(3px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    z-index: 2;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    svg {
+        flex-shrink: 0;
     }
 `;
 
@@ -54,7 +85,9 @@ const CardImageWrapper = styled.div`
     box-shadow: 0 0 16px 2px rgba(0,0,0,0.3);
     overflow: hidden;
     display: flex;
+    position: relative; /* Required for positioning the tag */
 `;
+
 
 const Tags = styled.div`
     width: 100%;
@@ -138,13 +171,20 @@ const ProjectCards = ({ project, setOpenModal }) => {
     return (
         <Card onClick={() => setOpenModal({ state: true, project: project })}>
             <CardImageWrapper>
-                <Image
-                    src={project.image}
-                    alt={project.title}
-                    width={306}
-                    height={180}
-                />
-            </CardImageWrapper>
+    {project.isInConstruction && (
+        <ConstructionTag>
+            <FaTools size={14} />
+            In Construction
+        </ConstructionTag>
+    )}
+    <Image
+        src={project.image}
+        alt={project.title}
+        width={306}
+        height={180}
+    />
+</CardImageWrapper>
+
             <Tags>
                 {project.tags?.map((tag, index) => (
                     <Tag key={index}>{tag}</Tag>

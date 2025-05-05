@@ -97,9 +97,9 @@ const About = () => {
               <SubDesc>
               🤖⚙️🔧🦾👩‍💻💻
               </SubDesc>
-              <SubDesc>
+              {/* <SubDesc>
               I've had the privilege of working on a range of exciting projects—from improving mobile app security through natural language processing to deploying machine learning models that enhance decision-making processes.
-              </SubDesc>
+              </SubDesc> */}
 
               <SubTitle>
               <b>Languages</b>
