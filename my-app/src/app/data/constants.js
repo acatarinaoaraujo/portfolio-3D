@@ -436,7 +436,7 @@ export const publications = [
 
 export const projects = [
   {
-    id: 12,
+    id: 10,
     title: "Climate Impact Visualizer",
     date: "Jan 2025 - May 2025",
     description: "Climate Impact Visualizer is a full-stack web application designed to help researchers, policymakers, and the public explore a country’s progress on climate change indicators. Built with ASP.NET and Angular, it visualizes high-impact climate metrics sourced from the IMF Climate Change Dashboard, including emissions, energy transition, forest coverage, and projected economic loss. The app features a 3D interactive globe for intuitive navigation, dynamic charts for year-over-year comparisons, and plans to integrate a large language model for natural language explanations. With upcoming support for persistent storage and containerized deployment, Climate Impact Visualizer aims to offer transparent, accessible insights into climate risks and progress across nations.",
