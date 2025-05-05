@@ -169,3 +169,66 @@ export const ResumeButton = styled.a`
         font-size: 18px;
     }
 `;
+
+export const GridWrapper = styled.div`
+  display: grid;
+  // grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  justify-items: center;
+  margin-top: 80px;
+  margin-bottom: 100px;
+
+  @media (max-width: 960px) {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 20px;
+  }
+`;
+
+export const Left = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+`;
+
+export const Right = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const SocialRow = styled.div`
+  display: flex;
+  gap: 20px;
+  margin-top: 8px;
+
+  a {
+    color: ${({ theme }) => theme.text_primary};
+    transition: 0.3s;
+
+    &:hover {
+      transform: scale(1.2);
+      color: ${({ theme }) => theme.primary};
+    }
+  }
+`;
+
+export const TagsContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 10px;
+`;
+
+export const Tag = styled.span`
+  padding: 6px 12px;
+  background: ${({ theme }) => theme.primary + "20"};
+  border: 1px solid ${({ theme }) => theme.primary};
+  color: ${({ theme }) => theme.text_primary};
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: 500;
+`;
+

@@ -1,128 +1,113 @@
 import Typewriter from "typewriter-effect";
 import { Bio } from "../../data/constants";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import EmailIcon from "@mui/icons-material/Email";
 import {
+  Container,
+  GridWrapper,
+  Title,
   TextLoop,
   Span,
-  ResumeButton,
   Desc,
   SubDesc,
   SubTitle,
-  Container,
-  Wrapper,
-  Title
+  Tag,
+  TagsContainer,
+  ResumeButton,
+  Img,
+  SocialRow,
 } from "./AboutStyle";
-
-
-const SocialLinks = () => {
-  return (
-    <div
-    style={{
-      display: "flex",
-      gap: "20px",
-      justifyContent: "left",
-      alignItems: "center",
-      // marginTop: "-50px",
-      // marginBottom: "-30px",
-    }}
-  >
-    <a
-      href={`mailto:${Bio.email}`}
-      style={{ color: "inherit", textDecoration: "none" }}
-    >
-      <EmailIcon  />
-    </a>
-    <a
-      href={Bio.github}
-      target="display"
-      style={{ color: "inherit", textDecoration: "none" }}
-    >
-      <GitHubIcon/>
-    </a>
-    <a
-      href={Bio.linkedin}
-      target="display"
-      style={{ color: "inherit", textDecoration: "none" }}
-    >
-      <LinkedInIcon />
-    </a>
-{/*
-    <a
-      href={Bio.leetcode}
-      target="display"
-      style={{ color: "inherit", textDecoration: "none" }}
-    >
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/0/0a/LeetCode_Logo_black_with_text.svg" // Replace with the actual image URL
-        alt="LeetCode"
-        style={{ width: "80px", height: "80px" }} // Adjust dimensions as needed
-      />
-    </a> */}
-  </div>
-  );
-};
-
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import EmailIcon from "@mui/icons-material/Email";
 
 const About = () => {
   return (
     <div id="about">
-    <Container>
-      <Wrapper>
-        <Title>About Me</Title>
-            <TextLoop>
-              Aspiring
-              <Span>
-                <Typewriter
-                  options={{
-                    strings: Bio.roles,
-                    autoStart: true,
-                    loop: true,
-                  }}
-                />
-              </Span>
-            </TextLoop>
+      <Container>
+        <GridWrapper>
+          {/* <Img
+            src="../../../.."
+            alt="Profile"
+          /> */}
 
-        <br />
-        <SocialLinks />
+  
 
-            <Desc>
-        I'm <b>open to relocating</b> and continue my journey as a software engineer. My goal is to work with a team that values <b>collaboration</b>, <b>continuous learning</b>, and the application of technology to <b>solve meaningful problems</b>.
-        </Desc>
+          <Title>About Me</Title>
+             <SocialRow>
+            <a href={`mailto:${Bio.email}`}>
+              <EmailIcon />
+            </a>
+            <a href={Bio.github} target="_blank" rel="noreferrer">
+              <GitHubIcon />
+            </a>
+            <a href={Bio.linkedin} target="_blank" rel="noreferrer">
+              <LinkedInIcon />
+            </a>
+          </SocialRow>
 
-              <SubDesc>
-              My journey in tech started with the fundamentals during my undergraduate studies at the University of Hawai'i at Manōa. Since then, I've expanded my expertise, particularly in <b>full-stack development</b> and <b>machine learning</b>.
-              </SubDesc>
-              <SubDesc>
-              🤖⚙️🔧🦾👩‍💻💻
-              </SubDesc>
-              {/* <SubDesc>
-              I've had the privilege of working on a range of exciting projects—from improving mobile app security through natural language processing to deploying machine learning models that enhance decision-making processes.
-              </SubDesc> */}
+          <TextLoop>
+            Aspiring{" "}
+            <Span>
+              <Typewriter
+                options={{
+                  strings: Bio.roles,
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
+            </Span>
+          </TextLoop>
 
-              <SubTitle>
-              <b>Languages</b>
-              </SubTitle>
-              <SubDesc>
-              English 🇺🇸,
-              Portuguese 🇧🇷,
-              Spanish 🇲🇽
-              </SubDesc>
+          <SubTitle>🌱 Fields I Enjoy</SubTitle>
+          <TagsContainer>
+            <Tag>Full-Stack Dev</Tag>
+            <Tag>Data Visualization</Tag>
+            <Tag>ML / NLP</Tag>
+            <Tag>Algorithms</Tag>
+          </TagsContainer>
 
-              <SubTitle>
-              <b>Interests & Hobbies</b>
-              </SubTitle>
-              <SubDesc>
-              When I'm not writing code, I enjoy staying active by working out 🏋️‍♀️, cooking new dishes 🍝, and exploring different music genres 🎸.
-              </SubDesc>
-              <ResumeButton href={Bio.resume} target="display">
-              Resume
-            </ResumeButton>
+          <Desc>
+            I'm <b>open to relocating</b> and continuing my journey as a
+            software engineer. I value <b>collaboration</b>,{" "}
+            <b>continuous learning</b>, and using tech to{" "}
+            <b>solve meaningful problems</b>.
+          </Desc>
 
-      </Wrapper>
+          <SubDesc>
+            My journey started at the University of Hawai'i at Mānoa and evolved
+            into <b>full-stack development</b> and <b>machine learning</b>.
+          </SubDesc>
 
-    </Container>
+
+          <SubTitle>🧠 Algorithm Practice</SubTitle>
+          <SubDesc>
+            Actively practicing on{" "} LeetCode
+          </SubDesc>
+          <div style={{ width: "60%", textAlign: "center" }}>
+            <img
+              src="https://leetcard.jacoblin.cool/acoa?theme=light&font=Khula&ext=heatmap"
+              alt="LeetCode Stats"
+              style={{
+                maxWidth: "80%",
+                height: "auto",
+                marginTop: "-12px",
+              }}
+            />
+          </div>
+
+
+          <SubTitle>Languages</SubTitle>
+          <SubDesc>English 🇺🇸, Portuguese 🇧🇷, Spanish 🇲🇽</SubDesc>
+
+          <SubTitle>Interests & Hobbies</SubTitle>
+          <SubDesc>
+            Working out 🏋️‍♀️, cooking 🍝, and exploring music 🎸
+          </SubDesc>
+
+          <ResumeButton href={Bio.resume} target="_blank">
+            Resume
+          </ResumeButton>
+        </GridWrapper>
+      </Container>
     </div>
   );
 };
