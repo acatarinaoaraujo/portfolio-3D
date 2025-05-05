@@ -446,6 +446,7 @@ export const projects = [
     tags: [
       "ASP.NET",
       "C#",
+      "TypeScript",
       "Angular",
       "IMF API",
       "Globe.gl",
