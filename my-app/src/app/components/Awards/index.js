@@ -22,12 +22,12 @@ const badges = [
     icon: "fa-award",
     label: "WWT Internship 2023 - Best Technical Solution",
   },
-  {
-    isCertificate: true,
-    img: "images/data-analytics-certificate.png",
-    label: "Google Advanced Data Analytics",
-    link: "https://www.credly.com/badges/03e94c3c-ce2a-43fb-80a4-6257f723827e/public_url",
-  },
+  // {
+  //   isCertificate: true,
+  //   img: "images/data-analytics-certificate.png",
+  //   label: "Google Advanced Data Analytics",
+  //   link: "https://www.credly.com/badges/03e94c3c-ce2a-43fb-80a4-6257f723827e/public_url",
+  // },
 ];
 
 const Container = styled.div`
