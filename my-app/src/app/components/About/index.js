@@ -7,32 +7,38 @@ import {
   TextLoop,
   Span,
   Desc,
-  SubDesc,
   SubTitle,
+  SubDesc,
   Tag,
   TagsContainer,
-  ResumeButton,
   Img,
   SocialRow,
+  AlbumContainer,
+  AlbumImage,
+  HighlightItem,
+  
+  HighlightSection,
+  HighlightTitle,
+  HighlightText,
+  ProjectBullet,
 } from "./AboutStyle";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
+
+
+
 
 const About = () => {
   return (
     <div id="about">
       <Container>
         <GridWrapper>
-          {/* <Img
-            src="../../../.."
-            alt="Profile"
-          /> */}
-
-  
+          {/* <Img src="/assets/profile-pic.png" alt="Profile" /> */}
 
           <Title>About Me</Title>
-             <SocialRow>
+
+          <SocialRow>
             <a href={`mailto:${Bio.email}`}>
               <EmailIcon />
             </a>
@@ -45,7 +51,7 @@ const About = () => {
           </SocialRow>
 
           <TextLoop>
-            Aspiring{" "}
+            ♡{" "}
             <Span>
               <Typewriter
                 options={{
@@ -55,17 +61,56 @@ const About = () => {
                 }}
               />
             </Span>
+            𓇢𓆸
           </TextLoop>
 
-          <SubTitle>🌱 Fields I Enjoy</SubTitle>
+          <Desc>
+            I’m Ana, a software engineer working at <b>@Apple</b> with a focus on full-stack
+            development. I enjoy building tools that help people and digging into problems
+            that require <u>thoughtful design</u> and <u>data-driven thinking</u>. From cleaning data to
+            clean UIs, I like working across layers of the stack.
+          </Desc>
+
+          <SubTitle>Fields I Enjoy</SubTitle>
           <TagsContainer>
-            <Tag>Full-Stack Dev</Tag>
             <Tag>Data Visualization</Tag>
-            <Tag>ML / NLP</Tag>
+            <Tag>NLP</Tag>
+             <Tag>Computer Vision</Tag>
             <Tag>Algorithms</Tag>
           </TagsContainer>
 
-          <Desc>
+          <SubTitle style={{ marginTop: "2rem" }}>Key Highlights</SubTitle>
+          <HighlightSection>
+            <HighlightItem>
+              <HighlightTitle>Projects</HighlightTitle>
+              <HighlightText>
+                <ProjectBullet>🌿 <strong>Coffee Plant Pathology</strong>: Classified leaf diseases with 87% accuracy using ResNet50 and CNNs.</ProjectBullet>
+                <ProjectBullet>📑 <strong>Receipt Manager</strong>: Built with OCR + GPT-4 to help users track expenses with 50% better accuracy.</ProjectBullet>
+                <ProjectBullet>🌊 <strong>Marine Debris System</strong>: Created chatbot-integrated app for debris tracking and hotline escalation.</ProjectBullet>
+                <ProjectBullet>📜 <strong>DOE Legislative Tracker</strong>: Developed real-time bill tracking tool with role-based access.</ProjectBullet>
+              </HighlightText>
+            </HighlightItem>
+
+            <HighlightItem>
+              <HighlightTitle>Research</HighlightTitle>
+              <HighlightText>
+                🔍 Fine-tuned LLMs to detect 27 types of software vulnerabilities using data from the NVD database.<br />
+📊 Applied LDA to Stack Overflow posts to understand mobile security challenges.
+              </HighlightText>
+            </HighlightItem>
+
+            <HighlightItem>
+              <HighlightTitle>Awards</HighlightTitle>
+              <HighlightText>
+                🌟 2nd & 3rd Place - Hawaii Annual Code Challenge (HACC ‘22, ‘23) <br />
+                🌟 Kalo Grant recipient for app development <br />
+                🌟 1st place in cybersecurity internship capstone at World Wide Technology
+              </HighlightText>
+            </HighlightItem>
+          </HighlightSection>
+
+
+          {/* <Desc>
             I'm <b>open to relocating</b> and continuing my journey as a
             software engineer. I value <b>collaboration</b>,{" "}
             <b>continuous learning</b>, and using tech to{" "}
@@ -75,10 +120,10 @@ const About = () => {
           <SubDesc>
             My journey started at the University of Hawai'i at Mānoa and evolved
             into <b>full-stack development</b> and <b>machine learning</b>.
-          </SubDesc>
+          </SubDesc> */}
 
 
-          <SubTitle>🧠 Algorithm Practice</SubTitle>
+          {/* <SubTitle>🧠 Algorithm Practice</SubTitle>
           <SubDesc>
             Actively practicing on{" "} LeetCode
           </SubDesc>
@@ -92,10 +137,10 @@ const About = () => {
                 marginTop: "-12px",
               }}
             />
-          </div>
+          </div> */}
 
 
-          <SubTitle>Languages</SubTitle>
+          {/* <SubTitle>Languages</SubTitle>
           <SubDesc>English 🇺🇸, Portuguese 🇧🇷, Spanish 🇲🇽</SubDesc>
 
           <SubTitle>Interests & Hobbies</SubTitle>
@@ -105,7 +150,9 @@ const About = () => {
 
           <ResumeButton href={Bio.resume} target="_blank">
             Resume
-          </ResumeButton>
+          </ResumeButton> */}
+
+
         </GridWrapper>
       </Container>
     </div>

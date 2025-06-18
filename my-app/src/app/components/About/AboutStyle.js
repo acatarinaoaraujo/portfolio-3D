@@ -137,6 +137,28 @@ export const Span = styled.span`
   cursor: pointer;
 `;
 
+export const AlbumContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+`;
+
+export const AlbumImage = styled.img`
+  width: 200px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+`;
+
+
 export const ResumeButton = styled.a`
     -webkit-appearance: button;
     -moz-appearance: button;
@@ -230,5 +252,37 @@ export const Tag = styled.span`
   border-radius: 16px;
   font-size: 14px;
   font-weight: 500;
+`;
+
+export const HighlightSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  align-items: center;
+    text-align: center;
+`;
+
+export const HighlightItem = styled.div``;
+
+export const HighlightTitle = styled.h3`
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+  text-align: center;
+`;
+
+export const HighlightText = styled.div`
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+`;
+
+export const ProjectBullet = styled.p`
+  margin: 0.3rem 0;
+  display: flex;
+  gap: 0.4rem;
+  text-align: center;
 `;
 
