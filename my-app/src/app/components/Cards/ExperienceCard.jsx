@@ -144,7 +144,7 @@ const ExperienceCard = ({ experience }) => {
         <Body>
           <Role>{experience.role}</Role>
           <Company>{experience.company}</Company>
-          <Date>{experience.date}</Date>
+          <Date> {experience.date.split('-').map(part => part.trim().match(/\d{4}$/)?.[0]).join('-')}</Date>
         </Body>
       </Top>
       <Description>

@@ -132,7 +132,7 @@ const EducationCard = ({ education }) => {
                 <Body>
                     <Name>{education.school}</Name>
                     <Degree>{education.degree}</Degree>
-                    <Date>{education.date}</Date>
+                    <Date> {education.date.split('-').map(part => part.trim().match(/\d{4}$/)?.[0]).join('-')}</Date>
                 </Body>
             </Top>
             <Grade><b>GPA: </b>{education.grade}</Grade>

@@ -31,13 +31,14 @@ const descriptionStyle = (
 
 export const Bio = {
   name: "Ana Araújo",
-  roles: ["Full-Stack Developer", "Software Engineer"],
+  roles: ["Software Engineer"],
   description: descriptionStyle,
   github: "https://github.com/acatarinaoaraujo",
   resume: resume,
   linkedin: "https://www.linkedin.com/in/acatarinaoaraujo/",
   leetcode: "https://leetcode.com/u/acoa/",
   email: "ancoaraujo@gmail.com",
+  spotify: "https://open.spotify.com/user/z0jvjmgy6bnrm5hasa4z1lh7v?si=07e900f2b1df487f"
 };
 
 export const skills = [
@@ -251,7 +252,7 @@ export const skills = [
         name: "Transformers",
         image:
           "https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/huggingface-color.png",
-      },
+      }, 
     ],
   },
   {
@@ -1071,10 +1072,10 @@ export const projects = [
   },
   {
     id: 7,
-    title: "Buy From Her",
+    title: "High-Fidelity Prototype",
     date: "Aug 2021 - Dec 2021",
     description:
-      "Buy From Her is a platform designed to support local female entrepreneurs by promoting their products and services. It helps customers discover and purchase items without extensive travel, making it easier to access products from businesswomen. The project aims to empower women, stimulate local economies, and create employment opportunities while promoting social progress. The design process followed a top-down approach, beginning with research and a mind map, followed by the creation of user flows and prototypes. The platform’s ultimate goal is to foster economic growth and convenience through digital accessibility.",
+      "A platform designed to support local female entrepreneurs by promoting their products and services. It helps customers discover and purchase items without extensive travel, making it easier to access products from businesswomen. The project aims to empower women, stimulate local economies, and create employment opportunities while promoting social progress. The design process followed a top-down approach, beginning with research and a mind map, followed by the creation of user flows and prototypes. The platform’s ultimate goal is to foster economic growth and convenience through digital accessibility.",
     // keyDetails: {
     //   goals: [
     //     "Empower women by promoting their products and services to a wider audience.",
