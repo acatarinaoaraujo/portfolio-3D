@@ -96,9 +96,7 @@ const index = () => {
       <SubSectionText>
         💡 🌈 🚂 💬 🐧
         <br />
-        Got a project, a job opportunity, or just want to geek out? Let's
-        connect! <br />
-        Check out my links or drop me a message below—I'd love to hear from you!
+        Drop me a message below, I'd love to hear from you!
       </SubSectionText>
 
       <Box
