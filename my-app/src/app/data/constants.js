@@ -38,7 +38,8 @@ export const Bio = {
   linkedin: "https://www.linkedin.com/in/acatarinaoaraujo/",
   leetcode: "https://leetcode.com/u/acoa/",
   email: "ancoaraujo@gmail.com",
-  spotify: "https://open.spotify.com/user/z0jvjmgy6bnrm5hasa4z1lh7v?si=07e900f2b1df487f"
+  spotify: "https://open.spotify.com/user/z0jvjmgy6bnrm5hasa4z1lh7v?si=07e900f2b1df487f",
+  instagram: "https://www.instagram.com/catarinaoaraujo/",
 };
 
 export const skills = [
