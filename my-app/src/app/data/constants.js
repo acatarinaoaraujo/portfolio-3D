@@ -328,8 +328,26 @@ export const skills = [
 ];
 
 export const experiences = [
+   {
+    id: 1,
+    img: "https://4kwallpapers.com/images/wallpapers/apple-logo-colorful-rainbow-colors-1280x1280-6033.jpg",
+    role: "Software Engineer",
+    company: "Apple (Current)",
+    date: "June 2025 - July 2026",
+    desc: "Under IS&T - AI&DP Marketing",
+    skills: [
+      "React",
+      "Express.js",
+      "Node.js",
+      "MongoDB",
+      "JavaScript",
+      "TypeScript",
+      "Python",
+      "Kubernetes"
+    ],
+  },
   {
-    id: 0,
+    id: 1,
     img: "https://iafor.org/wp-content/uploads/2017/03/IAFOR-Partners-Logos_University-of-Hawaii-at-Manoa-USA.jpg",
     role: "Graduate Teaching Assistant",
     company: "University of Hawaii at Mānoa",
@@ -348,7 +366,7 @@ export const experiences = [
     ],
   },
   {
-    id: 1,
+    id: 2,
     img: "https://media.licdn.com/dms/image/v2/C4D0BAQHWo9uFiZ1ZXQ/company-logo_200_200/company-logo_200_200/0/1630574516604/world_wide_technology_logo?e=2147483647&v=beta&t=EGnxrYqfCnk32TU9dBnftWiNBluhWCjkeDpOAEEW8_0",
     role: "Software Engineer Intern",
     company: "World Wide Technology (WWT)",
