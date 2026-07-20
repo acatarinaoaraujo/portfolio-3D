@@ -14,6 +14,7 @@ import styled from "styled-components";
 import Header from "./components/Header";
 import Awards from "./components/Awards";
 import Navbar from "./components/Navbar";
+import ComingSoon from "./components/ComingSoon";
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -56,7 +57,8 @@ export default function Page() {
 
   return (
     <Body>
-      <Navbar />
+       <ComingSoon />
+      {/* <Navbar />
 
       <Wrapper>
         <HeroSection />
@@ -76,7 +78,7 @@ export default function Page() {
       <Footer />
       {openModal.state && (
         <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />
-      )}
+      )} */}
     </Body>
   );
 }
