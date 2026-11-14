@@ -57,8 +57,8 @@ export default function Page() {
 
   return (
     <Body>
-       <ComingSoon />
-      {/* <Navbar />
+       {/* <ComingSoon /> */}
+      <Navbar />
 
       <Wrapper>
         <HeroSection />
@@ -68,7 +68,7 @@ export default function Page() {
       <Wrapper2>
         <Experience />
         <Projects openModal={openModal} setOpenModal={setOpenModal} />
-        <Publication />
+        {/* <Publication /> */}
         <Awards />
       </Wrapper2>
       <Education />
@@ -78,7 +78,7 @@ export default function Page() {
       <Footer />
       {openModal.state && (
         <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />
-      )} */}
+      )}
     </Body>
   );
 }
