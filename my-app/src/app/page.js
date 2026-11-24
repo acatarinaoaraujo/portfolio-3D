@@ -68,7 +68,7 @@ export default function Page() {
       <Wrapper2>
         <Experience />
         <Projects openModal={openModal} setOpenModal={setOpenModal} />
-        {/* <Publication /> */}
+        <Publication />
         <Awards />
       </Wrapper2>
       <Education />

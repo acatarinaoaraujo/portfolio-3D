@@ -411,19 +411,19 @@ export const education = [
 ];
 
 export const publications = [
-  {
-    id: 0,
-    title:
-      "An Exploratory Examination Of Software Vulnerability Classification Using Large Language Models",
-    date: "Jun 2024",
-    journal: "Thesis Accepted: Master of Science in Computer Science",
-    description:
-      "This study addresses the challenge of accurately classifying software vulnerabilities, critical weaknesses that can endanger system security. Leveraging the National Vulnerability Database (NVD) and the Vulnerability Description Ontology from NIST, we explore the integration of Large Language Models (LLMs), such as BERT and DistilBERT, to enhance classification across 27 vulnerability categories. Our analysis shows that LLMs outperform traditional models and entropy-based methods, particularly in understanding vulnerability descriptions within specified noun groups. Additionally, the ml highlights that while expanding datasets can improve classification coverage, annotation quality remains a key factor. The findings underscore the potential of LLMs and well-curated data to improve automated vulnerability assessment, advancing cybersecurity practices and precision in vulnerability management.",
-    image: publication_2,
-    tags: ["Cybersecurity", "Software Vulnerability", "Large Language Models"],
-    category: "Large Language Models",
-    webapp: thesis,
-  },
+  // {
+  //   id: 0,
+  //   title:
+  //     "An Exploratory Examination Of Software Vulnerability Classification Using Large Language Models",
+  //   date: "Jun 2024",
+  //   journal: "Thesis Accepted: Master of Science in Computer Science",
+  //   description:
+  //     "This study addresses the challenge of accurately classifying software vulnerabilities, critical weaknesses that can endanger system security. Leveraging the National Vulnerability Database (NVD) and the Vulnerability Description Ontology from NIST, we explore the integration of Large Language Models (LLMs), such as BERT and DistilBERT, to enhance classification across 27 vulnerability categories. Our analysis shows that LLMs outperform traditional models and entropy-based methods, particularly in understanding vulnerability descriptions within specified noun groups. Additionally, the ml highlights that while expanding datasets can improve classification coverage, annotation quality remains a key factor. The findings underscore the potential of LLMs and well-curated data to improve automated vulnerability assessment, advancing cybersecurity practices and precision in vulnerability management.",
+  //   image: publication_2,
+  //   tags: ["Cybersecurity", "Software Vulnerability", "Large Language Models"],
+  //   category: "Large Language Models",
+  //   webapp: thesis,
+  // },
   {
     id: 1,
     title:
