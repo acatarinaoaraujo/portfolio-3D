@@ -352,7 +352,7 @@ export const experiences = [
     role: "Graduate Teaching Assistant",
     company: "University of Hawaii at Mānoa",
     date: "August 2022 - May 2024",
-    desc: "I collaborated with a professor to enhance the learning experience for over 80 Software Engineering students, guiding them in building and deploying more than 56 web applications using the MERN stack. Through innovative quiz methods, I contributed to a 15% increase in student grades on programming quizzes, while maintaining an average class score of over 75% across four semesters, boosting overall academic performance.",
+    desc: "I collaborated with a professor to enhance the learning experience for over 80 Software Engineering students, guiding them in building and deploying more than 56 web applications using the MERN stack. ",
     skills: [
       "Web Development",
       "Teaching",
